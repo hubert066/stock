@@ -1,0 +1,1081 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b131c">
+<meta name="description" content="台美股收盤行情每日自動更新，含台股、美股、SOX、VIX、匯率、10年美債、個股追蹤、新聞與歷史快報。">
+<title>Market Pulse｜台美股每日市場儀表板</title>
+<style>
+:root{--bg:#0b131c;--pane:#111e29;--pane2:#162633;--pane3:#1a2d3b;--line:#273b48;--text:#eff6f7;--sub:#92a7b5;--dim:#718894;--mint:#66e5c3;--mint2:#1d7f71;--danger:#fa8792;--warn:#f7c37b;--blue:#8dbbff;--radius:18px;--shadow:0 10px 34px rgba(0,0,0,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.6;font-size:14px}button,input,select{font:inherit}button{cursor:pointer}a{color:inherit}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--mint);outline-offset:2px}::selection{background:var(--mint2)}
+.topbar{border-bottom:1px solid var(--line);background:#0c1720dd;backdrop-filter:blur(14px);position:sticky;top:0;z-index:30}.topwrap{max-width:1370px;padding:14px 28px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-size:15px;font-weight:760;letter-spacing:.01em}.logo{display:grid;place-items:center;border:1px solid #438a85;border-radius:12px;height:38px;width:38px;color:var(--mint);background:#132e35;font-weight:800;font-size:17px}.brand small{display:block;color:var(--sub);font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase}.topactions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.ghost{border:1px solid var(--line);color:var(--text);border-radius:10px;padding:9px 13px;background:#152631;text-decoration:none;white-space:nowrap}.ghost:hover{background:#203748;border-color:#486473}.ghost.accent{color:var(--mint);border-color:#3a7771;background:#112c2c}.ghost svg{vertical-align:middle; margin-right:4px}
+.hero{max-width:1370px;margin:auto;padding:40px 28px 28px}.eyebrow{color:var(--mint);font-size:11px;letter-spacing:.16em;font-weight:750;text-transform:uppercase}.hero h1{font-size:clamp(30px,4vw,49px);line-height:1.15;letter-spacing:-.045em;margin:12px 0;font-weight:790}.hero h1 span{color:var(--mint)}.hero p{color:#b2c2cb;max-width:760px;font-size:15px;margin:12px 0 20px}.meta{display:flex;flex-wrap:wrap;gap:10px}.chip{font-size:12px;border:1px solid var(--line);border-radius:30px;padding:5px 11px;color:var(--sub);background:#10202c}.chip strong{color:var(--text)}.caution{border-left:3px solid var(--warn);background:#29281f;border-radius:0 9px 9px 0;padding:10px 13px;margin-top:22px;color:#e5d7bb;font-size:12px;max-width:1100px}
+.dashboard{max-width:1370px;margin:auto;padding:0 28px 28px}.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}.metric{background:linear-gradient(150deg,#152633,#101d27);border:1px solid var(--line);border-radius:16px;padding:18px;min-height:126px;position:relative;overflow:hidden}.metric:before{position:absolute;content:"";right:-30px;top:-50px;width:110px;height:110px;background:#2d5452;filter:blur(45px);opacity:.2}.metric .label{font-size:12px;color:var(--sub)}.metric .val{font-size:clamp(24px,2.7vw,33px);font-weight:760;letter-spacing:-.04em;margin-top:7px;line-height:1.2;font-variant-numeric:tabular-nums}.metric .foot{font-size:11px;color:var(--sub);margin-top:10px}.positive{color:var(--mint)!important}.negative{color:var(--danger)!important}.warn{color:var(--warn)!important}.card{border:1px solid var(--line);border-radius:var(--radius);background:var(--pane);box-shadow:var(--shadow)}.chartcard{margin-top:14px;padding:20px 22px}.section-head{display:flex;align-items:start;justify-content:space-between;flex-wrap:wrap;gap:10px}.section-head h2{font-size:16px;line-height:1.5;margin:0;font-weight:710}.section-head p{font-size:11px;color:var(--sub);margin:4px 0 0}.chartcontrols{display:flex;gap:7px;flex-wrap:wrap}.select{background:var(--pane2);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:7px 9px;min-height:38px}.range{background:var(--pane2);padding:3px;border-radius:10px;border:1px solid var(--line);display:flex;gap:3px}.range button{border:none;background:transparent;color:var(--sub);padding:6px 11px;border-radius:7px;font-size:12px}.range button.active{background:#2a4350;color:#eef9f9}.graph{height:275px;margin:15px -5px 0;position:relative}.graph svg{display:block;width:100%;height:100%;overflow:visible}.graph .gridline{stroke:#2a3e4a;stroke-dasharray:3 5;stroke-width:.8}.graph .axistext{fill:#8299a6;font-size:11px}.graph .plotline{fill:none;stroke:var(--mint);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.graph .hover-point{fill:var(--mint);stroke:var(--bg);stroke-width:3;cursor:pointer}.graph .current-point{fill:var(--warn);stroke:var(--bg);stroke-width:3}.graph .gridrect{fill:transparent;cursor:crosshair}.graphlegend{font-size:12px;color:var(--sub);display:flex;gap:12px;flex-wrap:wrap;justify-content:space-between}.legendmark{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--mint);margin-right:5px}.graphTip{position:absolute;top:12px;right:12px;pointer-events:none;background:#182c38ee;border:1px solid #4a6a72;padding:8px 10px;border-radius:9px;color:#fff;font-size:12px;display:none;z-index:2;max-width:180px}
+.main{max-width:1370px;padding:0 28px 40px;margin:auto;display:grid;grid-template-columns:minmax(320px,.92fr) minmax(420px,1.45fr);gap:15px;align-items:start}.listcard{overflow:hidden}.toolbar{padding:20px;border-bottom:1px solid var(--line);position:sticky;top:67px;background:var(--pane);z-index:9}.toolbar h2{font-size:17px;margin:0 0 12px}.toolbar .inputs{display:flex;gap:8px;flex-wrap:wrap}.searchwrap{flex:1;min-width:180px;position:relative}.searchwrap input{padding:11px 11px 11px 36px;background:#0b1924;border:1px solid #334955;color:var(--text);border-radius:10px;outline:none;width:100%}.searchwrap:before{content:'⌕';position:absolute;top:4px;left:12px;color:var(--sub);font-size:22px}.counter{margin:10px 0 0;color:var(--dim);font-size:11px}.timeline{max-height:720px;overflow-y:auto;scrollbar-color:#365161 transparent;scrollbar-width:thin}.entry{border:0;border-bottom:1px solid #233540;background:none;text-align:left;color:inherit;display:block;width:100%;padding:15px 18px 15px 24px;position:relative;transition:background .18s}.entry:before{position:absolute;content:"";left:0;top:0;bottom:0;width:3px;opacity:0;background:var(--mint)}.entry:hover{background:#192c39}.entry.active{background:#1c333d}.entry.active:before{opacity:1}.entrytop{display:flex;align-items:center;justify-content:space-between;gap:12px}.entrydate{color:#d9e7ed;font-weight:720;font-size:13px;font-variant-numeric:tabular-nums}.entrytag{border-radius:6px;padding:2px 7px;font-size:10px;font-weight:700;background:#31414b;color:#c8d6df;white-space:nowrap}.entrytag.r極高{background:#642c36;color:#ffb4b9}.entrytag.r高{background:#53363a;color:#ffbec4}.entrytag.r偏高,.entrytag.r中性偏高{background:#55452e;color:#ffe1ac}.entrytag.r中性{background:#244b43;color:#a8f3d6}.entrytitle{display:block;margin-top:6px;font-size:12px;color:#b3c9d2;line-height:1.5}.entrymini{display:flex;gap:14px;margin-top:8px;align-items:center;font-variant-numeric:tabular-nums;font-size:12px;color:#9ab2be;flex-wrap:wrap}.entrymini strong{color:#eef8f9;font-size:15px}.empty{padding:25px;color:var(--sub);font-size:13px}.detail{padding:26px;min-height:630px;scroll-margin-top:95px}.detaildate{font-size:12px;letter-spacing:.1em;color:var(--mint);font-weight:730}.detail h2{font-size:clamp(20px,2.2vw,26px);line-height:1.4;margin:10px 0 12px;letter-spacing:-.02em}.detailIntro{color:var(--sub);font-size:12px}.detailsumm{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:20px 0}.tile{background:#0e1b26;border:1px solid #253a46;border-radius:12px;padding:12px}.tile .name{font-size:10px;color:var(--sub)}.tile .num{font-size:20px;letter-spacing:-.03em;font-variant-numeric:tabular-nums;font-weight:730;margin-top:5px;white-space:nowrap}.detailsection{border-top:1px solid var(--line);padding-top:17px;margin-top:18px}.detailsection h3{margin:0 0 8px;font-size:14px;color:#fff}.detailsection p{font-size:13px;line-height:1.9;color:#bfd0d7;margin:6px 0}.pnote{background:#253228;border:1px solid #3a5a45;border-radius:10px;padding:10px 12px;color:#d7e9da!important}.watchline{color:var(--mint)!important}.detailsTable{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#253847;border:1px solid #253847;border-radius:12px;overflow:hidden;margin-top:10px}.dataitem{background:#14232f;padding:11px}.dataitem label{display:block;color:var(--sub);font-size:10px}.dataitem strong{display:block;font-size:15px;font-variant-numeric:tabular-nums;line-height:1.8;font-weight:650}.detailactions{display:flex;gap:8px;margin-top:18px;flex-wrap:wrap}.footer{max-width:1370px;margin:0 auto;padding:4px 28px 32px;color:var(--dim);font-size:12px}.footer a{color:var(--mint)}
+.appendix{max-width:1370px;margin:5px auto 30px;padding:0 28px}.appendix-head{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}.appendix h2{font-size:21px;margin:12px 0}.grand{padding:22px;background:linear-gradient(140deg,#2c312b,#13242e 65%)}.grand p{color:#c9d5d6;line-height:1.9}.grand .qa{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:14px}.qabox{border:1px solid #405158;border-radius:13px;background:#0b1920ad;padding:16px}.qabox b{font-size:14px}.qabox p{font-size:12px;margin:8px 0 0}.note{padding:17px 20px;border:1px solid var(--line);border-radius:14px;background:var(--pane);margin:12px auto 35px;font-size:12px;color:var(--sub);line-height:1.8}.navhint{font-size:12px;color:var(--sub)}
+@media(max-width:900px){.main{grid-template-columns:1fr}.timeline{max-height:400px}.toolbar{position:static}.detail{min-height:unset}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.grand .qa{grid-template-columns:1fr}}
+@media(max-width:560px){.hero{padding:29px 16px 23px}.dashboard,.main,.appendix,.footer{padding-left:16px;padding-right:16px}.topwrap{padding:10px 16px}.brand{font-size:13px}.brand small{font-size:9px}.topactions .hide-mobile{display:none}.hero h1{font-size:32px}.hero p{font-size:13px}.meta{gap:6px}.chip{font-size:10px}.metric{padding:14px;min-height:115px}.metric .val{font-size:25px}.chartcard{padding:17px 12px}.graph{height:230px;margin:10px -5px 0}.chartcontrols{width:100%}.detailsumm{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.tile{padding:9px 7px}.tile .num{font-size:17px}.tile .name{font-size:9px}.detail{padding:20px 17px}.entry{padding:12px 14px 12px 18px}.footer{padding-bottom:28px}.topactions .ghost{padding:7px 9px;font-size:11px}.graphlegend{font-size:10px}}
+@media print{.topbar,.topactions,.toolbar,.chartcontrols,.detailactions,.caution,.graphTip{display:none!important}.main{display:block}.listcard{display:none}.detail{border:none;min-height:0}.metrics{grid-template-columns:repeat(4,1fr)}body{background:white;color:#17222b}.card,.metric,.tile,.dataitem{background:white;color:#17222b;border:1px solid #ddd;box-shadow:none}.detailsection p{color:#25303a}.hero p{color:#333}.appendix{break-before:page}}
+</style>
+
+<style id="live-css">
+.live-section{max-width:1370px;margin:0 auto;padding:0 28px 48px;scroll-margin-top:85px}.livehead{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:10px 0 17px}.section-kicker{color:var(--mint);letter-spacing:.13em;font-size:11px;font-weight:760}.livehead h2,.archive-head h2{font-size:24px;line-height:1.3;margin:5px 0 6px;letter-spacing:-.025em}.livehead p,.archive-head p{font-size:12px;color:var(--sub);margin:0}.statusbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.sync-pill{font-size:11px;border:1px solid #6f5740;background:#2d2b23;color:#f4cb89;border-radius:30px;padding:6px 11px}.sync-pill.ok{color:#8af1d2;border-color:#366b63;background:#18362f}.sync-pill.bad{color:#ffabb5;border-color:#79515b;background:#39252c}.live-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.live-tile{border:1px solid var(--line);border-radius:15px;background:linear-gradient(155deg,#162a36,#101e29);padding:17px 18px;min-width:0}.live-tile .q-name{font-size:12px;color:#a9bfcb;display:flex;align-items:center;justify-content:space-between;gap:8px}.live-tile .q-name small{font-size:10px;color:#708c99}.live-tile .q-val{font-size:clamp(21px,2.6vw,30px);font-weight:760;letter-spacing:-.04em;font-variant-numeric:tabular-nums;line-height:1.4;margin-top:8px;white-space:nowrap}.live-tile .q-change{font-size:12px;margin-top:4px;min-height:17px}.live-tile .q-source{font-size:10px;color:#758d9b;margin-top:9px;min-height:16px}.live-tile.empty .q-val{color:#526c7c}.micro{font-size:11px;color:var(--sub);margin:10px 0 0;line-height:1.8}.livegrid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;margin-top:14px}.live-panel{padding:21px 23px}.panel-heading{font-size:16px;font-weight:710;margin:0 0 5px}.subheading{font-size:12px;color:var(--sub);margin:0}.risk-box{display:flex;align-items:center;gap:14px;margin-top:18px}.risk-value{border-radius:12px;background:#242e30;border:1px solid #38505a;font-size:25px;font-weight:780;padding:15px 23px;white-space:nowrap}.risk-value.高,.risk-value.極高{color:#ffb0b9;background:#3b2630;border-color:#6d3e48}.risk-value.偏高{color:#fbd49a;background:#3a3127;border-color:#69583b}.risk-value.一般{color:var(--mint);background:#183a34;border-color:#32685c}.risk-explain{font-size:12px;color:var(--sub);line-height:1.9}.signals{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:8px}.signals li{font-size:12px;line-height:1.7;padding:7px 10px 7px 28px;background:#152632;border-radius:8px;border:1px solid #29404e;position:relative}.signals li:before{content:'•';position:absolute;left:12px;color:var(--mint)}.sync-detail{border-top:1px solid var(--line);margin-top:15px;padding-top:12px;display:grid;gap:8px}.sync-row{display:flex;justify-content:space-between;gap:10px;font-size:12px;color:#9eb4c0}.sync-row b{color:#deedf0;font-weight:600}.live-chart-card{margin-top:14px;padding:20px 22px}.lc-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.lc-head select{min-width:150px}.live-graph{height:245px;margin-top:12px;position:relative}.live-graph svg{display:block;height:100%;width:100%;overflow:visible}.live-graph .axis{font-size:11px;fill:#7e98a5}.live-graph .grid{stroke:#2a4050;stroke-dasharray:3 6;stroke-width:.75}.live-graph .chartline{stroke:#67e2c3;stroke-width:2.8;fill:none}.graphlinearea{fill:#66e5c3;opacity:.06}.live-newsgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;align-items:start}.search-small{border-radius:9px;border:1px solid #314a59;padding:9px 11px;background:#0d1d28;color:#e5eff2;width:180px;max-width:100%}.quote-table{width:100%;border-collapse:collapse;margin-top:15px;table-layout:fixed}.quote-table th{font-size:10px;color:#819aa8;text-align:left;font-weight:600;padding:9px 8px;border-bottom:1px solid #304652}.quote-table td{font-size:12px;color:#d9e8ec;border-bottom:1px solid #233a48;padding:11px 8px}.quote-table th:nth-child(2),.quote-table td:nth-child(2),.quote-table th:nth-child(3),.quote-table td:nth-child(3){text-align:right}.quote-table td a{color:#e4f4f3;text-decoration:none;font-weight:600}.quote-table td small{display:block;color:#77919e;font-size:10px}.quote-table tr:last-child td{border-bottom:none}.newsfeed{margin-top:14px;display:grid;gap:7px}.newsitem{border:1px solid #273c48;border-radius:11px;padding:12px 13px;display:block;color:inherit;text-decoration:none;background:#12222d}.newsitem:hover{border-color:#4c7e80;background:#1a303c}.newsitem h4{margin:0 0 7px;font-size:12px;font-weight:640;line-height:1.65}.newsitem .source{font-size:10px;color:#92adb8}.empty-message{color:#90a8b5;background:#142632;border-radius:10px;padding:16px;font-size:12px;line-height:1.9;margin-top:15px}.archive-head{padding:34px 0 18px;scroll-margin-top:85px}.live-fineprint{font-size:11px;color:#92aabb;line-height:1.9;margin:17px 0 0}.live-fineprint a{color:#9eead2}.live-chart-card .chart-note{font-size:11px;color:#7f99a6;margin:6px 0 0}.live-tile a{text-decoration:none}.live-tile a:hover{text-decoration:underline}.live-latest-link{font-size:11px;color:#a7e8d6;text-decoration:none}.live-latest-link:hover{text-decoration:underline}
+@media(max-width:1000px){.live-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.livegrid{grid-template-columns:1fr 1fr}.live-newsgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:720px){.live-section{padding:0 16px 36px}.live-metrics{gap:9px}.live-tile{padding:14px 12px}.live-tile .q-name{font-size:11px}.live-tile .q-val{font-size:23px}.livegrid,.live-newsgrid{grid-template-columns:1fr;gap:10px}.live-panel{padding:17px}.live-chart-card{padding:18px 14px}.livehead h2,.archive-head h2{font-size:21px}.quote-table td{padding:10px 5px}.live-chart-card .chart-note{font-size:10px}.archive-head{padding-top:26px}.risk-box{gap:10px}.risk-value{font-size:23px;padding:11px 17px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topwrap">
+    <a class="brand" href="#overview"><span class="logo">M<span style="color:#f7bd79">.</span></span><span>Market Pulse<small>台美股每日市場儀表板</small></span></a>
+    <div class="topactions"><a class="ghost hide-mobile" href="#live">最新市場</a><a class="ghost hide-mobile" href="#watch-panel">觀察清單</a><a class="ghost hide-mobile" href="#archive">歷史快報</a><a class="ghost hide-mobile" href="#grand">大峽谷問答</a><button id="exportBtn" class="ghost accent" title="匯出全部45期資料">匯出 CSV ↧</button></div>
+  </div>
+</header>
+<section class="hero" id="overview">
+  <div class="eyebrow">TW × US / DAILY MARKET MONITOR</div>
+  <h1>掌握每日市場變化，<br><span>看見風險與趨勢。</span></h1>
+  <p>追蹤台股、美股主要指數、SOX、VIX、美債殖利率與新台幣匯率；將交易日最新收盤資料、原始新聞標題、規則式風險指標及過往對話快報清楚分開。</p>
+  <div class="meta"><span class="chip"><strong id="metaCount">45</strong> 期市場快報</span><span class="chip">2026.09.22 — 2026.11.23</span><span class="chip">台美市場 · 繁體中文</span><span class="chip" id="connectionChip">尚待啟用資料更新</span></div>
+  <div class="caution"><strong>資料說明：</strong><strong>最新市場區</strong>在網站部署且排程成功後依交易日更新，並清楚標示各市場資料日期；不是即時行情。<strong>歷史對話區</strong>保留原本45期摘要，過往數字未重新核對。兩個資料來源不互相混合，所有風險判讀均為非個人化研究參考。</div>
+</section>
+
+<section class="live-section" id="live" aria-label="每日更新的市場資料">
+  <div class="livehead"><div><span class="section-kicker">LAST COMPLETED CLOSE · DAILY UPDATE</span><h2>最新市場總覽</h2><p>以各市場最後一個已完成交易日為準，非即時行情；上游資料可能延遲。</p></div><div class="statusbar"><span class="sync-pill" id="syncStatus">資料更新尚未啟用</span><button class="ghost" id="refreshLive" type="button">↻ 重新檢查</button></div></div>
+  <div class="live-metrics" id="liveMetrics" aria-live="polite">
+    <div class="live-tile empty"><div class="q-name">台股 TAIEX</div><div class="q-val">—</div><div class="q-change">待更新</div></div>
+    <div class="live-tile empty"><div class="q-name">S&P 500</div><div class="q-val">—</div><div class="q-change">待更新</div></div>
+    <div class="live-tile empty"><div class="q-name">Nasdaq</div><div class="q-val">—</div><div class="q-change">待更新</div></div>
+    <div class="live-tile empty"><div class="q-name">Dow Jones</div><div class="q-val">—</div><div class="q-change">待更新</div></div>
+  </div>
+  <p class="micro" id="marketAsOf">資料尚未同步。若以本機檔案開啟，仍可使用下方的歷史對話區；要自動更新，須先部署至網站並啟用排程。</p>
+  <div class="livegrid">
+    <article class="card live-panel" aria-label="規則式風險訊號"><div class="section-kicker">RULE-BASED RISK / 非個人化</div><h3 class="panel-heading">市場風險溫度計</h3><p class="subheading">以VIX、台股及半導體跌幅、匯率和美債殖利率計分。</p><div class="risk-box"><div class="risk-value" id="riskLevel">未啟用</div><div class="risk-explain" id="riskExplain">每日資料更新成功後計算。這是透明條件規則，不是AI預測，也不代表買賣訊號。</div></div><ul class="signals" id="riskSignals"><li>等待可核實的行情資料</li></ul></article>
+    <article class="card live-panel" aria-label="更新紀錄與資料來源"><div class="section-kicker">DATA INTEGRITY</div><h3 class="panel-heading">更新紀錄與來源</h3><p class="subheading">每個市場獨立標註實際報價日期，缺值不補猜。</p><div class="sync-detail" id="syncDetail"><div class="sync-row"><span>資料排程</span><b>尚未啟用</b></div><div class="sync-row"><span>台灣收盤</span><b>—</b></div><div class="sync-row"><span>美國收盤</span><b>—</b></div></div><div class="live-fineprint" id="liveWarnings">行情：台灣證交所（優先）及 Yahoo Finance 非官方報價；新聞來自原始RSS標題。GitHub Actions於平日台灣時間09:15與17:45嘗試更新，排程可能延遲或因來源失敗而保留前次資料。</div></article>
+  </div>
+  <article class="card live-chart-card" aria-label="每天收盤紀錄圖表"><div class="lc-head"><div><h3 class="panel-heading">每日收盤趨勢</h3><p class="subheading">自網站啟用之日起累積的市場資料，不與舊對話混用</p></div><select id="liveChartSelect" class="select" aria-label="選擇最新數據趨勢"><option value="taiex">台股 TAIEX</option><option value="sox">SOX 費半</option><option value="vix">VIX</option><option value="sp500">S&P 500</option><option value="nasdaq">Nasdaq</option><option value="usd_twd">USD/TWD</option><option value="us10y">美國10年債</option></select></div><div class="live-graph" id="liveChart"><div class="empty-message">第一次排程成功後會新增第一筆收盤紀錄，累積兩期以上即可顯示走勢。</div></div><p class="chart-note" id="liveChartNote">尚無自動更新的歷史資料</p></article>
+  <div class="live-newsgrid">
+    <article class="card live-panel" id="watch-panel"><div class="section-head"><div><span class="section-kicker">EQUITY WATCHLIST</span><h3 class="panel-heading">台美焦點股與 ETF</h3><p class="subheading">最近完成的收盤報價；各市場可能不同日</p></div><input class="search-small" id="watchSearch" type="search" placeholder="搜尋股票或代號" aria-label="搜尋觀察股"></div><div id="watchList"><div class="empty-message">待資料排程啟用後顯示個股收盤行情。</div></div></article>
+    <article class="card live-panel" aria-label="最新新聞來源"><span class="section-kicker">LATEST NEWS HEADLINES</span><h3 class="panel-heading">近期台美市場新聞</h3><p class="subheading">僅列來源標題與發表時間，不會自動生成或臆測事件內容。</p><div class="newsfeed" id="latestNews"><div class="empty-message">待資料排程啟用後顯示新聞來源。</div></div></article>
+  </div>
+  <p class="live-fineprint">價格與變動率只供研究。TWSE為官方指數來源，Yahoo Finance為非官方來源，資料可能延遲、缺失或被修正。風險規則僅為可解釋的觀察指標，未經投資績效回測；不構成個人化投資建議。每日ChatGPT排程訊息<strong>不會自動寫入</strong>此網站。</p>
+</section>
+
+<section class="dashboard" id="history-overview" aria-label="歷史快報指標總覽"><div class="archive-head"><span class="section-kicker">CONVERSATION ARCHIVE</span><h2>歷史對話資料</h2><p>以下為2026/09–11對話摘要，非市場最新行情；資料未再次驗證。</p></div>
+  <div class="metrics">
+    <div class="metric"><div class="label">歷史最新一期台股收盤</div><div class="val" id="latestTaiex">—</div><div class="foot" id="latestTaiexFoot">—</div></div>
+    <div class="metric"><div class="label">歷史最新一期 VIX</div><div class="val warn" id="latestVix">—</div><div class="foot" id="latestVixFoot">—</div></div>
+    <div class="metric"><div class="label">歷史最新一期 USD/TWD</div><div class="val" id="latestFx">—</div><div class="foot" id="latestFxFoot">—</div></div>
+    <div class="metric"><div class="label">歷史風險判斷</div><div class="val negative" id="latestRisk">—</div><div class="foot" id="latestRiskFoot">—</div></div>
+  </div>
+  <div class="card chartcard">
+    <div class="section-head"><div><h2>歷史快報指標走勢（原對話）</h2><p>滑過或點擊節點查看日期；圖表資料來自本對話，不代表即時行情</p></div><div class="chartcontrols"><select id="metricSel" class="select" aria-label="指標切換"><option value="taiex">台股 TAIEX</option><option value="sox">費城半導體 SOX</option><option value="vix">VIX</option><option value="fx">USD/TWD</option><option value="yield10">美國10年債 (%)</option><option value="nasdaq">Nasdaq</option></select><div class="range" role="group" aria-label="時間區間"><button data-range="14">14期</button><button data-range="30">30期</button><button class="active" data-range="all">全部</button></div></div></div>
+    <div class="graph" id="graph" role="img" aria-label="可互動市場走勢圖"><div class="graphTip" id="graphTip"></div></div>
+    <div class="graphlegend"><span><span class="legendmark"></span>所選指標歷史走勢</span><span id="chartHint">點擊圖中節點可開啟對應快報</span></div>
+  </div>
+</section>
+<main class="main" id="archive">
+  <section class="card listcard" aria-label="市場快報列表">
+    <div class="toolbar"><h2>每日市場快報 <span class="navhint">/ 時間軸</span></h2><div class="inputs"><div class="searchwrap"><input id="search" type="search" placeholder="搜尋日期、公司、事件或關鍵字..." aria-label="搜尋快報" autocomplete="off"></div><select id="month" class="select" aria-label="月份"><option value="all">所有月份</option><option value="2026-11">11 月</option><option value="2026-10">10 月</option><option value="2026-09">9 月</option></select><select id="risk" class="select" aria-label="風險"><option value="all">所有風險</option><option value="極高">極高</option><option value="高">高</option><option value="偏高">偏高</option><option value="中性偏高">中性偏高</option><option value="中性">中性</option></select></div><p class="counter" id="resultCount">—</p></div>
+    <div class="timeline" id="entries"></div>
+  </section>
+  <section class="card detail" id="detail" aria-live="polite"><p>選擇左側日期以查看快報摘要。</p></section>
+</main>
+<section id="grand" class="appendix">
+  <div class="appendix-head"><div><div class="eyebrow">An aside in this conversation</div><h2>附錄：大峽谷的兩個問答</h2></div><span class="chip">地質 · 科羅拉多高原</span></div>
+  <div class="card grand"><p>這段市場追蹤對話中，也曾穿插關於美國大峽谷（Grand Canyon）的地質與世界紀錄問答。以下保留精簡內容，與金融快報分開呈現。</p><div class="qa">
+    <div class="qabox"><b>Q｜大峽谷是怎麼形成的？</b><p>不同地質年代形成的沉積岩堆疊，再經科羅拉多高原隆升；約500至600萬年前，科羅拉多河大規模下切，加上雨水、支流侵蝕、風化及岩壁崩塌，逐漸形成今天深而寬的峽谷。最古老的基底岩可達約17至18億年，但峽谷本身遠比岩石年輕。</p></div>
+    <div class="qabox"><b>Q｜它是世界最大的峽谷嗎？</b><p>不一定，取決於以長度、深度、寬度或體積衡量。Grand Canyon長約446公里、最深超過1.8公里；雅魯藏布大峽谷等在深度與地形高差上更突出。Grand Canyon的獨特價值在於壯闊的裸露地層與完整的地質剖面。</p></div>
+  </div></div>
+</section>
+<section class="appendix"><div class="note"><b>編輯原則：</b>本頁以新行情與45期歷史快報為雙主軸，保留每期原對話所述的關鍵數值、事實摘要、非個人化評論與觀察門檻；並單獨保留大峽谷問答。為了瀏覽效率，原始長篇回答中的全部段落、引用連結與每檔個股漲跌並未逐字轉載。風險等級與價格門檻是當時的評論，不是量化預測或交易建議。<br><b>使用方式：</b>在本機開啟可瀏覽45期歷史檔案；最新行情、個股與新聞需部署網站，並啟用雲端更新排程才會載入。舊CSV按鈕匯出原對話整理資料。</div></section>
+<footer class="footer">MARKET PULSE · 資料來源：TWSE、Yahoo Finance（非官方）、Google News RSS；歷史對話快報截至2026/11/23。行情有延遲，並非投資建議。</footer>
+<script id="market-data" type="application/json">[
+  {
+    "date": "2026-09-22",
+    "marketDate": "09/21",
+    "taiex": 47718.84,
+    "pct": 1.14,
+    "sp": 7764.7,
+    "nasdaq": 27122.09,
+    "dow": 52048.83,
+    "sox": null,
+    "vix": 15.0,
+    "fx": 31.758,
+    "yield10": 4.99,
+    "risk": "中性",
+    "headline": "Nasdaq創高，SOX強漲，台股逼近歷史高點",
+    "facts": "Nasdaq、SOX與台股同步轉強；油價與10年債殖利率下降，外資買超與台幣升值。",
+    "commentary": "宏觀阻力降溫，短線仍需留意半導體急漲後的追價風險。",
+    "watch": "TAIEX 47,741／48,000；TSMC 2,500；10Y 5%；Brent 100美元。",
+    "stocks": "台積電、聯發科、Micron、SOX"
+  },
+  {
+    "date": "2026-09-23",
+    "marketDate": "09/22",
+    "taiex": 47800.17,
+    "pct": 0.17,
+    "sp": 7764.64,
+    "nasdaq": 27244.28,
+    "dow": 51863.69,
+    "sox": 12642.0,
+    "vix": 14.28,
+    "fx": 31.708,
+    "yield10": 4.953,
+    "risk": "中性",
+    "headline": "台股衝高回落，SOX六連漲與外資連買",
+    "facts": "TAIEX盤中衝至48,601後回落，收盤仍創新高；SOX已連六日上漲。",
+    "commentary": "強勢行情出現長上影與高檔換手，短線過熱度上升。",
+    "watch": "TAIEX 47,700／48,000；TSMC 2,460／2,500；SOX 12,642。",
+    "stocks": "台積電、聯發科、Micron、SanDisk"
+  },
+  {
+    "date": "2026-09-24",
+    "marketDate": "09/23",
+    "taiex": 48157.29,
+    "pct": 0.75,
+    "sp": 7706.05,
+    "nasdaq": 26936.04,
+    "dow": 51511.59,
+    "sox": null,
+    "vix": 15.0,
+    "fx": 31.716,
+    "yield10": 5.106,
+    "risk": "中性偏高",
+    "headline": "美債殖利率突破5%，油價再度走高",
+    "facts": "美國強勁PMI與債券標售壓力推升10年債至5.106%；Brent回到103美元以上。",
+    "commentary": "股票仍偏強，但債券市場重新發出宏觀警報。",
+    "watch": "10Y 5%／5.15%；TAIEX 48,000；TSMC 2,500。",
+    "stocks": "台積電、創意、Nvidia"
+  },
+  {
+    "date": "2026-09-25",
+    "marketDate": "09/24",
+    "taiex": 48024.6,
+    "pct": -0.28,
+    "sp": 7704.13,
+    "nasdaq": 26939.37,
+    "dow": 51349.98,
+    "sox": 12492.54,
+    "vix": 15.67,
+    "fx": 31.78,
+    "yield10": 5.16,
+    "risk": "偏高",
+    "headline": "股票有韌性，但長債殖利率持續攀升",
+    "facts": "美國長債殖利率約5.16%，全球債券持續承壓；台股法人由買轉賣、台幣貶值。",
+    "commentary": "債市與股市背離；須觀察外資資金流是否繼續惡化。",
+    "watch": "10Y 5.2%／5.25%；TAIEX 47,750／48,000；USD/TWD 32。",
+    "stocks": "台積電、聯發科、AMD"
+  },
+  {
+    "date": "2026-09-28",
+    "marketDate": "09/25 美股／09/24 台股",
+    "taiex": 48024.6,
+    "pct": -0.28,
+    "sp": 7743.41,
+    "nasdaq": 27068.72,
+    "dow": 51828.62,
+    "sox": 12668.93,
+    "vix": 14.87,
+    "fx": 31.78,
+    "yield10": 5.17,
+    "risk": "中性偏高",
+    "headline": "美股週五反彈，台股假期後重新開盤",
+    "facts": "美股週五SOX反彈1.41%，VIX回到14字頭，但10年債仍約5.17%。",
+    "commentary": "股票恢復risk-on，長債殖利率仍是估值壓力來源。",
+    "watch": "TAIEX 47,750／48,000；10Y 5%；SOX 12,690。",
+    "stocks": "台積電、Microsoft、SOX"
+  },
+  {
+    "date": "2026-09-29",
+    "marketDate": "09/28 美股／09/24 台股",
+    "taiex": 48024.6,
+    "pct": -0.28,
+    "sp": 7683.69,
+    "nasdaq": 26820.38,
+    "dow": 51481.51,
+    "sox": 12465.0,
+    "vix": 16.09,
+    "fx": 31.8,
+    "yield10": 5.23,
+    "risk": "偏高",
+    "headline": "台股連假後復市，美債10年期逼近5.25%",
+    "facts": "美債10年期盤中觸及5.27%；週一SOX下跌約1.6%，台股即將假期後重開。",
+    "commentary": "宏觀壓力持續；需避免將休市期間美股走勢等同台股必然補跌。",
+    "watch": "TAIEX 47,750／48,000；10Y 5.25%／5.33%；USD/TWD 32。",
+    "stocks": "Nvidia、AMD、Micron"
+  },
+  {
+    "date": "2026-09-30",
+    "marketDate": "09/29",
+    "taiex": 47631.96,
+    "pct": -0.82,
+    "sp": 7670.84,
+    "nasdaq": 26797.54,
+    "dow": 51349.92,
+    "sox": null,
+    "vix": 16.0,
+    "fx": 31.876,
+    "yield10": 5.255,
+    "risk": "偏高",
+    "headline": "台股外資賣超擴大，美元兌台幣逼近32",
+    "facts": "台股外資轉為大幅賣超、台幣走弱；美國10年債盤中接近5.30%。",
+    "commentary": "外資與匯率共同轉弱，台股風險偏高，但AI股尚未全面走空。",
+    "watch": "TAIEX 47,500；TSMC 2,450；USD/TWD 32；10Y 5.30%。",
+    "stocks": "台積電、聯發科、Meta"
+  },
+  {
+    "date": "2026-10-01",
+    "marketDate": "09/30",
+    "taiex": 47940.13,
+    "pct": 0.65,
+    "sp": 7651.54,
+    "nasdaq": 26861.06,
+    "dow": 50906.05,
+    "sox": null,
+    "vix": 16.5,
+    "fx": 31.852,
+    "yield10": 5.3,
+    "risk": "偏高",
+    "headline": "PCE溫和但美債殖利率仍居高位",
+    "facts": "美國PCE數據偏溫和，Fed升息機率下降；台股外資回補。",
+    "commentary": "利率預期改善，但長債殖利率仍高，股市反彈需資金面確認。",
+    "watch": "TAIEX 48,000／48,380；10Y 5.30%；USD/TWD 32。",
+    "stocks": "Micron、台積電、AMD"
+  },
+  {
+    "date": "2026-10-02",
+    "marketDate": "10/01",
+    "taiex": 48353.49,
+    "pct": 0.86,
+    "sp": 7666.45,
+    "nasdaq": 26871.6,
+    "dow": 50926.56,
+    "sox": null,
+    "vix": 16.4,
+    "fx": 31.842,
+    "yield10": 5.23,
+    "risk": "中性偏高",
+    "headline": "台股創高、台積電突破2500；SOX轉強",
+    "facts": "台股創收盤新高，台積電站上2500；美國SOX上漲。",
+    "commentary": "半導體動能改善，仍需確認長債殖利率是否見頂。",
+    "watch": "TAIEX 48,000；TSMC 2,500；10Y 5.30%。",
+    "stocks": "台積電、Micron、SOX"
+  },
+  {
+    "date": "2026-10-05",
+    "marketDate": "10/02",
+    "taiex": 48475.74,
+    "pct": 0.25,
+    "sp": 7722.72,
+    "nasdaq": 27190.86,
+    "dow": 51176.96,
+    "sox": 13136.67,
+    "vix": 15.31,
+    "fx": 31.83,
+    "yield10": 5.277,
+    "risk": "中性",
+    "headline": "美國弱非農提振半導體，SOX單日上漲2.4%",
+    "facts": "弱非農帶動美股科技與半導體上漲，台股續創高。",
+    "commentary": "股票風險偏好提升；長債殖利率高位仍可能壓縮估值。",
+    "watch": "TAIEX 48,000／49,000；TSMC 2,500；SOX 13,137。",
+    "stocks": "Nvidia、台積電、Micron"
+  },
+  {
+    "date": "2026-10-06",
+    "marketDate": "10/05",
+    "taiex": 49712.04,
+    "pct": 2.55,
+    "sp": 7773.95,
+    "nasdaq": null,
+    "dow": 51267.9,
+    "sox": null,
+    "vix": 15.0,
+    "fx": 31.788,
+    "yield10": 5.28,
+    "risk": "中性",
+    "headline": "台股單日大漲1236點，距五萬點僅一步",
+    "facts": "台股單日漲1236點、成交放大；外資買超、台幣升值。",
+    "commentary": "漲勢完整但單日漲幅過大，應更重視突破後能否守住。",
+    "watch": "TAIEX 49,000／50,000；TSMC 2,500／2,575。",
+    "stocks": "台積電、聯發科、台達電"
+  },
+  {
+    "date": "2026-10-07",
+    "marketDate": "10/06",
+    "taiex": 49822.55,
+    "pct": 0.22,
+    "sp": 7818.93,
+    "nasdaq": 27599.79,
+    "dow": 51521.28,
+    "sox": 13217.8,
+    "vix": 15.01,
+    "fx": 31.79,
+    "yield10": 5.27,
+    "risk": "中性",
+    "headline": "台股逼近50000點，法人與中小型股出現背離",
+    "facts": "台股盤中逼近5萬點但法人轉賣，櫃買指數走弱；美股創高。",
+    "commentary": "市場廣度和法人籌碼出現背離。",
+    "watch": "TAIEX 49,500／50,000；TSMC 2,550／2,600；10Y 5.34%。",
+    "stocks": "台積電、Marvell、AMD"
+  },
+  {
+    "date": "2026-10-08",
+    "marketDate": "10/07",
+    "taiex": 49806.37,
+    "pct": -0.03,
+    "sp": 7801.77,
+    "nasdaq": 27538.69,
+    "dow": 51179.87,
+    "sox": 13066.2,
+    "vix": 15.08,
+    "fx": 31.795,
+    "yield10": 5.277,
+    "risk": "中性偏高",
+    "headline": "美股半導體回落，台股法人連續賣超",
+    "facts": "台股仍站在高檔，但法人連兩日賣超；美股SOX與Russell回落。",
+    "commentary": "宏觀風險與集中度風險提高。",
+    "watch": "TAIEX 49,500／50,000；SOX 12,865／13,350。",
+    "stocks": "台積電、Nvidia、Micron"
+  },
+  {
+    "date": "2026-10-09",
+    "marketDate": "10/08",
+    "taiex": 49313.44,
+    "pct": -0.99,
+    "sp": 7765.36,
+    "nasdaq": 27193.34,
+    "dow": 51231.64,
+    "sox": 12623.7,
+    "vix": 15.41,
+    "fx": 31.875,
+    "yield10": 5.231,
+    "risk": "偏高",
+    "headline": "SOX重挫3.39%，台股外資賣超758億",
+    "facts": "SOX大跌3.39%，台股外資賣超758億，台幣貶至31.875。",
+    "commentary": "科技股出現集中獲利了結；VIX仍偏低。",
+    "watch": "TAIEX 49,000；SOX 12,500；USD/TWD 32。",
+    "stocks": "Nvidia、Micron、Broadcom、Oracle"
+  },
+  {
+    "date": "2026-10-12",
+    "marketDate": "10/09 美股／10/08 台股",
+    "taiex": 49313.44,
+    "pct": -0.99,
+    "sp": 7811.54,
+    "nasdaq": 27366.17,
+    "dow": 51654.95,
+    "sox": 12572.4,
+    "vix": 14.84,
+    "fx": 31.875,
+    "yield10": 5.243,
+    "risk": "偏高",
+    "headline": "美股反彈但SOX三連跌，台股連假後復市",
+    "facts": "美股大盤反彈，但半導體連三跌；台積電公布強勁月營收。",
+    "commentary": "需求基本面與短期股價分化，觀察外資是否停止調節。",
+    "watch": "TAIEX 49,000；TSMC 2,500；SOX 12,500。",
+    "stocks": "台積電、Nvidia、Broadcom"
+  },
+  {
+    "date": "2026-10-13",
+    "marketDate": "10/12",
+    "taiex": 49301.96,
+    "pct": -0.02,
+    "sp": 7807.24,
+    "nasdaq": 27245.9,
+    "dow": 51850.55,
+    "sox": 12236.8,
+    "vix": 15.21,
+    "fx": 31.895,
+    "yield10": 5.24,
+    "risk": "偏高",
+    "headline": "SOX四連跌，台股外資連四賣",
+    "facts": "SOX四連跌，台股外資持續賣超，油價超過106美元。",
+    "commentary": "半導體修正持續，仍非美股全面風險規避。",
+    "watch": "TAIEX 48,750；SOX 12,000；USD/TWD 32。",
+    "stocks": "Nvidia、Micron、AMD"
+  },
+  {
+    "date": "2026-10-14",
+    "marketDate": "10/13",
+    "taiex": 48341.31,
+    "pct": -1.95,
+    "sp": 7805.45,
+    "nasdaq": 27204.38,
+    "dow": 51670.1,
+    "sox": 12208.8,
+    "vix": 15.27,
+    "fx": 32.085,
+    "yield10": 5.22,
+    "risk": "高",
+    "headline": "台股大跌960點、外資賣超1653億元",
+    "facts": "台股大跌960點，外資賣超1653億，新台幣跌破32。",
+    "commentary": "台灣股匯雙殺，資金面風險進一步升高。",
+    "watch": "TAIEX 48,000；TSMC 2,500；USD/TWD 32.2。",
+    "stocks": "台積電、聯發科、Applied Materials"
+  },
+  {
+    "date": "2026-10-15",
+    "marketDate": "10/14",
+    "taiex": 48625.83,
+    "pct": 0.59,
+    "sp": 7718.94,
+    "nasdaq": 26692.87,
+    "dow": 51621.48,
+    "sox": 11684.4,
+    "vix": 16.87,
+    "fx": 32.073,
+    "yield10": 5.19,
+    "risk": "高",
+    "headline": "美國CPI偏熱、SOX重挫，台積電法說登場",
+    "facts": "美國CPI偏熱、SOX重挫；台積電法說即將公布。",
+    "commentary": "利率與AI估值形成雙重壓力。",
+    "watch": "TAIEX 48,000；SOX 11,500；VIX 18。",
+    "stocks": "台積電、AMD、Oracle"
+  },
+  {
+    "date": "2026-10-16",
+    "marketDate": "10/15",
+    "taiex": 46969.87,
+    "pct": -3.41,
+    "sp": 7744.06,
+    "nasdaq": 26713.03,
+    "dow": 52177.69,
+    "sox": 11581.2,
+    "vix": 16.46,
+    "fx": 32.265,
+    "yield10": 5.086,
+    "risk": "高",
+    "headline": "台股外資史上最大單日賣超，台積電財報強勁",
+    "facts": "台股外資單日賣超3026億；台積電Q3獲利與營收強勁。",
+    "commentary": "企業基本面仍強，但資金面出現歷史級壓力。",
+    "watch": "TAIEX 46,500；TSMC 2,400；USD/TWD 32.5。",
+    "stocks": "台積電、Nvidia、AMD"
+  },
+  {
+    "date": "2026-10-19",
+    "marketDate": "10/16",
+    "taiex": 47111.26,
+    "pct": 0.3,
+    "sp": 7659.44,
+    "nasdaq": 26140.03,
+    "dow": 52002.41,
+    "sox": 11137.29,
+    "vix": 19.99,
+    "fx": 32.338,
+    "yield10": 5.1,
+    "risk": "高",
+    "headline": "SOX八連跌，VIX逼近20",
+    "facts": "SOX八連跌，VIX接近20；台股外資連賣、台幣持續走弱。",
+    "commentary": "AI融資與資本支出回收風險成為市場焦點。",
+    "watch": "TAIEX 46,500；SOX 11,000；VIX 20。",
+    "stocks": "CoreWeave、Broadcom、Micron"
+  },
+  {
+    "date": "2026-10-20",
+    "marketDate": "10/19",
+    "taiex": 46822.08,
+    "pct": -0.61,
+    "sp": 7690.73,
+    "nasdaq": 26430.89,
+    "dow": 51966.03,
+    "sox": 11316.3,
+    "vix": 18.44,
+    "fx": 32.445,
+    "yield10": 5.14,
+    "risk": "高",
+    "headline": "SOX止跌反彈，但台股外資仍連續賣超",
+    "facts": "美股SOX終結八連跌；台股外資連九賣，台幣貶至32.445。",
+    "commentary": "海外科技股出現反彈，台灣資金面尚未修復。",
+    "watch": "TAIEX 46,170；SOX 11,500；USD/TWD 32.5。",
+    "stocks": "Intel、Nvidia、台積電"
+  },
+  {
+    "date": "2026-10-21",
+    "marketDate": "10/20",
+    "taiex": 46292.93,
+    "pct": -1.13,
+    "sp": 7712.57,
+    "nasdaq": 26424.82,
+    "dow": 52495.88,
+    "sox": 11283.81,
+    "vix": 17.31,
+    "fx": 32.617,
+    "yield10": 5.12,
+    "risk": "高",
+    "headline": "台幣跌破32.6，資金轉向傳統產業",
+    "facts": "道瓊和小型股上漲，半導體未跟進；台幣跌破32.6。",
+    "commentary": "美股價值股輪動與台股資金外流需分開解讀。",
+    "watch": "TAIEX 46,000；SOX 11,000；USD/TWD 32.8。",
+    "stocks": "3M、台積電、聯發科"
+  },
+  {
+    "date": "2026-10-22",
+    "marketDate": "10/21",
+    "taiex": 46887.77,
+    "pct": 1.28,
+    "sp": 7757.17,
+    "nasdaq": 26702.86,
+    "dow": 52856.09,
+    "sox": 11546.4,
+    "vix": 16.74,
+    "fx": 32.488,
+    "yield10": 5.12,
+    "risk": "中性偏高",
+    "headline": "台股反彈594點，外資終止連十賣",
+    "facts": "台股反彈594點，外資終止連十賣；SOX回升、VIX下降。",
+    "commentary": "短線壓力明顯緩和，但外資買超金額仍小。",
+    "watch": "TAIEX 47,000；SOX 12,000；USD/TWD 32.5。",
+    "stocks": "Meta、Tesla、台積電"
+  },
+  {
+    "date": "2026-10-23",
+    "marketDate": "10/22",
+    "taiex": 46041.43,
+    "pct": -1.81,
+    "sp": 7663.43,
+    "nasdaq": 26008.86,
+    "dow": 52867.98,
+    "sox": 10732.0,
+    "vix": 19.2,
+    "fx": 32.508,
+    "yield10": 4.952,
+    "risk": "高",
+    "headline": "SOX單日下跌6.72%，AI融資疑慮擴大",
+    "facts": "SOX下跌6.72%，台股失守季線，Meta AI資本支出與融資風險受關注。",
+    "commentary": "市場要求AI投資更清楚的自由現金流證據。",
+    "watch": "TAIEX 46,000；SOX 10,500；VIX 20。",
+    "stocks": "Meta、AMD、Micron"
+  },
+  {
+    "date": "2026-10-26",
+    "marketDate": "10/23 美股／10/22 台股",
+    "taiex": 46041.43,
+    "pct": -1.81,
+    "sp": 7623.68,
+    "nasdaq": 25955.34,
+    "dow": 52215.16,
+    "sox": 10779.46,
+    "vix": 19.71,
+    "fx": 32.508,
+    "yield10": 4.988,
+    "risk": "高",
+    "headline": "台股假期休市；油價突破116美元",
+    "facts": "台股因假期休市，油價超過116美元；美股SOX小幅反彈。",
+    "commentary": "能源通膨與AI融資仍使市場高波動。",
+    "watch": "TAIEX 46,000；SOX 11,000；Brent 115美元。",
+    "stocks": "台積電ADR、AT&T、T-Mobile"
+  },
+  {
+    "date": "2026-10-27",
+    "marketDate": "10/26 美股／10/22 台股",
+    "taiex": 46041.43,
+    "pct": -1.81,
+    "sp": 7676.77,
+    "nasdaq": 26169.38,
+    "dow": 52361.58,
+    "sox": 11083.5,
+    "vix": 18.39,
+    "fx": 32.508,
+    "yield10": 4.986,
+    "risk": "高",
+    "headline": "SOX反彈，台股恢復交易",
+    "facts": "台股恢復交易，美股SOX反彈約2.8%，VIX降至18.39。",
+    "commentary": "短線改善但未確認資金持續回流。",
+    "watch": "TAIEX 46,000；SOX 11,500；USD/TWD 32.8。",
+    "stocks": "台積電ADR、Tesla、Lumentum"
+  },
+  {
+    "date": "2026-10-28",
+    "marketDate": "10/27",
+    "taiex": 46096.23,
+    "pct": 0.12,
+    "sp": 7722.6,
+    "nasdaq": 26477.81,
+    "dow": 52377.57,
+    "sox": 11482.5,
+    "vix": 17.47,
+    "fx": 32.452,
+    "yield10": 4.99,
+    "risk": "偏高",
+    "headline": "SOX大漲3.6%，台股震盪守住46000",
+    "facts": "SOX大漲3.6%，台股震盪守住46000；台幣小幅回升。",
+    "commentary": "AI股反彈持續，市場廣度與法人籌碼仍不理想。",
+    "watch": "TAIEX 46,500；TSMC 2,450；SOX 12,000。",
+    "stocks": "Broadcom、CoreWeave、台光電"
+  },
+  {
+    "date": "2026-10-29",
+    "marketDate": "10/28",
+    "taiex": 47035.58,
+    "pct": 2.04,
+    "sp": 7743.98,
+    "nasdaq": 26549.85,
+    "dow": 52475.1,
+    "sox": 11684.0,
+    "vix": 17.5,
+    "fx": 32.418,
+    "yield10": 5.04,
+    "risk": "偏高",
+    "headline": "台股大漲939點，雲端財報與Fed決議分化",
+    "facts": "台股大漲939點，SOX連四漲；Microsoft與Alphabet財報盤後表現分化。",
+    "commentary": "強勁AI支出需要搭配自由現金流評估。",
+    "watch": "TAIEX 47,000；SOX 12,000；10Y 5%。",
+    "stocks": "Microsoft、Alphabet、Micron"
+  },
+  {
+    "date": "2026-10-30",
+    "marketDate": "10/29",
+    "taiex": 46368.33,
+    "pct": -1.42,
+    "sp": 7720.39,
+    "nasdaq": 26184.72,
+    "dow": 52342.56,
+    "sox": 11518.2,
+    "vix": 17.2,
+    "fx": 32.492,
+    "yield10": 4.939,
+    "risk": "高",
+    "headline": "Amazon、Intel財報後盤後承壓",
+    "facts": "台股回落667點，外資轉賣688億；Intel與Amazon財報後市場反應偏弱。",
+    "commentary": "科技股評價開始更嚴格區分企業財報品質。",
+    "watch": "TAIEX 46,000；SOX 11,500；USD/TWD 32.5。",
+    "stocks": "Amazon、Intel、Alphabet"
+  },
+  {
+    "date": "2026-11-02",
+    "marketDate": "10/30",
+    "taiex": 45211.83,
+    "pct": -2.49,
+    "sp": 7580.07,
+    "nasdaq": 25437.0,
+    "dow": 51770.31,
+    "sox": 10688.8,
+    "vix": 19.42,
+    "fx": 32.478,
+    "yield10": 4.929,
+    "risk": "高",
+    "headline": "SOX重挫7.2%，台股外資賣超1124億",
+    "facts": "SOX單日跌7.2%、台股跌1156點，科技股面臨廣泛調整。",
+    "commentary": "高資本支出與自由現金流成為核心風險。",
+    "watch": "TAIEX 44,700；SOX 10,500；VIX 20。",
+    "stocks": "Intel、AMD、Nvidia"
+  },
+  {
+    "date": "2026-11-03",
+    "marketDate": "11/02",
+    "taiex": 44920.14,
+    "pct": -0.65,
+    "sp": 7541.4,
+    "nasdaq": 25164.32,
+    "dow": 51983.98,
+    "sox": 10328.4,
+    "vix": 21.15,
+    "fx": 32.592,
+    "yield10": 4.884,
+    "risk": "高",
+    "headline": "油價大跌未能阻止科技股下行",
+    "facts": "SOX續跌、VIX突破21；台股外資連續賣超。",
+    "commentary": "油價下跌無法止住科技股修正，顯示估值風險持續。",
+    "watch": "TAIEX 44,400；SOX 10,300；VIX 25。",
+    "stocks": "AMD、Marvell、Oracle"
+  },
+  {
+    "date": "2026-11-04",
+    "marketDate": "11/03",
+    "taiex": 43307.54,
+    "pct": -3.59,
+    "sp": 7568.92,
+    "nasdaq": 25372.01,
+    "dow": 51786.72,
+    "sox": 10600.4,
+    "vix": 20.81,
+    "fx": 32.76,
+    "yield10": 4.95,
+    "risk": "高",
+    "headline": "台股暴跌1613點，股匯雙殺",
+    "facts": "台股暴跌1613點、匯率貶至32.760；美股半導體反彈。",
+    "commentary": "台股資金外流是當日主要警訊。",
+    "watch": "TAIEX 43,000；TSMC 2,280；USD/TWD 33。",
+    "stocks": "台積電、聯發科、Nvidia"
+  },
+  {
+    "date": "2026-11-05",
+    "marketDate": "11/04",
+    "taiex": 42948.91,
+    "pct": -0.83,
+    "sp": 7688.62,
+    "nasdaq": 25736.51,
+    "dow": 53356.12,
+    "sox": 10270.59,
+    "vix": 17.51,
+    "fx": 32.821,
+    "yield10": 4.89,
+    "risk": "偏高",
+    "headline": "道瓊強彈，但半導體逆勢下跌",
+    "facts": "美股大盤強彈但SOX下跌3.11%，台股盤中劇烈震盪。",
+    "commentary": "平台企業與AI硬體供應鏈走勢分歧。",
+    "watch": "TAIEX 41,850；SOX 10,000；USD/TWD 33。",
+    "stocks": "Microsoft、Amazon、Nvidia"
+  },
+  {
+    "date": "2026-11-06",
+    "marketDate": "11/05",
+    "taiex": 41574.72,
+    "pct": -3.2,
+    "sp": 7353.73,
+    "nasdaq": 24315.0,
+    "dow": 51523.06,
+    "sox": 9011.14,
+    "vix": 27.36,
+    "fx": 32.876,
+    "yield10": 4.84,
+    "risk": "極高",
+    "headline": "SOX暴跌12.25%，VIX飆升，台股期貨夜盤大跌",
+    "facts": "SOX暴跌12.25%，VIX急升；台指期夜盤大跌。",
+    "commentary": "高波動下需關注流動性和槓桿風險。",
+    "watch": "TAIEX 40,000；SOX 9,000；VIX 30。",
+    "stocks": "Nvidia、Micron、AMD"
+  },
+  {
+    "date": "2026-11-09",
+    "marketDate": "11/06",
+    "taiex": 39701.64,
+    "pct": -4.51,
+    "sp": 7376.86,
+    "nasdaq": 24579.42,
+    "dow": 51285.73,
+    "sox": 9390.3,
+    "vix": 25.64,
+    "fx": 32.768,
+    "yield10": 4.88,
+    "risk": "極高",
+    "headline": "台股失守40000點，半導體強彈但波動仍高",
+    "facts": "台股失守40000點，SOX週五反彈，但VIX仍高。",
+    "commentary": "快速反彈和真正止跌尚需區分。",
+    "watch": "TAIEX 37,800／40,000；SOX 9,500；VIX 25。",
+    "stocks": "台積電、AMD、Micron"
+  },
+  {
+    "date": "2026-11-10",
+    "marketDate": "11/09",
+    "taiex": 41661.7,
+    "pct": 4.94,
+    "sp": 7549.94,
+    "nasdaq": 25253.14,
+    "dow": 52389.75,
+    "sox": 10033.93,
+    "vix": 19.98,
+    "fx": 32.882,
+    "yield10": 4.884,
+    "risk": "高",
+    "headline": "台股暴漲1960點，外資仍賣超900億",
+    "facts": "台股反彈近2000點，SOX強彈；外資持續賣超、台幣走弱。",
+    "commentary": "指數反彈尚未得到資金流的完全確認。",
+    "watch": "TAIEX 42,350；SOX 10,500；USD/TWD 33。",
+    "stocks": "Broadcom、Nvidia、台積電"
+  },
+  {
+    "date": "2026-11-11",
+    "marketDate": "11/10",
+    "taiex": 42711.92,
+    "pct": 2.52,
+    "sp": 7520.93,
+    "nasdaq": 25065.88,
+    "dow": 52231.89,
+    "sox": 9998.3,
+    "vix": 19.46,
+    "fx": 32.865,
+    "yield10": 4.99,
+    "risk": "高",
+    "headline": "CPI偏熱、美債殖利率逼近5%",
+    "facts": "美國CPI偏熱、美債10年期逼近5%；台股連續反彈。",
+    "commentary": "利率重新定價可能壓制高本益比科技股。",
+    "watch": "TAIEX 42,000；SOX 10,000；10Y 5%。",
+    "stocks": "台積電、Broadcom、Nvidia"
+  },
+  {
+    "date": "2026-11-12",
+    "marketDate": "11/11",
+    "taiex": 44257.15,
+    "pct": 3.62,
+    "sp": 7619.38,
+    "nasdaq": 25466.19,
+    "dow": 52486.49,
+    "sox": 10564.1,
+    "vix": 17.49,
+    "fx": 32.88,
+    "yield10": 5.01,
+    "risk": "偏高",
+    "headline": "台股連三漲，SOX強彈5.66%",
+    "facts": "SOX上漲5.66%，台股連三日反彈，外資賣超接近歸零。",
+    "commentary": "市場情緒修復，但高利率和突發事件仍有風險。",
+    "watch": "TAIEX 44,000／45,000；SOX 10,500；VIX 18。",
+    "stocks": "CoreWeave、Micron、AMD"
+  },
+  {
+    "date": "2026-11-13",
+    "marketDate": "11/12",
+    "taiex": 43091.87,
+    "pct": -2.63,
+    "sp": 7592.4,
+    "nasdaq": 25366.09,
+    "dow": 52297.09,
+    "sox": 10506.67,
+    "vix": 17.36,
+    "fx": 32.889,
+    "yield10": 5.1,
+    "risk": "偏高",
+    "headline": "台股放量回落，AI雲端建置與美債利率成壓力",
+    "facts": "台股放量跌1165點，SOX小跌，美債殖利率升破5%。",
+    "commentary": "AI雲端建置能力與融資成本受到更嚴格檢驗。",
+    "watch": "TAIEX 42,900；SOX 10,000；10Y 5.2%。",
+    "stocks": "Nebius、CoreWeave、Broadcom"
+  },
+  {
+    "date": "2026-11-16",
+    "marketDate": "11/13",
+    "taiex": 43675.12,
+    "pct": 1.35,
+    "sp": 7561.0,
+    "nasdaq": 25137.0,
+    "dow": 52347.55,
+    "sox": 10146.32,
+    "vix": 19.28,
+    "fx": 32.838,
+    "yield10": 5.15,
+    "risk": "偏高",
+    "headline": "外資終結連十一賣，但SOX再跌3.43%",
+    "facts": "外資終結連十一賣，但SOX再跌3.43%。",
+    "commentary": "台灣資金面改善和美股AI硬體承壓形成背離。",
+    "watch": "TAIEX 43,000；SOX 10,000；USD/TWD 33。",
+    "stocks": "台積電、AMD、Cisco"
+  },
+  {
+    "date": "2026-11-17",
+    "marketDate": "11/16",
+    "taiex": 41040.08,
+    "pct": -6.03,
+    "sp": 7416.5,
+    "nasdaq": 24509.76,
+    "dow": 51608.17,
+    "sox": null,
+    "vix": 22.91,
+    "fx": 32.886,
+    "yield10": 5.12,
+    "risk": "極高",
+    "headline": "台股單日跌2635點，外資與投信同步賣超",
+    "facts": "台股跌2635點，外資和投信同步賣超，VIX回升。",
+    "commentary": "市場流動性和槓桿風險顯著升高。",
+    "watch": "TAIEX 40,000；SOX 9,000；VIX 25。",
+    "stocks": "台積電、Nvidia、Micron"
+  },
+  {
+    "date": "2026-11-18",
+    "marketDate": "11/17",
+    "taiex": 40092.11,
+    "pct": -2.31,
+    "sp": 7340.53,
+    "nasdaq": 24328.38,
+    "dow": 50759.42,
+    "sox": null,
+    "vix": 25.5,
+    "fx": 32.85,
+    "yield10": 5.1,
+    "risk": "高",
+    "headline": "台股測試40000點，Nvidia盤後財報優預期",
+    "facts": "台股測試40000點；Nvidia財報優於預期、盤後反彈。",
+    "commentary": "財報基本面改善不等於資金面與風險情緒立即恢復。",
+    "watch": "TAIEX 39,786／40,000；TSMC 2,200；VIX 25。",
+    "stocks": "Nvidia、台積電、日月光"
+  },
+  {
+    "date": "2026-11-19",
+    "marketDate": "11/18",
+    "taiex": 40194.91,
+    "pct": 0.26,
+    "sp": 7323.0,
+    "nasdaq": 24429.89,
+    "dow": 50193.03,
+    "sox": 9652.75,
+    "vix": 24.5,
+    "fx": 32.947,
+    "yield10": 5.07,
+    "risk": "高",
+    "headline": "台股守40000點，外資賣超仍大",
+    "facts": "台股守住40000點，但外資大幅賣超；Nvidia財報後股價下跌。",
+    "commentary": "市場更重視現金流與估值安全邊際，VIX仍偏高。",
+    "watch": "TAIEX 39,260／40,940；SOX 10,000；USD/TWD 33。",
+    "stocks": "Nvidia、Amazon、資安軟體"
+  },
+  {
+    "date": "2026-11-20",
+    "marketDate": "11/19",
+    "taiex": 38426.89,
+    "pct": -4.4,
+    "sp": 7175.83,
+    "nasdaq": 23879.2,
+    "dow": 49097.06,
+    "sox": null,
+    "vix": 28.47,
+    "fx": 32.942,
+    "yield10": 5.04,
+    "risk": "極高",
+    "headline": "台股跌破年線、VIX逼近30",
+    "facts": "台股單日跌1768點，失守年線；VIX上升至28.47。",
+    "commentary": "賣壓從科技股擴散至更廣泛的股票市場。",
+    "watch": "TAIEX 38,260；TSMC 2,100；VIX 30。",
+    "stocks": "台積電、Nvidia、AMD"
+  },
+  {
+    "date": "2026-11-23",
+    "marketDate": "11/20",
+    "taiex": 36033.29,
+    "pct": -6.23,
+    "sp": 6910.39,
+    "nasdaq": 22617.73,
+    "dow": 48147.33,
+    "sox": null,
+    "vix": 35.89,
+    "fx": 32.936,
+    "yield10": 4.98,
+    "risk": "極高",
+    "headline": "台股單週重挫17.5%，VIX升至35.89",
+    "facts": "台股上週五收36033.29，單週下跌17.5%；Nasdaq單週跌10%，VIX升至35.89。",
+    "commentary": "全球股市高度不穩，急跌後可能反彈，但流動性與去槓桿壓力未確認解除。",
+    "watch": "TAIEX 35,738／36,000；TSMC 2,000；VIX 30／35。",
+    "stocks": "台積電、聯發科、Nvidia、Micron"
+  }
+]</script>
+<script>
+(()=>{
+'use strict';
+const items=JSON.parse(document.getElementById('market-data').textContent);
+const newest=[...items].reverse();let selected=newest[0],range='all',metric='taiex';
+const $=id=>document.getElementById(id);
+const nf=(n,d=0)=>n==null?'—':Number(n).toLocaleString('zh-TW',{minimumFractionDigits:d,maximumFractionDigits:d});
+const fmt=(n,d=2)=>n==null?'—':nf(n,d);
+const pct=n=>n==null?'—':(n>0?'+':'')+fmt(n,2)+'%';
+const humanDate=d=>d.replaceAll('-','/');
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const riskColor=r=>['極高','高'].includes(r)?'negative':['偏高','中性偏高'].includes(r)?'warn':'positive';
+$('metaCount').textContent=items.length;
+$('latestTaiex').textContent=nf(selected.taiex,2);$('latestTaiexFoot').innerHTML=`<span class="negative">${pct(selected.pct)}</span> · ${esc(selected.marketDate)} 資料`;
+$('latestVix').textContent=fmt(selected.vix,2);$('latestVixFoot').textContent=`${selected.marketDate} 資料 · 原對話快照`;
+$('latestFx').textContent=fmt(selected.fx,3);$('latestFxFoot').textContent=`${selected.marketDate} 資料 · USD/TWD`;
+$('latestRisk').textContent=selected.risk;$('latestRiskFoot').textContent=`${humanDate(selected.date)} 快報的主觀評級`;
+function filtered(){const q=$('search').value.trim().toLowerCase(),month=$('month').value,risk=$('risk').value;return newest.filter(r=>(month==='all'||r.date.startsWith(month))&&(risk==='all'||r.risk===risk)&&(!q||[r.date,r.marketDate,r.headline,r.facts,r.commentary,r.watch,r.stocks,r.risk].join(' ').toLowerCase().includes(q)));}
+function makeList(){const rows=filtered();$('resultCount').textContent=`顯示 ${rows.length} / ${items.length} 期 · 點選日期查看內容`;const list=$('entries');if(!rows.length){list.innerHTML='<div class="empty">沒有找到符合條件的快報。試著調整搜尋詞或篩選條件。</div>';return;}
+list.innerHTML=rows.map(r=>`<button class="entry ${r.date===selected.date?'active':''}" data-date="${r.date}" aria-pressed="${r.date===selected.date}" type="button"><span class="entrytop"><span class="entrydate">${humanDate(r.date)}</span><span class="entrytag r${r.risk}">${r.risk}風險</span></span><span class="entrytitle">${esc(r.headline)}</span><span class="entrymini"><strong>${nf(r.taiex,0)}</strong><span class="${r.pct<0?'negative':'positive'}">${pct(r.pct)}</span><span>VIX ${fmt(r.vix,2)}</span></span></button>`).join('');}
+function makeDetail(){const r=selected;const data=[['S&P 500',nf(r.sp,2)],['Nasdaq',nf(r.nasdaq,2)],['Dow Jones',nf(r.dow,2)],['SOX',nf(r.sox,2)],['VIX',fmt(r.vix,2)],['USD/TWD',fmt(r.fx,3)],['美債 10Y',r.yield10==null?'—':fmt(r.yield10,3)+'%'],['原對話資料日',r.marketDate]];
+$('detail').innerHTML=`<div class="detaildate">MARKET BRIEF · ${humanDate(r.date)}</div><h2>${esc(r.headline)}</h2><div class="detailIntro">快報發布：${humanDate(r.date)}　·　市場資料日：${esc(r.marketDate)}　·　資料來源：本段對話整理</div><div class="detailsumm"><div class="tile"><div class="name">台股收盤</div><div class="num">${nf(r.taiex,2)}</div></div><div class="tile"><div class="name">台股單日變動</div><div class="num ${r.pct<0?'negative':'positive'}">${pct(r.pct)}</div></div><div class="tile"><div class="name">當日風險評級</div><div class="num ${riskColor(r.risk)}">${r.risk}</div></div></div><div class="detailsection"><h3>已在原對話呈現的市場事實</h3><p>${esc(r.facts)}</p><div class="detailsTable">${data.map(([k,v])=>`<div class="dataitem"><label>${esc(k)}</label><strong>${esc(v)}</strong></div>`).join('')}</div></div><div class="detailsection"><h3>非個人化市場評論</h3><p class="pnote">${esc(r.commentary)}</p></div><div class="detailsection"><h3>當時的觀察清單</h3><p class="watchline">${esc(r.watch)}</p><p><strong>對話提及的焦點公司或族群：</strong>${esc(r.stocks)}</p></div><div class="detailactions"><button class="ghost accent" id="copyBtn">複製這一期摘要</button><button class="ghost" id="prevBtn">較早一期</button><button class="ghost" id="nextBtn">較新一期</button></div><p class="detailIntro" style="margin-top:13px">以上為對話摘要，數字未重新核實；空白欄位表示該期未提供可靠明確數據。所列門檻不構成買賣建議。</p>`;
+$('copyBtn').addEventListener('click',()=>{const s=`${r.date} 台美股快報｜${r.headline}\nTAIEX ${nf(r.taiex,2)} (${pct(r.pct)})｜SOX ${nf(r.sox,2)}｜VIX ${fmt(r.vix,2)}｜USD/TWD ${fmt(r.fx,3)}\n市場事實：${r.facts}\n非個人化評論：${r.commentary}\n觀察：${r.watch}\n（來源：對話歷史整理；未重新驗證）`;if(navigator.clipboard&&window.isSecureContext) navigator.clipboard.writeText(s).then(()=>{$('copyBtn').textContent='已複製 ✓';},()=>fallbackCopy(s));else fallbackCopy(s);});
+function fallbackCopy(s){const ta=document.createElement('textarea');ta.value=s;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');$('copyBtn').textContent='已複製 ✓'}catch(e){$('copyBtn').textContent='請手動複製'}ta.remove();}
+const ix=items.findIndex(x=>x.date===r.date);$('prevBtn').disabled=ix===0;$('nextBtn').disabled=ix===items.length-1;$('prevBtn').onclick=()=>selectDate(items[Math.max(0,ix-1)].date,true);$('nextBtn').onclick=()=>selectDate(items[Math.min(items.length-1,ix+1)].date,true);
+}
+function selectDate(date,scroll){const r=items.find(i=>i.date===date);if(!r)return;selected=r;makeList();makeDetail();drawGraph();history.replaceState(null,'','#report-'+r.date);const b=document.querySelector(`.entry[data-date="${date}"]`);if(b)b.scrollIntoView({block:'nearest',behavior:'smooth'});if(scroll&&window.innerWidth<=900)$('detail').scrollIntoView({block:'start',behavior:'smooth'});}
+$('entries').addEventListener('click',e=>{const b=e.target.closest('button[data-date]');if(b)selectDate(b.dataset.date,true)});
+['search','month','risk'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',makeList));
+$('metricSel').addEventListener('change',e=>{metric=e.target.value;drawGraph()});
+document.querySelectorAll('[data-range]').forEach(b=>b.addEventListener('click',()=>{range=b.dataset.range;document.querySelectorAll('[data-range]').forEach(x=>x.classList.toggle('active',x===b));drawGraph()}));
+const metrics={taiex:['TAIEX',0],sox:['SOX',0],vix:['VIX',2],fx:['USD/TWD',3],yield10:['10Y',3],nasdaq:['Nasdaq',0]};
+function drawGraph(){const container=$('graph'),data=(range==='all'?items:items.slice(-Number(range))).filter(x=>x[metric]!=null);if(data.length<2){container.innerHTML='<div class="empty">所選區間資料不足。</div>';return;}
+const W=900,H=278,p={l:68,r:23,t:18,b:39},vals=data.map(x=>x[metric]),mi=Math.min(...vals),ma=Math.max(...vals),pad=(ma-mi)*.12||1,low=mi-pad,high=ma+pad;
+const x=i=>p.l+(W-p.l-p.r)*i/(data.length-1),y=v=>p.t+(H-p.t-p.b)*(high-v)/(high-low);
+const points=data.map((r,i)=>[x(i),y(r[metric])]);const path=points.map(([xx,yy],i)=>(i===0?'M':'L')+xx.toFixed(1)+' '+yy.toFixed(1)).join(' ');const fill=path+` L ${x(data.length-1)} ${H-p.b} L ${x(0)} ${H-p.b} Z`;
+const tickCount=4;let grid='';for(let i=0;i<=tickCount;i++){const value=low+(high-low)*(tickCount-i)/tickCount,yy=p.t+(H-p.t-p.b)*i/tickCount;grid+=`<line class="gridline" x1="${p.l}" y1="${yy}" x2="${W-p.r}" y2="${yy}"/><text class="axistext" x="${p.l-11}" y="${yy+4}" text-anchor="end">${metric==='fx'||metric==='yield10'?fmt(value,2):nf(value,0)}</text>`;}
+const labels=[0,Math.floor((data.length-1)/3),Math.floor((data.length-1)*2/3),data.length-1];labels.forEach(i=>{grid+=`<text class="axistext" x="${x(i)}" y="${H-10}" text-anchor="middle">${data[i].date.slice(5).replace('-','/')}</text>`});
+const circles=data.map((r,i)=>`<circle class="${r.date===selected.date?'current-point':'hover-point'}" data-chart-date="${r.date}" cx="${x(i)}" cy="${y(r[metric])}" r="${r.date===selected.date?7:4}" tabindex="0"><title>${r.date}: ${fmt(r[metric],metrics[metric][1])}</title></circle>`).join('');
+container.innerHTML=`<div class="graphTip" id="graphTip"></div><svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-label="${metrics[metric][0]}走勢圖"><defs><linearGradient id="lineFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#55dcc0" stop-opacity=".21"/><stop offset="1" stop-color="#55dcc0" stop-opacity="0"/></linearGradient></defs>${grid}<path d="${fill}" fill="url(#lineFill)"/><path d="${path}" class="plotline"/>${circles}</svg>`;
+const tip=container.querySelector('.graphTip');container.querySelectorAll('[data-chart-date]').forEach(c=>{const r=items.find(x=>x.date===c.dataset.chartDate);const hover=()=>{tip.style.display='block';tip.innerHTML=`<strong>${humanDate(r.date)}</strong><br>${metrics[metric][0]}：${fmt(r[metric],metrics[metric][1])}`};c.addEventListener('mouseenter',hover);c.addEventListener('focus',hover);c.addEventListener('mouseleave',()=>tip.style.display='none');c.addEventListener('blur',()=>tip.style.display='none');c.addEventListener('click',()=>selectDate(r.date,true));c.addEventListener('keydown',e=>{if(e.key==='Enter')selectDate(r.date,true)});});
+$('chartHint').textContent=`${data.length} 筆有數值的紀錄 · 空缺日期未補值`;}
+function csv(){const cols=[['date','快報日期'],['marketDate','市場資料日'],['taiex','TAIEX'],['pct','台股變動%'],['sp','S&P500'],['nasdaq','Nasdaq'],['dow','Dow'],['sox','SOX'],['vix','VIX'],['fx','USD/TWD'],['yield10','美債10Y%'],['risk','風險評級'],['headline','標題'],['facts','市場事實摘要'],['commentary','非個人化評論'],['watch','觀察門檻'],['stocks','焦點']];const quote=s=>'"'+String(s??'').replaceAll('"','""')+'"';return '\ufeff'+[cols.map(c=>quote(c[1])).join(','),...items.map(r=>cols.map(c=>quote(r[c[0]])).join(','))].join('\r\n');}
+$('exportBtn').addEventListener('click',()=>{const blob=new Blob([csv()],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='台美股對話檔案_20260922-20261123.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),5000)});
+let hash=location.hash.match(/^#report-(\d{4}-\d{2}-\d{2})$/);if(hash){const x=items.find(x=>x.date===hash[1]);if(x)selected=x;}
+makeList();makeDetail();drawGraph();
+})();
+</script>
+
+<script id="daily-data-script">
+(()=>{
+'use strict';
+const $ = id=>document.getElementById(id);
+const fmt=(v,d=2)=>typeof v==='number'&&Number.isFinite(v)?v.toLocaleString('zh-TW',{minimumFractionDigits:d,maximumFractionDigits:d}):'—';
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const validLink=u=>typeof u==='string'&&/^https:\/\//i.test(u)?u:'#';
+const cleanTitle=s=>String(s||'').slice(0,190);
+const metrics=[['taiex','TAIEX 加權指數',2],['sp500','S&P 500',2],['nasdaq','Nasdaq',2],['dow','Dow Jones',2],['russell','Russell 2000',2],['sox','SOX 費城半導體',2],['vix','VIX 恐慌指數',2],['usd_twd','USD/TWD',3],['us10y','美國10年債',3]];
+let activeHistory=[],quoteList=[];
+function marketTime(iso){if(!iso)return '—';try{return new Date(iso).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false})+' 台灣時間';}catch(e){return iso;}}
+function todayInTaiwan(){return new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Taipei'});}
+function daysOld(day){if(!day)return Infinity;const now=new Date(todayInTaiwan()+'T12:00:00+08:00');const d=new Date(day+'T12:00:00+08:00');return (now-d)/(1000*60*60*24);}
+function tile(key,label,d,quote){
+ if(!quote||typeof quote.value!=='number')return `<div class="live-tile empty"><div class="q-name">${esc(label)}<small>未取得</small></div><div class="q-val">—</div><div class="q-change">資料來源不可用</div></div>`;
+ const stale=daysOld(quote.date)>5, delta=typeof quote.change==='number'?(quote.change>=0?'+':'')+fmt(quote.change, key==='usd_twd'?3:2):'—';
+ const change=key==='us10y'&&typeof quote.change==='number'?(quote.change>=0?'+':'')+fmt(quote.change*100,1)+'bp':delta;
+ const move=typeof quote.pct==='number'?' ('+(quote.pct>=0?'+':'')+fmt(quote.pct,2)+'%)':'';
+ const cls=key==='vix'||key==='usd_twd'||key==='us10y'?(quote.change>0?'negative':'positive'):(quote.change>=0?'positive':'negative');
+ return `<div class="live-tile"><div class="q-name">${esc(label)}<small>${esc(quote.date||'')}</small></div><div class="q-val"><a href="${esc(validLink(quote.url))}" target="_blank" rel="noopener noreferrer">${fmt(quote.value,d)}${key==='us10y'?'%':''}</a></div><div class="q-change ${cls}">${esc(change)}${key==='us10y'?'':esc(move)} ${stale?'　⚠ 資料過舊':''}</div><div class="q-source">${esc(quote.source||'來源未註明')}</div></div>`;
+}
+function showNotReady(message,error=false){$('syncStatus').textContent=error?'更新來源異常':'更新尚未啟用';$('syncStatus').className='sync-pill'+(error?' bad':'');$('connectionChip').textContent='歷史資料離線可用 · 即時更新尚未啟用';$('marketAsOf').textContent=message;}
+function renderLive(data){
+ const p=data.prices||{};
+ $('syncStatus').textContent='已連線 · 最近收盤';$('syncStatus').className='sync-pill ok';
+ $('connectionChip').textContent='最新行情已同步 · '+(data.coverage?.taiex||'交易日');
+ $('liveMetrics').innerHTML=metrics.map(([k,label,dp])=>tile(k,label,dp,p[k])).join('');
+ const c=data.coverage||{};
+ $('marketAsOf').textContent=`資料同步：${marketTime(data.generated_at)}｜台股資料日：${c.taiex||'—'}｜美股資料日：${c.sp500||'—'}｜各指標請見卡片標示。`;
+ const risk=data.risk||{};
+ $('riskLevel').textContent=risk.level||'資料不足';$('riskLevel').className='risk-value '+(risk.level||'');
+ $('riskExplain').textContent=risk.score==null?'尚無足夠資料；風險分數不計算。':`規則分數 ${risk.score}。僅供辨識波動與宏觀壓力；不是AI預測，也未經回測。`;
+ $('riskSignals').innerHTML=(risk.signals||[]).map(s=>'<li>'+esc(s)+'</li>').join('')||'<li>本次沒有新增風險訊號</li>';
+ const dates=[['上次同步',marketTime(data.generated_at)],['台灣加權指數',c.taiex||'—'],['美國S&P 500',c.sp500||'—'],['SOX費半',c.sox||'—'],['美國10年債',c.us10y||'—']];
+ $('syncDetail').innerHTML=dates.map(([k,v])=>`<div class="sync-row"><span>${esc(k)}</span><b>${esc(v)}</b></div>`).join('');
+ const warns=(data.warnings||[]);$('liveWarnings').textContent='資料來源：台灣證交所（加權指數優先）、Yahoo Finance（非官方；可能延遲）、Google News RSS。'+(warns.length?'提醒：'+warns.join('；'):'未回報來源缺值。')+' 如資料無法更新，頁面保留前一次有效收盤，並顯示其日期。';
+ quoteList=Array.isArray(data.watchlist)?data.watchlist:[];
+ drawWatchlist();drawNews(Array.isArray(data.news)?data.news:[]);
+}
+function drawWatchlist(){
+ const q=$('watchSearch').value.trim().toLowerCase();const rows=quoteList.filter(x=>[x.name,x.symbol].join(' ').toLowerCase().includes(q));
+ if(!rows.length){$('watchList').innerHTML='<div class="empty-message">'+(quoteList.length?'沒有符合搜尋的股票。':'本次沒有取得個股報價。')+'</div>';return;}
+ $('watchList').innerHTML=`<table class="quote-table"><thead><tr><th style="width:48%">標的</th><th style="width:27%">收盤價</th><th style="width:25%">漲跌</th></tr></thead><tbody>${rows.map(r=>`<tr><td><a href="${esc(validLink(r.url))}" target="_blank" rel="noopener noreferrer">${esc(r.name)}</a><small>${esc(r.symbol)} · ${esc(r.date)}</small></td><td>${fmt(r.value,2)}</td><td class="${r.pct>=0?'positive':'negative'}">${typeof r.pct==='number'?(r.pct>0?'+':'')+fmt(r.pct,2)+'%':'—'}</td></tr>`).join('')}</tbody></table><div class="micro">價格幣別依上市市場（台幣／美元），非即時報價。</div>`;
+}
+function drawNews(news){
+ if(!news.length){$('latestNews').innerHTML='<div class="empty-message">尚無最近7日內可驗證時間與來源的RSS標題。</div>';return;}
+ $('latestNews').innerHTML=news.slice(0,9).map(n=>{let date='—';try{date=new Date(n.published_at).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false})}catch(e){}
+ return `<a class="newsitem" href="${esc(validLink(n.url))}" target="_blank" rel="noopener noreferrer"><h4>${esc(cleanTitle(n.title))}</h4><div class="source">${esc(n.region||'')} · ${esc(n.source||'')} · ${esc(date)} 台灣時間</div></a>`}).join('');
+}
+function renderChart(){
+ const key=$('liveChartSelect').value;const labels={taiex:'TAIEX',sox:'SOX',vix:'VIX',sp500:'S&P 500',nasdaq:'Nasdaq',usd_twd:'USD/TWD',us10y:'10年債'};
+ const valid=activeHistory.map(r=>({date:r.coverage?.[key],value:r.prices?.[key]?.value})).filter(r=>r.date&&typeof r.value==='number');
+ const unique=new Map(valid.map(r=>[r.date,r]));const arr=[...unique.values()].sort((a,b)=>a.date.localeCompare(b.date));
+ if(arr.length<2){$('liveChart').innerHTML='<div class="empty-message">已累積 '+arr.length+' 個可用交易日。至少兩筆資料才能繪製走勢；這裡不使用舊對話數據填補。</div>';$('liveChartNote').textContent='新資料筆數：'+arr.length;return;}
+ const w=900,h=240,pad={l:72,r:18,t:15,b:35},v=arr.map(x=>x.value),lo=Math.min(...v),hi=Math.max(...v),breath=(hi-lo)*.12||1,low=lo-breath,high=hi+breath;
+ const xp=i=>pad.l+i*(w-pad.l-pad.r)/(arr.length-1),yp=n=>pad.t+(high-n)*(h-pad.t-pad.b)/(high-low);
+ const path=arr.map((r,i)=>(i?'L':'M')+xp(i).toFixed(1)+','+yp(r.value).toFixed(1)).join(' ');
+ const ticks=[0,1,2,3,4].map(i=>{const yy=pad.t+(h-pad.t-pad.b)*i/4;return `<line class="grid" x1="${pad.l}" y1="${yy}" x2="${w-pad.r}" y2="${yy}"/><text x="${pad.l-12}" y="${yy+4}" class="axis" text-anchor="end">${fmt(high-(high-low)*i/4,key==='usd_twd'||key==='us10y'?2:0)}</text>`}).join('');
+ const dates=[0,Math.floor((arr.length-1)/2),arr.length-1].map(i=>`<text class="axis" x="${xp(i)}" y="${h-8}" text-anchor="middle">${esc(arr[i].date.slice(5).replace('-','/'))}</text>`).join('');
+ const dots=arr.map((r,i)=>`<circle cx="${xp(i)}" cy="${yp(r.value)}" r="4" fill="#6ee7c6" stroke="#13252d" stroke-width="1.5"><title>${esc(r.date)} ${labels[key]} ${fmt(r.value,2)}</title></circle>`).join('');
+ $('liveChart').innerHTML=`<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" role="img" aria-label="${labels[key]} 每日收盤走勢">${ticks}${dates}<path d="${path}" class="chartline"/>${dots}</svg>`;
+ $('liveChartNote').textContent=`${arr.length} 個交易日 · ${arr[0].date} 至 ${arr[arr.length-1].date} · 僅顯示更新後的來源行情`;
+}
+async function jsonAt(path){let res=await fetch(path+'?ts='+Date.now(),{cache:'no-store'});if(!res.ok)throw Error('HTTP '+res.status);return res.json();}
+let inProgress=false;
+async function refresh(){
+ if(inProgress)return;inProgress=true;$('refreshLive').disabled=true;$('refreshLive').textContent='檢查中…';
+ try{
+  if(location.protocol==='file:'||location.protocol==='about:'){showNotReady('目前是單一HTML離線預覽。歷史快報可正常瀏覽；若要每日自動更新，請把完整專案部署到GitHub Pages並啟用GitHub Actions。');return;}
+  const data=await jsonAt('data/latest.json');
+  if(data?.status!=='ok'||!data?.prices||!data.generated_at){showNotReady(data?.message||'尚未產生第一份市場快照。請在GitHub Actions執行一次 Update workflow。');return;}
+  renderLive(data);
+  try{activeHistory=await jsonAt('data/history.json');if(!Array.isArray(activeHistory))activeHistory=[];}catch(e){activeHistory=[];$('liveChartNote').textContent='無法讀取每日歷史紀錄';}
+  renderChart();
+ }catch(err){showNotReady('連線或資料讀取失敗。請確認已發布完整資料夾、GitHub Actions曾成功執行，並重新整理頁面。',true);}
+ finally{inProgress=false;$('refreshLive').disabled=false;$('refreshLive').textContent='↻ 重新檢查';}
+}
+$('refreshLive').addEventListener('click',refresh);$('watchSearch').addEventListener('input',drawWatchlist);$('liveChartSelect').addEventListener('change',renderChart);
+refresh();
+})();
+</script>
+</body>
+</html>
