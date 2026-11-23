@@ -1,7 +1,322 @@
 {
-  "status": "not_configured",
-  "message": "尚未產生第一份市場快照；請執行 GitHub Actions。",
-  "prices": {},
-  "watchlist": [],
-  "news": []
+  "status": "ok",
+  "generated_at": "2026-11-23T21:40:14.999119+00:00",
+  "display_timezone": "Asia/Taipei",
+  "coverage": {
+    "taiex": "2026-11-23",
+    "sp500": "2026-11-23",
+    "sox": "2026-11-23",
+    "vix": "2026-11-23",
+    "usd_twd": "2026-11-23",
+    "us10y": "2026-11-23"
+  },
+  "prices": {
+    "taiex": {
+      "name": "TAIEX 加權指數",
+      "symbol": "TAIEX",
+      "value": 36811.89,
+      "change": 778.6,
+      "pct": 2.161,
+      "date": "2026-11-23",
+      "source": "臺灣證券交易所（官方）",
+      "url": "https://www.twse.com.tw/zh/trading/historical/fmtqik.html"
+    },
+    "sp500": {
+      "name": "S&P 500",
+      "symbol": "^GSPC",
+      "value": 7237.1699,
+      "change": 326.7798,
+      "pct": 4.729,
+      "date": "2026-11-23",
+      "source": "Yahoo Finance（非官方、可能延遲）",
+      "url": "https://finance.yahoo.com/quote/%5EGSPC"
+    },
+    "nasdaq": {
+      "name": "Nasdaq",
+      "symbol": "^IXIC",
+      "value": 24089.5586,
+      "change": 1471.8281,
+      "pct": 6.507,
+      "date": "2026-11-23",
+      "source": "Yahoo Finance（非官方、可能延遲）",
+      "url": "https://finance.yahoo.com/quote/%5EIXIC"
+    },
+    "dow": {
+      "name": "Dow Jones",
+      "symbol": "^DJI",
+      "value": 49595.3086,
+      "change": 1447.9805,
+      "pct": 3.007,
+      "date": "2026-11-23",
+      "source": "Yahoo Finance（非官方、可能延遲）",
+      "url": "https://finance.yahoo.com/quote/%5EDJI"
+    },
+    "russell": {
+      "name": "Russell 2000",
+      "symbol": "^RUT",
+      "value": 2669.655,
+      "change": 87.865,
+      "pct": 3.403,
+      "date": "2026-11-23",
+      "source": "Yahoo Finance（非官方、可能延遲）",
+      "url": "https://finance.yahoo.com/quote/%5ERUT"
+    },
+    "sox": {
+      "name": "SOX 費城半導體",
+      "symbol": "^SOX",
+      "value": 9588.0498,
+      "change": 1179.46,
+      "pct": 14.027,
+      "date": "2026-11-23",
+      "source": "Yahoo Finance（非官方、可能延遲）",
+      "url": "https://finance.yahoo.com/quote/%5ESOX"
+    },
+    "vix": {
+      "name": "VIX",
+      "symbol": "^VIX",
+      "value": 26.62,
+      "change": -9.27,
+      "pct": -25.829,
+      "date": "2026-11-23",
+      "source": "Yahoo Finance（非官方、可能延遲）",
+      "url": "https://finance.yahoo.com/quote/%5EVIX"
+    },
+    "usd_twd": {
+      "name": "USD/TWD",
+      "symbol": "TWD=X",
+      "value": 32.804,
+      "change": -0.2223,
+      "pct": -0.673,
+      "date": "2026-11-23",
+      "source": "Yahoo Finance（非官方、可能延遲）",
+      "url": "https://finance.yahoo.com/quote/TWD%3DX"
+    },
+    "us10y": {
+      "name": "美國10年債殖利率",
+      "symbol": "^TNX",
+      "value": 4.918,
+      "change": 0.006,
+      "pct": 0.122,
+      "date": "2026-11-23",
+      "source": "Yahoo Finance（非官方、可能延遲）",
+      "url": "https://finance.yahoo.com/quote/%5ETNX"
+    }
+  },
+  "watchlist": [
+    {
+      "name": "台積電",
+      "symbol": "2330.TW",
+      "value": 2000.0,
+      "change": -100.0,
+      "pct": -4.762,
+      "date": "2026-11-20",
+      "source": "Yahoo Finance（非官方、可能延遲）",
+      "url": "https://finance.yahoo.com/quote/2330.TW"
+    },
+    {
+      "name": "聯發科",
+      "symbol": "2454.TW",
+      "value": 3350.0,
+      "change": -370.0,
+      "pct": -9.946,
+      "date": "2026-11-20",
+      "source": "Yahoo Finance（非官方、可能延遲）",
+      "url": "https://finance.yahoo.com/quote/2454.TW"
+    },
+    {
+      "name": "台達電",
+      "symbol": "2308.TW",
+      "value": 900.0,
+      "change": -100.0,
+      "pct": -10.0,
+      "date": "2026-11-20",
+      "source": "Yahoo Finance（非官方、可能延遲）",
+      "url": "https://finance.yahoo.com/quote/2308.TW"
+    },
+    {
+      "name": "鴻海",
+      "symbol": "2317.TW",
+      "value": 210.0,
+      "change": -10.5,
+      "pct": -4.762,
+      "date": "2026-11-20",
+      "source": "Yahoo Finance（非官方、可能延遲）",
+      "url": "https://finance.yahoo.com/quote/2317.TW"
+    },
+    {
+      "name": "Nvidia",
+      "symbol": "NVDA",
+      "value": 165.05,
+      "change": 39.52,
+      "pct": 31.483,
+      "date": "2026-11-23",
+      "source": "Yahoo Finance（非官方、可能延遲）",
+      "url": "https://finance.yahoo.com/quote/NVDA"
+    },
+    {
+      "name": "AMD",
+      "symbol": "AMD",
+      "value": 453.46,
+      "change": 29.07,
+      "pct": 6.85,
+      "date": "2026-11-23",
+      "source": "Yahoo Finance（非官方、可能延遲）",
+      "url": "https://finance.yahoo.com/quote/AMD"
+    },
+    {
+      "name": "Broadcom",
+      "symbol": "AVGO",
+      "value": 313.55,
+      "change": 9.14,
+      "pct": 3.003,
+      "date": "2026-11-23",
+      "source": "Yahoo Finance（非官方、可能延遲）",
+      "url": "https://finance.yahoo.com/quote/AVGO"
+    },
+    {
+      "name": "Micron",
+      "symbol": "MU",
+      "value": 707.7,
+      "change": 113.19,
+      "pct": 19.039,
+      "date": "2026-11-23",
+      "source": "Yahoo Finance（非官方、可能延遲）",
+      "url": "https://finance.yahoo.com/quote/MU"
+    },
+    {
+      "name": "Microsoft",
+      "symbol": "MSFT",
+      "value": 492.5,
+      "change": 7.98,
+      "pct": 1.647,
+      "date": "2026-11-23",
+      "source": "Yahoo Finance（非官方、可能延遲）",
+      "url": "https://finance.yahoo.com/quote/MSFT"
+    },
+    {
+      "name": "0050 元大台灣50",
+      "symbol": "0050.TW",
+      "value": 87.0,
+      "change": 2.55,
+      "pct": 3.02,
+      "date": "2026-11-23",
+      "source": "Yahoo Finance（非官方、可能延遲）",
+      "url": "https://finance.yahoo.com/quote/0050.TW"
+    },
+    {
+      "name": "0052 富邦科技",
+      "symbol": "0052.TW",
+      "value": 50.15,
+      "change": 1.75,
+      "pct": 3.616,
+      "date": "2026-11-23",
+      "source": "Yahoo Finance（非官方、可能延遲）",
+      "url": "https://finance.yahoo.com/quote/0052.TW"
+    },
+    {
+      "name": "00662 富邦NASDAQ",
+      "symbol": "00662.TW",
+      "value": 21.84,
+      "change": -0.31,
+      "pct": -1.4,
+      "date": "2026-11-23",
+      "source": "Yahoo Finance（非官方、可能延遲）",
+      "url": "https://finance.yahoo.com/quote/00662.TW"
+    },
+    {
+      "name": "00646 元大S&P500",
+      "symbol": "00646.TW",
+      "value": 73.45,
+      "change": -0.6,
+      "pct": -0.81,
+      "date": "2026-11-23",
+      "source": "Yahoo Finance（非官方、可能延遲）",
+      "url": "https://finance.yahoo.com/quote/00646.TW"
+    },
+    {
+      "name": "VOO Vanguard S&P500",
+      "symbol": "VOO",
+      "value": 663.91,
+      "change": 28.37,
+      "pct": 4.464,
+      "date": "2026-11-23",
+      "source": "Yahoo Finance（非官方、可能延遲）",
+      "url": "https://finance.yahoo.com/quote/VOO"
+    }
+  ],
+  "news": [
+    {
+      "region": "台灣",
+      "title": "三大法人買賣超 – 外資買超(3443)創意、(2603)長榮，投信買超(2330)台積電、(2454)聯發科，法人合計賣超511.77億元 - 永豐金證券",
+      "url": "https://news.google.com/rss/articles/CBMi0wRBVV95cUxOUkxGdVcwMEN2RGFlOEhWczdtc1VjNVFMWmRtRWV2c05KOGhhRWhiNFBnN3dDaW5mMkdaNkd3OVAxSkxvdWJEOFd1WURvQ1RqQ3N1T2JZSGtNakhNa3p0NTkwWF9JT3ZpQVRvNnpyeGU2RHNWYzg1eFlZS3BnZ0NLZGlwd2FPQ0E4dWdoaG9PSURwMHVvYXZRWFp5Y0YwZ2M1Y29XY3RpbDdjMExnT0NIZlpIMHM0LW00Tk5sTW9jUkpSSTFuSDU1TzZCWmhpZzAtLWh2Rkd4ZnV1T29BOXZwY2hhejRuQmYyQUx0bkZzc1ZkN19nb3hrYl9yOFZzMFlqdGRPanh2RUhZd0NLWW1ZS3RfM1BvdEVWT3ZmdkYyMktsdUEtdTlBdGRzMVVQRjV1LVVvLWtnNTZ5bHFnbnZnLVJWSHVNaUJlcTM1MlBTZ3lCRnRManFkdTRwSmFoUnBKREI2YmJqY3ZKeWlqekxDQnBlWlY4bUx0VnZOSDJCRU45M1pWb2FmUXQyQTFHaloyQjl3Nm4zNDZtd0MxMGgyR3JoNHZzVU5fUWh3cl9pd0UwV3JkaWY2ejNIZmdQSjU2dzM4Zk1jQmZkdXRuVnpPamdzaklYOHRhYnE0MHdyUngtV09UTWZxM2RzbXZyQTNCNlYyOS1laF9NZFJRMjBaVTJBMlAtLUlvZ3kzQ2dXTHlXT0ZTa2ZDaThXOUgzODBHQkRUc3FNTVBzYm45WnNPbV93RVR0NXVqV2VQLWFxVWpaRXpfekUyRWRfX044bDU2V3dF?oc=5",
+      "source": "永豐金證券",
+      "published_at": "2026-11-23T08:45:51+00:00"
+    },
+    {
+      "region": "台灣",
+      "title": "《台北股市》政府積極救市 台積電、聯發科、台達電領軍反彈 - 富聯網",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPLTcyVGdHWnd4T2tDdVhVNW9RSTRCXzhRRThObVl5UVYyTWkzbE5LSFlyTUM4cGNTRC1OMnRDTEJuamRLc0EyRE9zYXJJN3V2NGpmeHIwUXZITkpuYlFJV3UzbFpKX2Z6eUhVclRVWmh4d2QydXg2S2dNSTFBbmR1SGFReUhEWWp4?oc=5",
+      "source": "富聯網",
+      "published_at": "2026-11-23T02:07:00+00:00"
+    },
+    {
+      "region": "台灣",
+      "title": "台股震盪翻紅、台積電帶頭衝 聯電及聯發科為何成左右護法跟進漲？ - UDN",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE93WVJEN1N0QmZpbVJhWEluUnBYMzVHaFJTdG1vRnNVUmJlRmJFU0IzSWx5bTJDc1A5X1VCRDVRbW11aXBpa05Sc3NQNS11cFA40gFWQVVfeXFMUHAyLW92MFpYTjZERzJIYXR0eGota0RVMjg4ZWhydHRTcUlERHZaN21rN2JoblF1dW1udF9McjZ1a3YtS3lhdmNkYldZT0FPLXJ1Y2JDOEE?oc=5",
+      "source": "UDN",
+      "published_at": "2026-11-23T01:18:09+00:00"
+    },
+    {
+      "region": "台灣",
+      "title": "聯電、聯發科及台達電漲停！台股巨震1665點收高778點 法人再拋511億 - 知新聞",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9XeFlHd0pxZ043U01DSVNMbWZlRUticmVsU20weEFCeDFOc0drWWJmd0J6X2lRd2FDcWt3RjZsTEdIRkNUbUNzOXRwRGZ6SkdOS0Fpa3pZZVdnOWpORkEzOEprT2JSdFpKZUJtanVJQQ?oc=5",
+      "source": "知新聞",
+      "published_at": "2026-11-23T01:08:00+00:00"
+    },
+    {
+      "region": "美國",
+      "title": "Nasdaq falls as Anthropic slides, dragging AI stocks into weekly selloff - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUUJtMEtQS0hxU0RSZFVjbG1aQVFvUUFaV1c3c1h3Zy1QU1hfMXN6cXN5c1VtTWFCWVAtVTVaaG1hT3NoeWZWOWRKTVA1VzN6ejZLOXBtMkhIdF95UlVZNGJQYmg0bXdKcU9pSTNTeHBvZHh0eWFjdFJGRDFMZzAwTlJoZTh4T0Z5YUVybFpZS3pjMTNVQTJlUEFiemdYb0ExLUl1eUMxSTBpMG5lMTBzY2lKZlRBQ3VDWUlqZjd5UXJGZmQ3U2c?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-20T14:41:38+00:00"
+    },
+    {
+      "region": "美國",
+      "title": "U.S. stocks experienced panic selling, with several institutions suggesting it may merely be a bull market adjustment. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQbmh6OHBZV3VXOHVsN19oWld2MDVfS05rTHBFblZPU1B2SXBBUktuUEZoeEZlbnJNS0VzcUZKc0tJRW9zVEJjMW00Z1hYaThtd2NiU3NBdFNwSEczbWlvUGRsbWRXU3BDN2t4eTl6WHNwRjBVSzNFcDJqNWliYnd1Z2lSZzEyMmFmV3doUE9zRGcyNEpENE9VUHZSN25XZndxUDJXZDlWcGE1ZTF0amh5aUV6Q1hiWlJiY0E?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-20T08:07:00+00:00"
+    },
+    {
+      "region": "美國",
+      "title": "Nasdaq 100 Ends Worst Week Since 2020, S&P 500 In Correction Territory As AI Rout Sours Sentiment — ANT, NVDA, TTWO, ZS, CRWD In Focus - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxNVVlwclA1UmFFb2dHaUZKUURtV0VJbEhqdzV5cU9lZl8zZlo0akdNc1RLRzdDUDFQdnRZWFlvX1pud3BtR2MxVEdtM2F1S3NLR3FxcmFkYllUZHpRTUFuNk5QZXY1SFZQZnRiazJTT05yM292bXRFTWNZclhhZzhUbXIybm5LcTA2ZnZhZkN0WTItVWFyVE4wR25fYlBEUzJaS2V6a2dPc29HeDNWdEU1aWFEY0FET01aVExXZHVPN3VfUlFKWWpJdkxRQjBUYUFDeWxKVUN2MVNGN1pYYm1EMERKTVNfX3I2VXdkRUNoODdtUTlZczhvSUMzdGdkemFVYVg5c21YLURVRUktSTBqZVA3dEN5QQ?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-20T08:00:00+00:00"
+    },
+    {
+      "region": "美國",
+      "title": "Nasdaq futures jump 560 points: 5 things to know before Wall Street opens - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNT1JMLVZPdkR1bjhTT1VlUGJNZ19Wa1RFQVlnZ05ZV00zX3dXSEhYdzFQRUJHZGNiX1NPVnJRV0tfTmVyekp3Q2dQak9OdnVzNXZ6My15U1JYV1hyMWRqVmxjMFViWHR1ZmxrV040R25NYk11SnR5YllDcXFKWDNqZ2pSMVg2Zml3XzRJQUVZaVBGUlFTRXJ0R3VpTjlLMFRRcGNfQmhvWlhEVDFvMGd3T2F1bHEwX01SZmxzMldzS1JHZndGSklr?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-19T10:31:37+00:00"
+    },
+    {
+      "region": "美國",
+      "title": "Is the AI boom an engine or a bubble? Fed Chair Walsh outlines three scenarios: a productivity surge, mass unemployment, or a stock market crash. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNMmtnRUpMQV9OMXF5WUphUjZoREJiXzg5TUtSd2ZjYzhMalBjTE1zTUk2Z1F0RGlyb3JSSmR3ZU5Ob2pFT2NaYklLYVFaaVFTRnppVkxlV0gxNUtKWWRSU3VLeDhSVVAzUkV0UEVHT2FHMm5aR1laS25rR0V1aTJXenF2MGh4Z3ZqZ2JB?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-17T06:03:21+00:00"
+    }
+  ],
+  "risk": {
+    "level": "偏高",
+    "score": 2,
+    "signals": [
+      "VIX ≥ 25"
+    ],
+    "description": "固定觀察規則，非AI預測、非回測模型或投資建議。"
+  },
+  "warnings": [],
+  "methodology": "僅最近完成交易日收盤與可能延遲行情；新聞為來源原始標題。ChatGPT每日對話不會自動同步。"
 }
