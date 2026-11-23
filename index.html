@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0b131c">
+<meta name="theme-color" content="#f5f5f0">
 <meta name="description" content="台美股收盤行情每日自動更新，含台股、美股、SOX、VIX、匯率、10年美債、個股追蹤、新聞與歷史快報。">
 <title>Market Pulse｜台美股每日市場儀表板</title>
 <style>
@@ -24,24 +24,27 @@
 @media(max-width:1000px){.live-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.livegrid{grid-template-columns:1fr 1fr}.live-newsgrid{grid-template-columns:1fr 1fr}}
 @media(max-width:720px){.live-section{padding:0 16px 36px}.live-metrics{gap:9px}.live-tile{padding:14px 12px}.live-tile .q-name{font-size:11px}.live-tile .q-val{font-size:23px}.livegrid,.live-newsgrid{grid-template-columns:1fr;gap:10px}.live-panel{padding:17px}.live-chart-card{padding:18px 14px}.livehead h2,.archive-head h2{font-size:21px}.quote-table td{padding:10px 5px}.live-chart-card .chart-note{font-size:10px}.archive-head{padding-top:26px}.risk-box{gap:10px}.risk-value{font-size:23px;padding:11px 17px}}
 </style>
+<link rel="stylesheet" href="assets/institutional.css?v=20261123-2">
 </head>
 <body>
+<div class="utilitybar"><div class="utility-inner"><strong>MARKET PULSE <span style="color:#df986c">/</span> FINANCIAL INTELLIGENCE</strong><span class="utility-right">TAIWAN &amp; UNITED STATES MARKETS　·　INDEPENDENT RESEARCH EDITION</span></div></div>
 <header class="topbar">
   <div class="topwrap">
     <a class="brand" href="#overview"><span class="logo">M<span style="color:#f7bd79">.</span></span><span>Market Pulse<small>台美股每日市場儀表板</small></span></a>
-    <div class="topactions"><a class="ghost hide-mobile" href="#live">最新市場</a><a class="ghost hide-mobile" href="#watch-panel">觀察清單</a><a class="ghost hide-mobile" href="#archive">歷史快報</a><a class="ghost hide-mobile" href="#grand">大峽谷問答</a><button id="exportBtn" class="ghost accent" title="匯出全部45期資料">匯出 CSV ↧</button></div>
+    <div class="topactions"><a class="ghost hide-mobile" href="#live">最新市場</a><a class="ghost hide-mobile" href="#watch-panel">觀察清單</a><a class="ghost hide-mobile" href="#archive">歷史快報</a><a class="ghost hide-mobile" href="#grand">大峽谷問答</a><button id="themeToggle" class="ghost" type="button" aria-label="切換淺色或深色版">◑ 深色版</button><button id="exportBtn" class="ghost accent" title="匯出全部45期資料">匯出 CSV ↧</button></div>
   </div>
 </header>
+<div class="market-ribbon" aria-label="市場最近收盤快覽"><div class="market-ribbon-inner"><div class="ribbon-label">MARKET<br>SNAPSHOT</div><div class="ribbon-scroller" id="ribbonQuotes" aria-live="polite"><div class="ribbon-quote"><div class="sym">TAIEX</div><div class="rline"><strong>—</strong></div></div></div></div></div>
 <section class="hero" id="overview">
-  <div class="eyebrow">TW × US / DAILY MARKET MONITOR</div>
-  <h1>掌握每日市場變化，<br><span>看見風險與趨勢。</span></h1>
-  <p>追蹤台股、美股主要指數、SOX、VIX、美債殖利率與新台幣匯率；將交易日最新收盤資料、原始新聞標題、規則式風險指標及過往對話快報清楚分開。</p>
+  <div class="eyebrow">THE DAILY BRIEFING / MARKETS · DATA · RISK</div>
+  <h1>全球市場，每日觀察。<br><span>用數據解讀風險。</span></h1>
+  <p>涵蓋台灣加權指數、美國主要股價指數、費城半導體、VIX、美元兌新台幣及美債殖利率。依照專業市場簡報的閱讀順序，先看價格與資金訊號，再核對新聞來源、風險規則及歷史脈絡。</p>
   <div class="meta"><span class="chip"><strong id="metaCount">45</strong> 期市場快報</span><span class="chip">2026.09.22 — 2026.11.23</span><span class="chip">台美市場 · 繁體中文</span><span class="chip" id="connectionChip">尚待啟用資料更新</span></div>
   <div class="caution"><strong>資料說明：</strong><strong>最新市場區</strong>在網站部署且排程成功後依交易日更新，並清楚標示各市場資料日期；不是即時行情。<strong>歷史對話區</strong>保留原本45期摘要，過往數字未重新核對。兩個資料來源不互相混合，所有風險判讀均為非個人化研究參考。</div>
 </section>
 
 <section class="live-section" id="live" aria-label="每日更新的市場資料">
-  <div class="livehead"><div><span class="section-kicker">LAST COMPLETED CLOSE · DAILY UPDATE</span><h2>最新市場總覽</h2><p>以各市場最後一個已完成交易日為準，非即時行情；上游資料可能延遲。</p></div><div class="statusbar"><span class="sync-pill" id="syncStatus">資料更新尚未啟用</span><button class="ghost" id="refreshLive" type="button">↻ 重新檢查</button></div></div>
+  <div class="livehead"><div><span class="section-kicker">LAST COMPLETED CLOSE · DAILY UPDATE</span><h2>全球市場收盤總覽</h2><p>以各市場最後一個已完成交易日為準，非即時行情；上游資料可能延遲。</p></div><div class="statusbar"><span class="sync-pill" id="syncStatus">資料更新尚未啟用</span><button class="ghost" id="refreshLive" type="button">↻ 重新檢查</button></div></div>
   <div class="live-metrics" id="liveMetrics" aria-live="polite">
     <div class="live-tile empty"><div class="q-name">台股 TAIEX</div><div class="q-val">—</div><div class="q-change">待更新</div></div>
     <div class="live-tile empty"><div class="q-name">S&P 500</div><div class="q-val">—</div><div class="q-change">待更新</div></div>
@@ -89,7 +92,7 @@
   </div></div>
 </section>
 <section class="appendix"><div class="note"><b>編輯原則：</b>本頁以新行情與45期歷史快報為雙主軸，保留每期原對話所述的關鍵數值、事實摘要、非個人化評論與觀察門檻；並單獨保留大峽谷問答。為了瀏覽效率，原始長篇回答中的全部段落、引用連結與每檔個股漲跌並未逐字轉載。風險等級與價格門檻是當時的評論，不是量化預測或交易建議。<br><b>使用方式：</b>在本機開啟可瀏覽45期歷史檔案；最新行情、個股與新聞需部署網站，並啟用雲端更新排程才會載入。舊CSV按鈕匯出原對話整理資料。</div></section>
-<footer class="footer">MARKET PULSE · 資料來源：TWSE、Yahoo Finance（非官方）、Google News RSS；歷史對話快報截至2026/11/23。行情有延遲，並非投資建議。</footer>
+<footer class="footer">MARKET PULSE · INDEPENDENT MARKET RESEARCH · 非 Bloomberg、WSJ、FT 官方產品。 資料來源：TWSE、Yahoo Finance（非官方）、Google News RSS；歷史對話快報截至2026/11/23。行情有延遲，並非投資建議。</footer>
 <script id="market-data" type="application/json">[
   {
     "date": "2026-09-22",
@@ -1077,5 +1080,6 @@ $('refreshLive').addEventListener('click',refresh);$('watchSearch').addEventList
 refresh();
 })();
 </script>
+<script defer src="assets/editorial.js?v=20261123-2"></script>
 </body>
 </html>
