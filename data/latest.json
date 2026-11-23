@@ -1,0 +1,7 @@
+{
+  "status": "not_configured",
+  "message": "尚未產生第一份市場快照；請執行 GitHub Actions。",
+  "prices": {},
+  "watchlist": [],
+  "news": []
+}
