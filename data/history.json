@@ -222,7 +222,7 @@
     }
   },
   {
-    "generated_at": "2026-11-24T16:17:50.597929+00:00",
+    "generated_at": "2026-11-24T20:20:39.702124+00:00",
     "coverage": {
       "taiex": "2026-11-24",
       "sp500": "2026-11-24",
@@ -245,9 +245,9 @@
       "sp500": {
         "name": "S&P 500",
         "symbol": "^GSPC",
-        "value": 7157.6699,
-        "change": -79.5,
-        "pct": -1.098,
+        "value": 7179.52,
+        "change": -57.6499,
+        "pct": -0.797,
         "date": "2026-11-24",
         "source": "Yahoo Finance（非官方、可能延遲）",
         "url": "https://finance.yahoo.com/quote/%5EGSPC"
@@ -255,9 +255,9 @@
       "nasdaq": {
         "name": "Nasdaq",
         "symbol": "^IXIC",
-        "value": 23516.5898,
-        "change": -572.9707,
-        "pct": -2.379,
+        "value": 23627.6387,
+        "change": -461.9219,
+        "pct": -1.918,
         "date": "2026-11-24",
         "source": "Yahoo Finance（非官方、可能延遲）",
         "url": "https://finance.yahoo.com/quote/%5EIXIC"
@@ -265,9 +265,9 @@
       "dow": {
         "name": "Dow Jones",
         "symbol": "^DJI",
-        "value": 49643.6992,
-        "change": 48.3906,
-        "pct": 0.098,
+        "value": 49906.9102,
+        "change": 311.6016,
+        "pct": 0.628,
         "date": "2026-11-24",
         "source": "Yahoo Finance（非官方、可能延遲）",
         "url": "https://finance.yahoo.com/quote/%5EDJI"
@@ -275,9 +275,9 @@
       "russell": {
         "name": "Russell 2000",
         "symbol": "^RUT",
-        "value": 2663.793,
-        "change": -5.8669,
-        "pct": -0.22,
+        "value": 2682.0015,
+        "change": 12.3416,
+        "pct": 0.462,
         "date": "2026-11-24",
         "source": "Yahoo Finance（非官方、可能延遲）",
         "url": "https://finance.yahoo.com/quote/%5ERUT"
@@ -285,9 +285,9 @@
       "sox": {
         "name": "SOX 費城半導體",
         "symbol": "^SOX",
-        "value": 8707.7822,
-        "change": -880.2676,
-        "pct": -9.181,
+        "value": 8827.1875,
+        "change": -760.8623,
+        "pct": -7.936,
         "date": "2026-11-24",
         "source": "Yahoo Finance（非官方、可能延遲）",
         "url": "https://finance.yahoo.com/quote/%5ESOX"
@@ -295,9 +295,9 @@
       "vix": {
         "name": "VIX",
         "symbol": "^VIX",
-        "value": 28.83,
-        "change": 2.21,
-        "pct": 8.302,
+        "value": 27.53,
+        "change": 0.91,
+        "pct": 3.418,
         "date": "2026-11-24",
         "source": "Yahoo Finance（非官方、可能延遲）",
         "url": "https://finance.yahoo.com/quote/%5EVIX"
@@ -305,9 +305,9 @@
       "usd_twd": {
         "name": "USD/TWD",
         "symbol": "TWD=X",
-        "value": 32.978,
-        "change": 0.0234,
-        "pct": 0.071,
+        "value": 32.963,
+        "change": 0.0084,
+        "pct": 0.025,
         "date": "2026-11-24",
         "source": "Yahoo Finance（非官方、可能延遲）",
         "url": "https://finance.yahoo.com/quote/TWD%3DX"
@@ -315,9 +315,9 @@
       "us10y": {
         "name": "美國10年債殖利率",
         "symbol": "^TNX",
-        "value": 4.886,
-        "change": -0.032,
-        "pct": -0.651,
+        "value": 4.904,
+        "change": -0.014,
+        "pct": -0.285,
         "date": "2026-11-24",
         "source": "Yahoo Finance（非官方、可能延遲）",
         "url": "https://finance.yahoo.com/quote/%5ETNX"
