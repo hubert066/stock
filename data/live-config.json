@@ -1,5 +1,6 @@
 {
-  "endpoint": null,
-  "refresh_seconds": 60,
-  "enabled": false
+  "endpoint": "https://market-pulse-quotes.hubert066.workers.dev/quotes",
+  "refresh_seconds": 300,
+  "enabled": true,
+  "mode": "open_daily"
 }
