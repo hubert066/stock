@@ -1,0 +1,584 @@
+{
+  "date": "2026-11-24",
+  "session": "institution",
+  "status": "ok",
+  "generated_at": "2026-11-24T07:30:59.080Z",
+  "scheduled_at": "2026-11-24T15:30:00+08:00",
+  "production": "chatgpt_scheduled_source_checked",
+  "note": "上市現貨法人總額經15:01與15:24公開報導交叉核對；證交所原始端點未能直接讀取。期貨夜盤成交淨額來自期交所，不等於未平倉。未核實資料留空。",
+  "prices": {
+    "taiex": {
+      "name": "TAIEX 加權指數",
+      "value": 40122.35,
+      "pct": 8.99,
+      "change": 3310.46,
+      "date": "2026-11-24",
+      "source": "中央社・經濟日報收盤報導",
+      "url": "https://www.cna.com.tw/news/afe/202611240129.aspx",
+      "symbol": "TAIEX",
+      "asof": "13:30 收盤",
+      "open": 39148.91,
+      "high": 40180.38,
+      "low": 39148.91,
+      "previous_close": 36811.89,
+      "turnover_billion_twd": 4194.05
+    },
+    "sp500": {
+      "name": "S&P 500",
+      "value": 7237.17,
+      "pct": 4.73,
+      "change": 326.78,
+      "date": "2026-11-23",
+      "source": "TVBS・優分析",
+      "url": "https://news.tvbs.com.tw/money/4055190",
+      "symbol": "^GSPC",
+      "asof": "美東 16:00 收盤"
+    },
+    "nasdaq": {
+      "name": "NASDAQ",
+      "value": 24089.56,
+      "pct": 6.51,
+      "change": 1471.83,
+      "date": "2026-11-23",
+      "source": "TVBS・優分析",
+      "url": "https://news.tvbs.com.tw/money/4055190",
+      "symbol": "^IXIC",
+      "asof": "美東 16:00 收盤"
+    },
+    "dow": {
+      "name": "Dow Jones",
+      "value": 49595.31,
+      "pct": 3.01,
+      "change": 1447.98,
+      "date": "2026-11-23",
+      "source": "TVBS・優分析",
+      "url": "https://news.tvbs.com.tw/money/4055190",
+      "symbol": "^DJI",
+      "asof": "美東 16:00 收盤"
+    },
+    "russell": {
+      "name": "Russell 2000",
+      "value": 2669.66,
+      "pct": 3.4,
+      "change": 87.87,
+      "date": "2026-11-23",
+      "source": "永豐全球重要指數",
+      "url": "https://mmafund.sinopac.com/z/ze/zeo/zeosinopac.djhtm",
+      "symbol": "^RUT",
+      "asof": "美東 16:00 收盤"
+    },
+    "sox": {
+      "name": "SOX 費城半導體",
+      "value": 9588.05,
+      "pct": 14.03,
+      "change": 1179.46,
+      "date": "2026-11-23",
+      "source": "TVBS・永豐",
+      "url": "https://mmafund.sinopac.com/z/ze/zeo/zeosinopac.djhtm",
+      "symbol": "^SOX",
+      "asof": "美東 16:00 收盤"
+    },
+    "vix": {
+      "name": "VIX 恐慌指數",
+      "value": 26.62,
+      "pct": -25.83,
+      "change": -9.27,
+      "date": "2026-11-23",
+      "source": "鉅亨歷史行情",
+      "url": "https://www.cnyes.com/global/astock/html5chart.aspx?area=US&code=VIX",
+      "symbol": "^VIX",
+      "asof": "美東 16:00 收盤"
+    },
+    "usd_twd": {
+      "name": "USD/TWD",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-24",
+      "source": "未核實當日匯率，留空",
+      "url": null
+    },
+    "us10y": {
+      "name": "美國10年期公債",
+      "value": 4.92,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-23",
+      "source": "永豐全球重要指數（日資料）",
+      "url": "https://mmafund.sinopac.com/z/ze/zeo/zeosinopac.djhtm"
+    },
+    "tsmc": {
+      "name": "台積電",
+      "value": 2230,
+      "pct": 9.85,
+      "change": 200,
+      "date": "2026-11-24",
+      "source": "經濟日報・中央社",
+      "url": "https://money.udn.com/money/story/5607/9898603?from=edn_related_storybottom",
+      "symbol": "2330.TW",
+      "asof": "13:30 收盤"
+    }
+  },
+  "watchlist": [
+    {
+      "name": "台積電",
+      "value": 2230,
+      "pct": 9.85,
+      "change": 200,
+      "date": "2026-11-24",
+      "source": "經濟日報・中央社",
+      "url": "https://money.udn.com/money/story/5607/9898603?from=edn_related_storybottom",
+      "symbol": "2330.TW",
+      "asof": "13:30 收盤"
+    },
+    {
+      "name": "聯發科",
+      "value": 4050,
+      "pct": 9.91,
+      "change": 365,
+      "date": "2026-11-24",
+      "source": "TVBS 早盤價＋中央社收盤漲停報導",
+      "url": "https://taronews.tw/2026/11/24/1212103/",
+      "symbol": "2454.TW",
+      "asof": "13:30 收盤"
+    },
+    {
+      "name": "台達電",
+      "value": 1085,
+      "pct": 9.6,
+      "change": 95,
+      "date": "2026-11-24",
+      "source": "TVBS 早盤價＋中央社收盤漲停報導",
+      "url": "https://taronews.tw/2026/11/24/1212103/",
+      "symbol": "2308.TW",
+      "asof": "13:30 收盤"
+    },
+    {
+      "name": "鴻海",
+      "value": 226.5,
+      "pct": 9.95,
+      "change": 20.5,
+      "date": "2026-11-24",
+      "source": "TVBS 早盤價＋中央社收盤漲停報導",
+      "url": "https://taronews.tw/2026/11/24/1212103/",
+      "symbol": "2317.TW",
+      "asof": "13:30 收盤"
+    },
+    {
+      "name": "元大台灣50",
+      "value": 95.7,
+      "pct": 10,
+      "change": 8.7,
+      "date": "2026-11-24",
+      "source": "公開歷史行情・今周刊",
+      "url": "https://hk.investing.com/etfs/yuanta-p-shares-taiwan-top-50-historical-data",
+      "symbol": "0050.TW",
+      "asof": "13:30 收盤"
+    },
+    {
+      "name": "富邦科技",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-24",
+      "source": "今日收盤價尚未獨立核實；私人行情模組另行查詢",
+      "url": null,
+      "symbol": "0052.TW",
+      "asof": null
+    },
+    {
+      "name": "富邦NASDAQ",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-24",
+      "source": "今日收盤價尚未獨立核實；私人行情模組另行查詢",
+      "url": null,
+      "symbol": "00662.TW",
+      "asof": null
+    },
+    {
+      "name": "元大S&P500",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-24",
+      "source": "今日收盤價尚未獨立核實；私人行情模組另行查詢",
+      "url": null,
+      "symbol": "00646.TW",
+      "asof": null
+    },
+    {
+      "name": "廣達",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-24",
+      "source": "今日收盤價尚未獨立核實；私人行情模組另行查詢",
+      "url": null,
+      "symbol": "2382.TW",
+      "asof": null
+    },
+    {
+      "name": "NVIDIA",
+      "value": 165.05,
+      "pct": 31.48,
+      "change": null,
+      "date": "2026-11-23",
+      "source": "公開收盤報導・行情研究",
+      "url": "https://worldmoneyroadmap.com/en/reports/2026-11-23-evening/",
+      "symbol": "NVDA",
+      "asof": "美東 16:00 收盤"
+    },
+    {
+      "name": "美光",
+      "value": 707.7,
+      "pct": 19.04,
+      "change": null,
+      "date": "2026-11-23",
+      "source": "公開收盤報導・行情研究",
+      "url": "https://worldmoneyroadmap.com/en/reports/2026-11-23-evening/",
+      "symbol": "MU",
+      "asof": "美東 16:00 收盤"
+    },
+    {
+      "name": "AMD",
+      "value": 453.46,
+      "pct": 6.85,
+      "change": 29.07,
+      "date": "2026-11-23",
+      "source": "AMD 投資人關係官網",
+      "url": "https://ir.amd.com/stock-data/price-history",
+      "symbol": "AMD",
+      "asof": "美東 16:00 收盤"
+    },
+    {
+      "name": "Broadcom",
+      "value": 313.55,
+      "pct": 3,
+      "change": null,
+      "date": "2026-11-23",
+      "source": "公開收盤報導・行情研究",
+      "url": "https://worldmoneyroadmap.com/en/reports/2026-11-23-evening/",
+      "symbol": "AVGO",
+      "asof": "美東 16:00 收盤"
+    },
+    {
+      "name": "Microsoft",
+      "value": 492.5,
+      "pct": 1.65,
+      "change": null,
+      "date": "2026-11-23",
+      "source": "公開收盤報導・行情研究",
+      "url": "https://worldmoneyroadmap.com/en/reports/2026-11-23-evening/",
+      "symbol": "MSFT",
+      "asof": "美東 16:00 收盤"
+    },
+    {
+      "name": "Vanguard S&P 500 ETF",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-23",
+      "source": "本次未獨立核實收盤價",
+      "url": null,
+      "symbol": "VOO"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "科技",
+      "pct": 8.97,
+      "date": "2026-11-23",
+      "source": "Sector Pulse／SPDR 產業ETF",
+      "url": "https://ta-sector-pulse.web.app/us/"
+    },
+    {
+      "name": "非必需消費",
+      "pct": 3.97,
+      "date": "2026-11-23",
+      "source": "Sector Pulse／SPDR 產業ETF",
+      "url": "https://ta-sector-pulse.web.app/us/"
+    },
+    {
+      "name": "工業",
+      "pct": 3.9,
+      "date": "2026-11-23",
+      "source": "Sector Pulse／SPDR 產業ETF",
+      "url": "https://ta-sector-pulse.web.app/us/"
+    },
+    {
+      "name": "通訊服務",
+      "pct": 3.57,
+      "date": "2026-11-23",
+      "source": "Sector Pulse／SPDR 產業ETF",
+      "url": "https://ta-sector-pulse.web.app/us/"
+    },
+    {
+      "name": "原物料",
+      "pct": 3.23,
+      "date": "2026-11-23",
+      "source": "Sector Pulse／SPDR 產業ETF",
+      "url": "https://ta-sector-pulse.web.app/us/"
+    },
+    {
+      "name": "金融",
+      "pct": 1.98,
+      "date": "2026-11-23",
+      "source": "Sector Pulse／SPDR 產業ETF",
+      "url": "https://ta-sector-pulse.web.app/us/"
+    },
+    {
+      "name": "公用事業",
+      "pct": 1.48,
+      "date": "2026-11-23",
+      "source": "Sector Pulse／SPDR 產業ETF",
+      "url": "https://ta-sector-pulse.web.app/us/"
+    },
+    {
+      "name": "醫療保健",
+      "pct": 1.23,
+      "date": "2026-11-23",
+      "source": "Sector Pulse／SPDR 產業ETF",
+      "url": "https://ta-sector-pulse.web.app/us/"
+    },
+    {
+      "name": "房地產",
+      "pct": 1.04,
+      "date": "2026-11-23",
+      "source": "Sector Pulse／SPDR 產業ETF",
+      "url": "https://ta-sector-pulse.web.app/us/"
+    },
+    {
+      "name": "必需消費",
+      "pct": -0.09,
+      "date": "2026-11-23",
+      "source": "Sector Pulse／SPDR 產業ETF",
+      "url": "https://ta-sector-pulse.web.app/us/"
+    },
+    {
+      "name": "能源",
+      "pct": -1.06,
+      "date": "2026-11-23",
+      "source": "Sector Pulse／SPDR 產業ETF",
+      "url": "https://ta-sector-pulse.web.app/us/"
+    }
+  ],
+  "news": [],
+  "risk": {
+    "level": "高波動風險",
+    "score": "2 / 2 警示",
+    "description": "兩項透明觀察門檻：台股絕對日漲跌幅≥3%；前一美股交易日VIX≥25。均觸發，並非風險機率、信用評級或回測模型。",
+    "signals": [
+      "指數大漲8.99%，法人反向淨賣超1230.11億元",
+      "自營商避險賣超826.12億元，不宜直接視為方向性看空",
+      "外資當日台指期未平倉尚未核實",
+      "個股法人排行及櫃買法人總額尚未核實"
+    ]
+  },
+  "headline": "指數強彈、法人反向賣超：反彈延續仍需籌碼確認",
+  "summary": "上市三大法人淨賣超1,230.11億元，外資及陸資賣超503.90億元，投信買超84.04億元，自營商賣超810.25億元。台股收40,122.35點，上漲8.99%。自營商賣超主要來自避險分類。",
+  "thesis": "價格修復已發生，但現貨法人尚未同步轉買；不能由避險交易推斷自營商方向性看空，也不能確認外資空單回補。",
+  "factors": [
+    {
+      "title": "現貨籌碼與價格背離",
+      "text": "法人合計賣超約為當日成交值29.3%，這是規模比較而非成交占比。投信買超不足抵銷外資與自營商淨賣出。",
+      "url": "https://money.udn.com/money/story/5607/9898862"
+    },
+    {
+      "title": "自營商避險是主要賣出分類",
+      "text": "自行買賣淨買15.86億元、避險淨賣826.12億元；分項與合計存在0.01億元四捨五入差異。避險可能涉及ETF或衍生品，實際交易目的未核實。",
+      "url": "https://money.udn.com/money/story/5607/9898862"
+    },
+    {
+      "title": "期貨夜盤與未平倉必須分開",
+      "text": "期交所11/24交易日夜盤外資大台成交多空淨額+3,215口，不是收盤淨未平倉，不能據此推算空單減少。",
+      "url": "https://www.taifex.com.tw/cht/3/futContractsDateAhExcel"
+    },
+    {
+      "title": "次日觀察",
+      "text": "觀察外資是否縮減現貨賣超、漲停解除後成交及40,000點支撐；待核實期貨淨未平倉及個股法人排行。"
+    }
+  ],
+  "scenarios": [],
+  "validation": {
+    "scenario": "不計正式命中",
+    "text": "11/24早盤僅有未核實的回溯試跑，其A情境門檻為40,000點以上，今日實際收40,122.35，形式上落入A區間，但不能計入正式預測命中率。缺乏獨立事前正式快照；收盤後不得補寫為事前預測。"
+  },
+  "sources": [
+    {
+      "id": "ed",
+      "url": "https://money.udn.com/money/story/5607/9898862"
+    },
+    {
+      "id": "cy",
+      "url": "https://news.cnyes.com/news/id/6670956"
+    },
+    {
+      "id": "we",
+      "url": "https://news.wearn.com/c2152981.html"
+    },
+    {
+      "id": "taifex_night",
+      "url": "https://www.taifex.com.tw/cht/3/futContractsDateAhExcel"
+    },
+    {
+      "id": "twse_attempt",
+      "url": "https://www.twse.com.tw/rwd/zh/fund/BFI82U?dayDate=20261124&type=day&response=json"
+    },
+    {
+      "id": "close",
+      "url": "https://tw.news.yahoo.com/%E5%8F%B0%E8%82%A1%E6%BC%B23310-46%E9%BB%9E-054633670.html"
+    },
+    {
+      "id": "cna",
+      "url": "https://www.cna.com.tw/news/afe/202611240129.aspx"
+    },
+    {
+      "id": "taronews",
+      "url": "https://taronews.tw/2026/11/24/1212103/"
+    },
+    {
+      "id": "udn",
+      "url": "https://money.udn.com/money/story/5607/9898603?from=edn_related_storybottom"
+    },
+    {
+      "id": "us",
+      "url": "https://news.tvbs.com.tw/money/4055190"
+    },
+    {
+      "id": "global",
+      "url": "https://mmafund.sinopac.com/z/ze/zeo/zeosinopac.djhtm"
+    },
+    {
+      "id": "vix",
+      "url": "https://www.cnyes.com/global/astock/html5chart.aspx?area=US&code=VIX"
+    },
+    {
+      "id": "nvda",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Board-Reinstates-Jensen-Huang-as-President-CEO-and-Board-Director/default.aspx"
+    },
+    {
+      "id": "sec",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000090/nvda-20261122.htm"
+    },
+    {
+      "id": "sectors",
+      "url": "https://ta-sector-pulse.web.app/us/"
+    },
+    {
+      "id": "sectorcheck",
+      "url": "https://www.thetrading.tools/sector-performance"
+    },
+    {
+      "id": "stocks",
+      "url": "https://worldmoneyroadmap.com/en/reports/2026-11-23-evening/"
+    },
+    {
+      "id": "amd",
+      "url": "https://ir.amd.com/stock-data/price-history"
+    },
+    {
+      "id": "etf",
+      "url": "https://hk.investing.com/etfs/yuanta-p-shares-taiwan-top-50-historical-data"
+    },
+    {
+      "id": "etf2",
+      "url": "https://www.businesstoday.com.tw/article/category/183013/post/202611240023/"
+    },
+    {
+      "id": "twPrev",
+      "url": "https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date=20261123&response=html&type=IND"
+    },
+    {
+      "id": "reuters",
+      "url": "https://www.reuters.com/technology/nvidia-reinstates-jensen-huang-ceo-2026-11-23/"
+    },
+    {
+      "id": "us2",
+      "url": "https://uanalyze.com.tw/articles/7356460973"
+    }
+  ],
+  "warnings": [
+    "證交所原始端點未能直接取得；上市法人總額採公開報導交叉核實。",
+    "當日外資大台淨未平倉、櫃買法人總額及個股排行尚未核實，留null；本次執行結束後不會自行補抓。",
+    "早盤為試跑，不計正式命中率。"
+  ],
+  "institutional_data": {
+    "market": "TWSE上市",
+    "foreign": {
+      "value": -503.9,
+      "unit": "新台幣億元",
+      "source": "鉅亨、經濟日報",
+      "url": "https://money.udn.com/money/story/5607/9898862",
+      "asof": "15:24報導",
+      "date": "2026-11-24"
+    },
+    "trust": {
+      "value": 84.04,
+      "unit": "新台幣億元",
+      "source": "經濟日報、聚財網",
+      "url": "https://money.udn.com/money/story/5607/9898862",
+      "asof": "15:24報導",
+      "date": "2026-11-24"
+    },
+    "dealer": {
+      "value": -810.25,
+      "unit": "新台幣億元",
+      "source": "鉅亨、經濟日報",
+      "url": "https://money.udn.com/money/story/5607/9898862",
+      "asof": "15:24報導",
+      "date": "2026-11-24"
+    },
+    "total": {
+      "value": -1230.11,
+      "unit": "新台幣億元",
+      "source": "鉅亨、經濟日報",
+      "url": "https://money.udn.com/money/story/5607/9898862",
+      "asof": "15:24報導",
+      "date": "2026-11-24"
+    },
+    "dealer_proprietary": {
+      "value": 15.86,
+      "unit": "新台幣億元",
+      "source": "經濟日報",
+      "url": "https://money.udn.com/money/story/5607/9898862",
+      "asof": "15:24報導",
+      "date": "2026-11-24"
+    },
+    "dealer_hedge": {
+      "value": -826.12,
+      "unit": "新台幣億元",
+      "source": "經濟日報",
+      "url": "https://money.udn.com/money/story/5607/9898862",
+      "asof": "15:24報導",
+      "date": "2026-11-24"
+    },
+    "foreign_tx_net_open_interest": {
+      "value": null,
+      "unit": "口",
+      "source": "期交所當日未平倉未核實",
+      "url": "https://www.taifex.com.tw/cht/3/futContractsDate",
+      "asof": null,
+      "date": "2026-11-24"
+    },
+    "foreign_tx_night_net_trades": {
+      "value": 3215,
+      "unit": "口",
+      "source": "期交所夜盤成交多空淨額",
+      "url": "https://www.taifex.com.tw/cht/3/futContractsDateAhExcel",
+      "asof": "11/24交易日夜盤",
+      "date": "2026-11-24"
+    },
+    "tpex_total": {
+      "value": null,
+      "unit": "新台幣億元",
+      "source": "未核實",
+      "url": "https://www.tpex.org.tw/",
+      "asof": null,
+      "date": "2026-11-24"
+    },
+    "top_buy": null,
+    "top_sell": null
+  }
+}
