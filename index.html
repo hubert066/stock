@@ -22,11 +22,11 @@ const $=s=>document.querySelector(s),$$=s=>Array.from(document.querySelectorAll(
 const keys=[['taiex','TAIEX 加權指數'],['sp500','S&P 500'],['nasdaq','NASDAQ'],['dow','Dow Jones'],['russell','Russell 2000'],['sox','SOX 費城半導體'],['vix','VIX 恐慌指數'],['usd_twd','USD/TWD'],['us10y','美國10年期公債'],['tsmc','台積電 2330']];
 let view='overview',session='opening',filter='all',latest=null,report=null,opening=null,closing=null,hist=[],rows=[],seq=0;
 $('#date').value=today();$('#today').textContent=today().replaceAll('-','.');
-async function get(path){try{const r=await fetch(path+'?t='+Date.now(),{cache:'no-store'});return r.ok?await r.json():null}catch(e){return null}}
+async function get(path){for(const base of ['https://raw.githubusercontent.com/hubert066/stock/main/','']){try{const r=await fetch(base+path+'?t='+Date.now(),{cache:'no-store'});if(r.ok)return await r.json();if(base&&r.status===404)return null}catch(e){}}return null}
 function switchView(v){view=v;['overview','analysis','archive'].forEach(k=>$('#'+k).hidden=k!==v);$$('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===v));$('#pageTitle').textContent=v==='analysis'?'從市場訊號，到投資洞察。':v==='archive'?'每一次市場判斷，皆有紀錄。':'全球市場，每日觀察。';}
 function render(){
 const d=report||($('#date').value===today()?latest:null),p={...(d?.prices||{})};const list=Array.isArray(d?.watchlist)?d.watchlist:[];p.tsmc=p.tsmc||list.find(x=>x.symbol==='2330.TW');rows=keys.map(([k,n])=>{const q=p[k]||{};return [k,n,q]});
-$('#status').textContent=report?'報告已讀取 · '+time(report.generated_at):'本時段報告尚未取得';
+$('#status').textContent=report?(report.status==='demo'?'回溯試跑 · 非即時行情':'報告已讀取 · '+time(report.generated_at)):'本時段報告尚未取得';
 $('#notice').textContent=report?(report.note||'資料時間與來源見各欄位；非即時行情。'):'選定時段的獨立報告尚未發布。'+(d?'下方為原有行情系統最近一次可用快照，非本時段報告。':'尚無可用行情。')+' 缺值不以試跑資料補入。';
 $('#asof').textContent='資料同步：'+time(d?.generated_at);
 const val=(k,q)=>num(q.value,['usd_twd','us10y'].includes(k)?3:2)+(k==='us10y'&&Number.isFinite(q.value)?'%':'');
