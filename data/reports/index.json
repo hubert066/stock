@@ -1,6 +1,13 @@
 [
   {
     "date": "2026-11-24",
+    "session": "institution",
+    "status": "ok",
+    "generated_at": "2026-11-24T07:30:59.080Z",
+    "production": "chatgpt_scheduled_source_checked"
+  },
+  {
+    "date": "2026-11-24",
     "session": "closing",
     "status": "ok",
     "generated_at": "2026-11-24T06:28:33.880Z",
