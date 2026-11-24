@@ -1,4 +1,4 @@
-# Market Pulse｜台美股每日市場儀表板
+# Market Pulse 2.0｜台美股每日市場儀表板
 
 繁體中文手機友善的公開市場研究儀表板。
 
@@ -19,7 +19,7 @@ https://hubert066.github.io/stock/
 4. 檢查工作流程狀態為綠色，及 data/latest.json 中 status 為 ok。
 
 ## 更新時間
-GitHub Actions 設定平日台灣時間 09:15、17:45 嘗試更新。排程不保證準時；休市與來源異常可能延遲。網頁每次載入最新 JSON；不會直接讀取 ChatGPT 的排程或歷史對話。
+GitHub Actions 設定平日台灣時間 09:15 早盤、13:40 收盤；09:25 與 17:45 為缺值補抓，已有的分時段報告不覆寫。早盤採截至 09:15 的可用 Yahoo Finance 1 分鐘 K 線，收盤採同日 TWSE 官方收盤；無當日台股資料則不發布。排程及來源可能延遲，報告明示來源時間。15:30 籌碼頁保留入口，尚未接資料。新報告保存在 `data/reports/YYYY-MM-DD/{opening,closing}.json`，由 `data/reports/index.json` 歸檔。分析是規則式研究評論，非 AI 生成或回測模型。舊站 `archive.html` 保留 45 期歷史快報及原資料讀取；`demo-2026-11-24.html` 是明確標示未重新核實的回溯試跑。正式排程首次成功及 Pages 發布需於 Actions 檢查。
 
 ## 資料來源與風險
 - TAIEX：https://www.twse.com.tw/
