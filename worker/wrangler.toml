@@ -1,0 +1,5 @@
+name = "market-pulse-quotes"
+main = "src/index.js"
+compatibility_date = "2026-11-24"
+[vars]
+PUBLIC_DISPLAY_AUTHORIZED = "false"
