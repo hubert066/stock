@@ -9,7 +9,7 @@
 <main class="wrap mast"><div class="kicker">THE DAILY BRIEFING / MARKETS · DATA · RISK</div><div class="intro"><div><h1 id="pageTitle">全球市場，每日觀察。</h1><p>開盤先讀風險，收盤驗證判斷。每日兩次市場研究快報。</p></div><div class="date"><b id="today"></b><small>台北時間 · <input id="date" class="reportdate" type="date" aria-label="選擇報告日期"></small></div></div>
 <div class="sessionbar"><div class="sessions"><button class="session active" data-session="opening"><b>09:15　早盤分析</b><small>OPENING BRIEF</small></button><button class="session" data-session="closing"><b>13:40　收盤分析</b><small>CLOSING REVIEW</small></button><button class="session" data-session="institution"><b>15:30　籌碼補充</b><small>INSTITUTIONAL UPDATE</small></button></div><div class="status" id="status">讀取資料…</div></div>
 <div class="notice" id="notice">載入資料中。報價以來源時間為準，不補造缺值。</div>
-<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px"><a class="btn" href="demo-2026-11-24.html">11/24 早盤試跑・完整原型 ↗</a><a class="btn" href="archive.html#live">原站完整行情與新聞 ↗</a><button class="btn" id="refresh">↻ 重新讀取</button></div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px"><a class="btn" href="demo-2026-11-24.html">11/24 早盤試跑・完整原型 ↗</a><a class="btn" href="archive.html#live">原站完整行情與新聞 ↗</a><button class="btn" id="refresh">↻ 重新讀取</button><button class="btn" id="autoMode" aria-pressed="true">◉ 自動最新</button></div>
 <section id="overview"><div class="sectionhead"><h2>最新市場 <span class="kicker">MARKET SNAPSHOT</span></h2><p id="asof"></p></div><div id="metrics" class="metrics"></div>
 <div class="cols"><article class="panel"><div class="kicker">TAIWAN / MARKET TREND</div><h2>台灣加權指數走勢</h2><div class="sub">僅繪製原資料庫已取得的收盤行情</div><div id="chart"></div><div class="chartnote" id="chartnote"></div></article><article class="panel"><div class="kicker">US / SECTOR ROTATION</div><h2>美股產業輪動</h2><div class="sub">同一交易日產業 ETF 單日變動</div><div id="sectors" class="sectors"></div></article><article class="panel"><div class="kicker">MARKET / RISK ASSESSMENT</div><h2>市場風險評級</h2><div id="risk"></div><button class="linkbtn" data-view="analysis">閱讀完整風險分析 →</button></article></div>
 <div class="wide"><article class="panel"><div class="kicker">THE DAILY BRIEF</div><div class="headline" id="headline"></div><p id="summary" class="story report-text"></p><div id="news"></div></article><article class="panel"><div class="kicker">US / EQUITY WATCH</div><h2>美股焦點個股</h2><table class="table" id="usTable"></table><button class="linkbtn" data-view="analysis">查看完整觀察清單 →</button></article></div></section>
@@ -20,14 +20,21 @@
 <script>
 const $=s=>document.querySelector(s),$$=s=>Array.from(document.querySelectorAll(s)),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),num=(v,d=2)=>Number.isFinite(v)?v.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d}):'—',pct=v=>Number.isFinite(v)?(v>0?'+':'')+num(v)+'%':'—',cls=v=>v>0?'up':v<0?'down':'muted',url=u=>typeof u==='string'&&/^https:\/\//.test(u)?esc(u):'#',today=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date()),time=t=>t?new Date(t).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',hour12:false}):'—';
 const keys=[['taiex','TAIEX 加權指數'],['sp500','S&P 500'],['nasdaq','NASDAQ'],['dow','Dow Jones'],['russell','Russell 2000'],['sox','SOX 費城半導體'],['vix','VIX 恐慌指數'],['usd_twd','USD/TWD'],['us10y','美國10年期公債'],['tsmc','台積電 2330']];
-let view='overview',session='opening',filter='all',latest=null,report=null,opening=null,closing=null,hist=[],rows=[],seq=0;
+let view='overview',session='opening',filter='all',latest=null,report=null,opening=null,closing=null,hist=[],rows=[],seq=0,autoMode=true,autoReason='';
+const slots=[["opening",555],["closing",820],["institution",930]];
+function marketClock(now=new Date()){const parts=Object.fromEntries(new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23',weekday:'short'}).formatToParts(now).map(p=>[p.type,p.value]));const date=parts.year+'-'+parts.month+'-'+parts.day,minute=Number(parts.hour)*60+Number(parts.minute);return {date,minute,clock:parts.hour+':'+parts.minute,weekend:['Sat','Sun'].includes(parts.weekday)}}
+function candidates(clock,index){const order=['institution','closing','opening'];const prior=(Array.isArray(index)?index:[]).filter(x=>/^\d{4}-\d{2}-\d{2}$/.test(x.date)&&x.date<clock.date&&order.includes(x.session)&&!['pending','error'].includes(x.status)).sort((a,b)=>b.date.localeCompare(a.date)||order.indexOf(a.session)-order.indexOf(b.session));const current=clock.weekend?[]:slots.filter(([,m])=>m<=clock.minute).reverse().map(([session])=>({date:clock.date,session}));const seen=new Set();return [...current,...prior].filter(x=>{const k=x.date+'/'+x.session;if(seen.has(k))return false;seen.add(k);return true})}
+const names={opening:'早盤分析',closing:'收盤分析',institution:'籌碼補充'};
+const validReport=(r,date,s)=>r&&r.date===date&&(!r.session||r.session===s)&&['ok','demo'].includes(r.status)&&r.prices&&Object.keys(r.prices).length>0;
+function syncMode(){const b=$('#autoMode');b.textContent=autoMode?'◉ 自動最新':'↻ 回到自動最新';b.setAttribute('aria-pressed',String(autoMode));}
+function syncSession(){$$('[data-session]').forEach(b=>{b.classList.toggle('active',b.dataset.session===session);b.setAttribute('aria-pressed',String(b.dataset.session===session))})}
 $('#date').value=today();$('#today').textContent=today().replaceAll('-','.');
 async function get(path){for(const base of ['https://raw.githubusercontent.com/hubert066/stock/main/','']){try{const r=await fetch(base+path+'?t='+Date.now(),{cache:'no-store'});if(r.ok)return await r.json();if(base&&r.status===404)return null}catch(e){}}return null}
 function switchView(v){view=v;['overview','analysis','archive'].forEach(k=>$('#'+k).hidden=k!==v);$$('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===v));$('#pageTitle').textContent=v==='analysis'?'從市場訊號，到投資洞察。':v==='archive'?'每一次市場判斷，皆有紀錄。':'全球市場，每日觀察。';}
 function render(){
 const d=report||($('#date').value===today()?latest:null),p={...(d?.prices||{})};const list=Array.isArray(d?.watchlist)?d.watchlist:[];p.tsmc=p.tsmc||list.find(x=>x.symbol==='2330.TW');rows=keys.map(([k,n])=>{const q=p[k]||{};return [k,n,q]});
 $('#status').textContent=report?(report.status==='demo'?'回溯試跑 · 非即時行情':'報告已讀取 · '+time(report.generated_at)):'本時段報告尚未取得';
-$('#notice').textContent=report?(report.note||'資料時間與來源見各欄位；非即時行情。'):'選定時段的獨立報告尚未發布。'+(d?'下方為原有行情系統最近一次可用快照，非本時段報告。':'尚無可用行情。')+' 缺值不以試跑資料補入。';
+$('#notice').textContent=(autoMode?'自動最新｜台北 '+marketClock().clock+'。'+autoReason+' ':'手動瀏覽｜')+(report?(report.note||'資料時間與來源見各欄位；非即時行情。'):'選定時段的獨立報告尚未發布。'+(d?'下方為原有行情系統最近一次可用快照，非本時段報告。':'尚無可用行情。')+' 缺值不以試跑資料補入。');
 $('#asof').textContent='資料同步：'+time(d?.generated_at);
 const val=(k,q)=>num(q.value,['usd_twd','us10y'].includes(k)?3:2)+(k==='us10y'&&Number.isFinite(q.value)?'%':'');
 $('#metrics').innerHTML=rows.map(([k,n,q],i)=>'<div class="metric '+(!i?'lead':'')+'"><div class="name">'+esc(n)+'<small>'+esc(q.date||'未取得')+'</small></div><div class="val">'+val(k,q)+'</div><div class="change '+cls(q.pct)+'">'+pct(q.pct)+'</div><div class="foot">'+esc(q.source||'未取得')+(q.asof?' · '+esc(q.asof):'')+'</div></div>').join('');
@@ -45,8 +52,44 @@ renderWatch();drawChart();
 function table(list){return '<thead><tr><th>代號／標的</th><th>報價</th><th>漲跌</th></tr></thead><tbody>'+list.map(q=>'<tr><td><a href="'+url(q.url)+'" target="_blank" rel="noopener"><b>'+esc(q.name||q.symbol)+'</b></a><small>'+esc(q.symbol)+' · '+esc(q.date||'')+'</small></td><td>'+num(q.value)+'</td><td class="'+cls(q.pct)+'">'+pct(q.pct)+'</td></tr>').join('')+'</tbody>'}
 function renderWatch(){const d=report||($('#date').value===today()?latest:null),q=$('#search').value.toLowerCase();const list=(d?.watchlist||[]).filter(x=>{const sym=x.symbol||'',etf=/^(00|VOO)/.test(sym),cat=etf?'ETF':sym.endsWith('.TW')?'TW':'US';return (filter==='all'||cat===filter)&&[sym,x.name].join(' ').toLowerCase().includes(q)});$('#watchTable').innerHTML=table(list)}
 function drawChart(){const unique=new Map();for(const d of hist){const q=d?.prices?.taiex;if(Number.isFinite(q?.value)&&q.date&&q.date<=$('#date').value)unique.set(q.date,q.value)}const arr=[...unique].sort().slice(-20);if(arr.length<2){$('#chart').innerHTML='<div class="empty">已取得 '+arr.length+' 筆收盤記錄；累積至少兩筆後繪製。</div>';$('#chartnote').textContent='可在原站歷史快報查看舊對話資料。';return}const lo=Math.min(...arr.map(x=>x[1])),hi=Math.max(...arr.map(x=>x[1])),span=hi-lo||1,x=i=>45+i*375/(arr.length-1),y=v=>15+(hi-v)/span*112;$('#chart').innerHTML='<svg class="chart" viewBox="0 0 440 160" role="img" aria-label="台股歷史收盤">'+[0,.25,.5,.75,1].map(t=>'<line class="grid" x1="45" x2="420" y1="'+(15+t*112)+'" y2="'+(15+t*112)+'"/><text x="39" y="'+(19+t*112)+'" text-anchor="end">'+num(hi-t*span,0)+'</text>').join('')+'<path class="plot" d="'+arr.map((r,i)=>(i?'L':'M')+x(i)+' '+y(r[1])).join(' ')+'"/>'+arr.map((r,i)=>'<circle tabindex="0" cx="'+x(i)+'" cy="'+y(r[1])+'" r="4"><title>'+esc(r[0])+' '+num(r[1])+'</title></circle>').join('')+'</svg>';$('#chartnote').textContent=arr[0][0]+' — '+arr.at(-1)[0]+' · '+arr.length+' 筆收盤'}
-async function load(){const id=++seq,date=$('#date').value;if(!/^\d{4}-\d{2}-\d{2}$/.test(date))return;$('#status').textContent='讀取資料…';const [l,h,o,c,i,a]=await Promise.all([get('data/latest.json'),get('data/history.json'),get('data/reports/'+date+'/opening.json'),get('data/reports/'+date+'/closing.json'),get('data/reports/'+date+'/institution.json'),get('data/reports/index.json')]);if(id!==seq)return;latest=l?.status==='ok'?l:null;hist=Array.isArray(h)?h:[];opening=o?.date===date?o:null;closing=c?.date===date?c:null;report=session==='opening'?opening:session==='closing'?closing:i?.date===date?i:null;$('#archiveList').innerHTML=(Array.isArray(a)?a:[]).filter(x=>/^\d{4}-\d{2}-\d{2}$/.test(x.date)&&['opening','closing','institution'].includes(x.session)).slice().reverse().map(x=>'<div class="archive-row"><b>'+esc(x.date)+' · '+esc(x.session)+'</b><button class="btn" data-report-date="'+x.date+'" data-report-session="'+x.session+'">查看</button></div>').join('');render()}
-function selectSession(s){session=s;$$('[data-session]').forEach(b=>b.classList.toggle('active',b.dataset.session===s));load()}
-$$('[data-view]').forEach(b=>b.onclick=()=>switchView(b.dataset.view));$$('[data-session]').forEach(b=>b.onclick=()=>{switchView('overview');selectSession(b.dataset.session)});$('#date').onchange=load;$('#refresh').onclick=load;$('#search').oninput=renderWatch;$$('[data-filter]').forEach(b=>b.onclick=()=>{filter=b.dataset.filter;$$('[data-filter]').forEach(x=>x.classList.toggle('active',x===b));renderWatch()});$('#archiveList').onclick=e=>{const b=e.target.closest('[data-report-date]');if(b){$('#date').value=b.dataset.reportDate;switchView('overview');selectSession(b.dataset.reportSession)}};$('#theme').onclick=()=>{document.documentElement.classList.toggle('dark');$('#theme').textContent=document.documentElement.classList.contains('dark')?'◑ 淺色版':'◑ 深色版'};$('#export').onclick=()=>{const data=[['指標','資料日期','數值','漲跌%','來源'],...rows.map(([k,n,q])=>[n,q.date,q.value,q.pct,q.source])];const csv='\ufeff'+data.map(r=>r.map(s=>'"'+String(s??'').replaceAll('"','""')+'"').join(',')).join('\r\n'),a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.download='market-pulse-'+$('#date').value+'-'+session+'.csv';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
-if(location.hash==='#archive')switchView('archive');load();
+async function load(){
+ const id=++seq,clock=marketClock();let date=autoMode?clock.date:$('#date').value;if(!/^\d{4}-\d{2}-\d{2}$/.test(date))return;
+ $('#today').textContent=clock.date.replaceAll('-','.');$('#status').textContent='讀取資料…';
+ const path=(d,s)=>'data/reports/'+d+'/'+s+'.json';
+ const [l,h,o,c,i,a]=await Promise.all([get('data/latest.json'),get('data/history.json'),get(path(date,'opening')),get(path(date,'closing')),get(path(date,'institution')),get('data/reports/index.json')]);
+ if(id!==seq)return;
+ const map={opening:o,closing:c,institution:i};let chosen=null;
+ autoReason='';
+ if(autoMode){
+  const opts=candidates(clock,a);
+  for(const x of opts){
+   const q=x.date===date?map[x.session]:await get(path(x.date,x.session));
+   if(id!==seq)return;
+   if(validReport(q,x.date,x.session)){chosen=x;report=q;break}
+  }
+  if(chosen){
+   date=chosen.date;session=chosen.session;
+   const expected=opts[0];autoReason='顯示 '+date+' '+names[session]+'。';
+   if(date!==clock.date)autoReason+='今日尚無已發布報告，保留最近可用報告（不代表今日行情）。';
+   else if(expected&&expected.session!==session)autoReason+=names[expected.session]+' 尚未發布，暫用前一時段。';
+  }else{
+   const due=slots.filter(([,m])=>m<=clock.minute);session=due.length?due.at(-1)[0]:'opening';
+   report=null;autoReason='尚未找到可用的分時段報告。';
+  }
+  $('#date').value=date;
+ }
+ if(date===clock.date&&autoMode||!autoMode){
+  opening=validReport(o,date,'opening')?o:null;closing=validReport(c,date,'closing')?c:null;
+  if(!autoMode)report=validReport(map[session],date,session)?map[session]:null;
+ }else{
+  const [po,pc]=await Promise.all([session==='opening'?report:get(path(date,'opening')),session==='closing'?report:get(path(date,'closing'))]);
+  if(id!==seq)return;opening=validReport(po,date,'opening')?po:null;closing=validReport(pc,date,'closing')?pc:null;
+ }
+ latest=l?.status==='ok'?l:null;hist=Array.isArray(h)?h:[];
+ $('#archiveList').innerHTML=(Array.isArray(a)?a:[]).filter(x=>/^\d{4}-\d{2}-\d{2}$/.test(x.date)&&['opening','closing','institution'].includes(x.session)).slice().reverse().map(x=>'<div class="archive-row"><b>'+esc(x.date)+' · '+esc(x.session)+'</b><button class="btn" data-report-date="'+x.date+'" data-report-session="'+x.session+'">查看</button></div>').join('');
+ syncMode();syncSession();render();
+}
+function selectSession(s){autoMode=false;session=s;syncMode();syncSession();load()}
+$$('[data-view]').forEach(b=>b.onclick=()=>switchView(b.dataset.view));$$('[data-session]').forEach(b=>b.onclick=()=>{switchView('overview');selectSession(b.dataset.session)});$('#date').onchange=()=>{autoMode=false;syncMode();load()};$('#refresh').onclick=load;$('#autoMode').onclick=()=>{autoMode=true;syncMode();switchView('overview');load()};$('#search').oninput=renderWatch;$$('[data-filter]').forEach(b=>b.onclick=()=>{filter=b.dataset.filter;$$('[data-filter]').forEach(x=>x.classList.toggle('active',x===b));renderWatch()});$('#archiveList').onclick=e=>{const b=e.target.closest('[data-report-date]');if(b){$('#date').value=b.dataset.reportDate;switchView('overview');selectSession(b.dataset.reportSession)}};$('#theme').onclick=()=>{document.documentElement.classList.toggle('dark');$('#theme').textContent=document.documentElement.classList.contains('dark')?'◑ 淺色版':'◑ 深色版'};$('#export').onclick=()=>{const data=[['指標','資料日期','數值','漲跌%','來源'],...rows.map(([k,n,q])=>[n,q.date,q.value,q.pct,q.source])];const csv='\ufeff'+data.map(r=>r.map(s=>'"'+String(s??'').replaceAll('"','""')+'"').join(',')).join('\r\n'),a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.download='market-pulse-'+$('#date').value+'-'+session+'.csv';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
+if(location.hash==='#archive')switchView('archive');syncMode();load();setInterval(()=>{if(autoMode&&!document.hidden)load()},60000);document.addEventListener('visibilitychange',()=>{if(autoMode&&!document.hidden)load()});
 </script></body></html>
