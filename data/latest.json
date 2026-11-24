@@ -1,14 +1,14 @@
 {
   "status": "ok",
-  "generated_at": "2026-11-24T10:52:20.850620+00:00",
+  "generated_at": "2026-11-24T16:17:50.597929+00:00",
   "display_timezone": "Asia/Taipei",
   "coverage": {
     "taiex": "2026-11-24",
-    "sp500": "2026-11-23",
-    "sox": "2026-11-23",
+    "sp500": "2026-11-24",
+    "sox": "2026-11-24",
     "vix": "2026-11-24",
     "usd_twd": "2026-11-24",
-    "us10y": "2026-11-23"
+    "us10y": "2026-11-24"
   },
   "prices": {
     "taiex": {
@@ -24,59 +24,59 @@
     "sp500": {
       "name": "S&P 500",
       "symbol": "^GSPC",
-      "value": 7237.1699,
-      "change": 326.7798,
-      "pct": 4.729,
-      "date": "2026-11-23",
+      "value": 7157.6699,
+      "change": -79.5,
+      "pct": -1.098,
+      "date": "2026-11-24",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/%5EGSPC"
     },
     "nasdaq": {
       "name": "Nasdaq",
       "symbol": "^IXIC",
-      "value": 24089.5605,
-      "change": 1471.8301,
-      "pct": 6.507,
-      "date": "2026-11-23",
+      "value": 23516.5898,
+      "change": -572.9707,
+      "pct": -2.379,
+      "date": "2026-11-24",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/%5EIXIC"
     },
     "dow": {
       "name": "Dow Jones",
       "symbol": "^DJI",
-      "value": 49595.3086,
-      "change": 1447.9805,
-      "pct": 3.007,
-      "date": "2026-11-23",
+      "value": 49643.6992,
+      "change": 48.3906,
+      "pct": 0.098,
+      "date": "2026-11-24",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/%5EDJI"
     },
     "russell": {
       "name": "Russell 2000",
       "symbol": "^RUT",
-      "value": 2669.6599,
-      "change": 87.8699,
-      "pct": 3.403,
-      "date": "2026-11-23",
+      "value": 2663.793,
+      "change": -5.8669,
+      "pct": -0.22,
+      "date": "2026-11-24",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/%5ERUT"
     },
     "sox": {
       "name": "SOX 費城半導體",
       "symbol": "^SOX",
-      "value": 9588.0498,
-      "change": 1179.46,
-      "pct": 14.027,
-      "date": "2026-11-23",
+      "value": 8707.7822,
+      "change": -880.2676,
+      "pct": -9.181,
+      "date": "2026-11-24",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/%5ESOX"
     },
     "vix": {
       "name": "VIX",
       "symbol": "^VIX",
-      "value": 28.04,
-      "change": 1.42,
-      "pct": 5.334,
+      "value": 28.83,
+      "change": 2.21,
+      "pct": 8.302,
       "date": "2026-11-24",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/%5EVIX"
@@ -84,9 +84,9 @@
     "usd_twd": {
       "name": "USD/TWD",
       "symbol": "TWD=X",
-      "value": 32.922,
-      "change": -0.0326,
-      "pct": -0.099,
+      "value": 32.978,
+      "change": 0.0234,
+      "pct": 0.071,
       "date": "2026-11-24",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/TWD%3DX"
@@ -94,10 +94,10 @@
     "us10y": {
       "name": "美國10年債殖利率",
       "symbol": "^TNX",
-      "value": 4.918,
-      "change": 0.006,
-      "pct": 0.122,
-      "date": "2026-11-23",
+      "value": 4.886,
+      "change": -0.032,
+      "pct": -0.651,
+      "date": "2026-11-24",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/%5ETNX"
     }
@@ -106,140 +106,140 @@
     {
       "name": "台積電",
       "symbol": "2330.TW",
-      "value": 2230.0,
-      "change": 200.0,
-      "pct": 9.852,
-      "date": "2026-11-24",
+      "value": 2030.0,
+      "change": 30.0,
+      "pct": 1.5,
+      "date": "2026-11-23",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/2330.TW"
     },
     {
       "name": "聯發科",
       "symbol": "2454.TW",
-      "value": 4050.0,
-      "change": 365.0,
-      "pct": 9.905,
-      "date": "2026-11-24",
+      "value": 3685.0,
+      "change": 335.0,
+      "pct": 10.0,
+      "date": "2026-11-23",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/2454.TW"
     },
     {
       "name": "台達電",
       "symbol": "2308.TW",
-      "value": 1085.0,
-      "change": 95.0,
-      "pct": 9.596,
-      "date": "2026-11-24",
+      "value": 990.0,
+      "change": 90.0,
+      "pct": 10.0,
+      "date": "2026-11-23",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/2308.TW"
     },
     {
       "name": "鴻海",
       "symbol": "2317.TW",
-      "value": 226.5,
-      "change": 20.5,
-      "pct": 9.951,
-      "date": "2026-11-24",
+      "value": 206.0,
+      "change": -4.0,
+      "pct": -1.905,
+      "date": "2026-11-23",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/2317.TW"
     },
     {
       "name": "Nvidia",
       "symbol": "NVDA",
-      "value": 165.05,
-      "change": 39.52,
-      "pct": 31.483,
-      "date": "2026-11-23",
+      "value": 151.79,
+      "change": -13.26,
+      "pct": -8.034,
+      "date": "2026-11-24",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/NVDA"
     },
     {
       "name": "AMD",
       "symbol": "AMD",
-      "value": 453.46,
-      "change": 29.07,
-      "pct": 6.85,
-      "date": "2026-11-23",
+      "value": 398.8293,
+      "change": -54.6307,
+      "pct": -12.048,
+      "date": "2026-11-24",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/AMD"
     },
     {
       "name": "Broadcom",
       "symbol": "AVGO",
-      "value": 313.55,
-      "change": 9.14,
-      "pct": 3.003,
-      "date": "2026-11-23",
+      "value": 299.6,
+      "change": -13.95,
+      "pct": -4.449,
+      "date": "2026-11-24",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/AVGO"
     },
     {
       "name": "Micron",
       "symbol": "MU",
-      "value": 707.7,
-      "change": 113.19,
-      "pct": 19.039,
-      "date": "2026-11-23",
+      "value": 628.8396,
+      "change": -78.8604,
+      "pct": -11.143,
+      "date": "2026-11-24",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/MU"
     },
     {
       "name": "Microsoft",
       "symbol": "MSFT",
-      "value": 492.5,
-      "change": 7.98,
-      "pct": 1.647,
-      "date": "2026-11-23",
+      "value": 495.18,
+      "change": 2.68,
+      "pct": 0.544,
+      "date": "2026-11-24",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/MSFT"
     },
     {
       "name": "0050 元大台灣50",
       "symbol": "0050.TW",
-      "value": 95.7,
-      "change": 8.7,
-      "pct": 10.0,
-      "date": "2026-11-24",
+      "value": 87.0,
+      "change": 2.55,
+      "pct": 3.02,
+      "date": "2026-11-23",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/0050.TW"
     },
     {
       "name": "0052 富邦科技",
       "symbol": "0052.TW",
-      "value": 55.15,
-      "change": 5.0,
-      "pct": 9.97,
-      "date": "2026-11-24",
+      "value": 50.15,
+      "change": 1.75,
+      "pct": 3.616,
+      "date": "2026-11-23",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/0052.TW"
     },
     {
       "name": "00662 富邦NASDAQ",
       "symbol": "00662.TW",
-      "value": 22.65,
-      "change": 0.81,
-      "pct": 3.709,
-      "date": "2026-11-24",
+      "value": 21.84,
+      "change": -0.31,
+      "pct": -1.4,
+      "date": "2026-11-23",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/00662.TW"
     },
     {
       "name": "00646 元大S&P500",
       "symbol": "00646.TW",
-      "value": 75.4,
-      "change": 1.95,
-      "pct": 2.655,
-      "date": "2026-11-24",
+      "value": 73.45,
+      "change": -0.6,
+      "pct": -0.81,
+      "date": "2026-11-23",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/00646.TW"
     },
     {
       "name": "VOO Vanguard S&P500",
       "symbol": "VOO",
-      "value": 663.91,
-      "change": 28.37,
-      "pct": 4.464,
-      "date": "2026-11-23",
+      "value": 656.59,
+      "change": -7.3199,
+      "pct": -1.103,
+      "date": "2026-11-24",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/VOO"
     }
@@ -247,10 +247,45 @@
   "news": [
     {
       "region": "台灣",
-      "title": "台股震盪翻紅、台積電帶頭衝 聯電及聯發科為何成左右護法跟進漲？ - UDN",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE93WVJEN1N0QmZpbVJhWEluUnBYMzVHaFJTdG1vRnNVUmJlRmJFU0IzSWx5bTJDc1A5X1VCRDVRbW11aXBpa05Sc3NQNS11cFA40gFWQVVfeXFMUHAyLW92MFpYTjZERzJIYXR0eGota0RVMjg4ZWhydHRTcUlERHZaN21rN2JoblF1dW1udF9McjZ1a3YtS3lhdmNkYldZT0FPLXJ1Y2JDOEE?oc=5",
-      "source": "UDN",
-      "published_at": "2026-11-23T01:18:09+00:00"
+      "title": "明天會震盪!!換股時機?台積電⊕、鴻海⊕、台達電⊕、國巨⊕、金像電⊕ - 鉅亨網",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5NYzd2S1dmcXByRnlra3VEZ0IxR1Z4VnozOXFJR1hHRDg4azVvbGFPMldGd2pFZWRpeUhYZUl5alZBX0ZHc2JqR24tZEI3TUE?oc=5",
+      "source": "鉅亨網",
+      "published_at": "2026-11-24T09:12:57+00:00"
+    },
+    {
+      "region": "台灣",
+      "title": "三大法人買賣超 – 外資買超(3443)創意、(2603)長榮，投信買超(2330)台積電、(2454)聯發科，法人合計賣超511.77億元 - 永豐金證券",
+      "url": "https://news.google.com/rss/articles/CBMi0wRBVV95cUxOUkxGdVcwMEN2RGFlOEhWczdtc1VjNVFMWmRtRWV2c05KOGhhRWhiNFBnN3dDaW5mMkdaNkd3OVAxSkxvdWJEOFd1WURvQ1RqQ3N1T2JZSGtNakhNa3p0NTkwWF9JT3ZpQVRvNnpyeGU2RHNWYzg1eFlZS3BnZ0NLZGlwd2FPQ0E4dWdoaG9PSURwMHVvYXZRWFp5Y0YwZ2M1Y29XY3RpbDdjMExnT0NIZlpIMHM0LW00Tk5sTW9jUkpSSTFuSDU1TzZCWmhpZzAtLWh2Rkd4ZnV1T29BOXZwY2hhejRuQmYyQUx0bkZzc1ZkN19nb3hrYl9yOFZzMFlqdGRPanh2RUhZd0NLWW1ZS3RfM1BvdEVWT3ZmdkYyMktsdUEtdTlBdGRzMVVQRjV1LVVvLWtnNTZ5bHFnbnZnLVJWSHVNaUJlcTM1MlBTZ3lCRnRManFkdTRwSmFoUnBKREI2YmJqY3ZKeWlqekxDQnBlWlY4bUx0VnZOSDJCRU45M1pWb2FmUXQyQTFHaloyQjl3Nm4zNDZtd0MxMGgyR3JoNHZzVU5fUWh3cl9pd0UwV3JkaWY2ejNIZmdQSjU2dzM4Zk1jQmZkdXRuVnpPamdzaklYOHRhYnE0MHdyUngtV09UTWZxM2RzbXZyQTNCNlYyOS1laF9NZFJRMjBaVTJBMlAtLUlvZ3kzQ2dXTHlXT0ZTa2ZDaThXOUgzODBHQkRUc3FNTVBzYm45WnNPbV93RVR0NXVqV2VQLWFxVWpaRXpfekUyRWRfX044bDU2V3dF?oc=5",
+      "source": "永豐金證券",
+      "published_at": "2026-11-23T12:05:41+00:00"
+    },
+    {
+      "region": "美國",
+      "title": "AM Markets: Goldman eyes rebound, Ackman flags Fed risk, and more - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOU3BlWmY1VFYyVEdvWE1hcW4wSDhDTmZzVWRNbVhGclJmdTladjJSRHRPbUJHakdMRXhIcklHQXZqd0J6V01nUDhUZ19jbDBtaXJybFRSdkxMd3NGOFNJQ3p6NS1CaGlmdHhpNk5ONzFHdDNNTW1VM3lGVDlsTWlIRFJGbTg2ZlZJRW01d29mNzZZSDZ3TmRsNGxJZFFpOHV5cUluMl95cEJNN1FtdTh6QTNGeXVJNVFqTG9RdlYybnd5QQ?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-23T10:42:57+00:00"
+    },
+    {
+      "region": "美國",
+      "title": "Overbought conditions triggered a rebound! Pre-market U.S. tech stocks rallied across the board, with NVIDIA surging nearly 10% and Anthropic rising more than 5%; Nasdaq futures gained nearly 4%. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOR08yQTBsZDJUN0lOOWVIZi1rbzBBc2V2bFJWbjU0dlNmdExZWmk4ZHQyWmY1Sk9keFoxbVdFN2dKc0tOdWhGY3E4Rkg3ellqTkFFd3lkNERldjVETGlNRGNZVXlEbGtoRU1MZ0JBV3Q2OUJCSVNSaHFrYmFGS2RQUkMxXzdYNm9kaFZZN3VpaDc0UnVxN1NNQ2JWYWNROF9lM1kyakpqUzN2aEJ0Rzk0?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-23T09:49:05+00:00"
+    },
+    {
+      "region": "台灣",
+      "title": "《台北股市》政府積極救市 台積電、聯發科、台達電領軍反彈 - 富聯網",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPLTcyVGdHWnd4T2tDdVhVNW9RSTRCXzhRRThObVl5UVYyTWkzbE5LSFlyTUM4cGNTRC1OMnRDTEJuamRLc0EyRE9zYXJJN3V2NGpmeHIwUXZITkpuYlFJV3UzbFpKX2Z6eUhVclRVWmh4d2QydXg2S2dNSTFBbmR1SGFReUhEWWp4?oc=5",
+      "source": "富聯網",
+      "published_at": "2026-11-23T02:07:00+00:00"
+    },
+    {
+      "region": "美國",
+      "title": "Gold Weekly Review: AI Stock Crash Combined with Rate Hike Expectations Sends Gold Prices Plunging Nearly 9% in a Week, Marking Largest Drop in Eight Months! Hits 14-Month Low - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNd3J6UEVtS040R0twSFU5WG1JVlFOOVVRM2JGdUhIMUlsd21JZE1JMklWTDhpUEUtNzZjbEhOQm5BU2ZZS09lOWs5eVNldTM3NkRmWThONjR3MXVzQWl1NnFCYXEzUndidWd4M05zWm9JM1ZiZ1A5eWcxOEtubGdLVmVwbDRkQ210WlJGNThrUGVwWnFKODdLQU9TcXRQZ3c1V0E?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-21T01:41:27+00:00"
     },
     {
       "region": "美國",
@@ -258,6 +293,13 @@
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUUJtMEtQS0hxU0RSZFVjbG1aQVFvUUFaV1c3c1h3Zy1QU1hfMXN6cXN5c1VtTWFCWVAtVTVaaG1hT3NoeWZWOWRKTVA1VzN6ejZLOXBtMkhIdF95UlVZNGJQYmg0bXdKcU9pSTNTeHBvZHh0eWFjdFJGRDFMZzAwTlJoZTh4T0Z5YUVybFpZS3pjMTNVQTJlUEFiemdYb0ExLUl1eUMxSTBpMG5lMTBzY2lKZlRBQ3VDWUlqZjd5UXJGZmQ3U2c?oc=5",
       "source": "TradingView",
       "published_at": "2026-11-20T14:41:38+00:00"
+    },
+    {
+      "region": "美國",
+      "title": "Global Market Watch for Next Week: Can U.S. Stocks Stabilize? PCE Data and Black Friday Spending to Test Market Confidence - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxON2lidUc3bG0wVm5HWVJiWWhvQV9oRExzWXJmZ1dlekVDQ2pKaGRXS3UzYjNDZ1JUaUVvM2VQTk1sNFRocEdfOXJQY3dLLVE1cFR6QjVZVmMwQmVoWlloSGhfa05ueDlfc2Z3Rml6NS1DUGJQWk5aLW5Bc2c1QnN0anlxUHZubmNLSzNTSGhCZmMyNXdBeDFDc3FQbmZWbnZvYVE?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-20T10:10:00+00:00"
     },
     {
       "region": "美國",
@@ -275,10 +317,11 @@
     }
   ],
   "risk": {
-    "level": "偏高",
-    "score": 2,
+    "level": "高",
+    "score": 4,
     "signals": [
-      "VIX ≥ 25"
+      "VIX ≥ 25",
+      "SOX單日跌幅 ≥ 3%"
     ],
     "description": "固定觀察規則，非AI預測、非回測模型或投資建議。"
   },
