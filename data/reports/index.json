@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-11-25",
+    "session": "opening",
+    "status": "ok",
+    "generated_at": "2026-11-25T03:09:49.814Z",
+    "production": "manual_source_checked"
+  },
+  {
     "date": "2026-11-24",
     "session": "institution",
     "status": "ok",
