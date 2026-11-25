@@ -334,7 +334,7 @@
     }
   },
   {
-    "generated_at": "2026-11-25T09:47:59.089108+00:00",
+    "generated_at": "2026-11-25T10:02:40.831607+00:00",
     "coverage": {
       "taiex": "2026-11-25",
       "sp500": "2026-11-24",
@@ -407,9 +407,9 @@
       "vix": {
         "name": "VIX",
         "symbol": "^VIX",
-        "value": 29.04,
-        "change": 2.68,
-        "pct": 10.167,
+        "value": 29.66,
+        "change": 3.3,
+        "pct": 12.519,
         "date": "2026-11-25",
         "source": "Yahoo Finance（非官方、可能延遲）",
         "url": "https://finance.yahoo.com/quote/%5EVIX"

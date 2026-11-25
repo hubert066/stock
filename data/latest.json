@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "generated_at": "2026-11-25T09:47:59.089108+00:00",
+  "generated_at": "2026-11-25T10:02:40.831607+00:00",
   "display_timezone": "Asia/Taipei",
   "coverage": {
     "taiex": "2026-11-25",
@@ -74,9 +74,9 @@
     "vix": {
       "name": "VIX",
       "symbol": "^VIX",
-      "value": 29.04,
-      "change": 2.68,
-      "pct": 10.167,
+      "value": 29.66,
+      "change": 3.3,
+      "pct": 12.519,
       "date": "2026-11-25",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/%5EVIX"
@@ -247,10 +247,31 @@
   "news": [
     {
       "region": "美國",
+      "title": "Nasdaq, Dow, S&P 500 Futures Gain As Jensen Huang’s Return To Nvidia Sparks $3T Market Rally: SOXS, IBRX, HPE, TSM In Focus - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxOc01GelVNdkEzZFRUbTVFdFV1S0tWUDJwS2VzSGVIcXItWDZ5NzhXNUNleVNkYkdMV2FSaGhBRS1NYkpzY1AydkxybDk4WTlINGxrTTBVaks4RUV1ajFjNFhUbjJUX1l1S3JMNkRMak9fb2V6YXpIMURRWDUxMVZtYmhDVTZrb2RmaEE5bXlIdzN1dE03MHAwSHRNeV9vMV91VGhzRmdrMEZmNlFvbFF4MUNLT0VYUlRRcFNCUjh5bmZYRi12RHVLTmtFU3pNRG5FaDh1N1ZnVS1ULXVCQWMycnp6amRUazN4Z3dBRi1xTE1RUnhXMzhfT1hjV0JYb1BMR1VXd28zLV9QS1NCeUdadHFud1NmMEZ6c2VYVE1kRGI?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-24T02:13:43+00:00"
+    },
+    {
+      "region": "美國",
       "title": "Why is Applied Materials stock soaring today - TradingView",
       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNektnbHA3Zkx3UDFyaTJxNWcwVW9MY0w3OVFDdS1HaW5tOTBBcjZER0MwbHVNQmM1Q1QzMFNHTGVmTmszaHpvSlRYbjN2Y2JlWEt6cHpidXpOcjBiVnp3a1B2UlhscFZ5ZTQ3Z19YNzRWcDJmaHhzV1RwZzhMLWp0TktkajVuQXRyRXlzTnM4TmdFWThuemViWElMWXhRblgzallJUnlIY0FIMkx5akdQZHEwc0lIQldXUnlvODJNa0Y?oc=5",
       "source": "TradingView",
       "published_at": "2026-11-23T19:50:42+00:00"
+    },
+    {
+      "region": "美國",
+      "title": "Why is Micron stock rocketing higher today - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxONmxFYjNNZmpzMm9RZVZzTlM1UzdzUmlMU1p0bHFaSnl3R2Zxcm1sUzM2Y19hVTJNMWRwcmppT3Vyb2M5Q3lVVHpkNjQ4ZWNfS1ROZVNraWtvQ3J2MDBlWTZ6YUtvQnphcHQ5TmI2SUpnazVaSi0xY0JOdFNtdEt4TVlqbFd6U21aeW1HVmFmUVlYOFVOc2hJVERiV0NselA5X0tGb0N2QWN0XzhWbGJlVmJrUFQ0TTJWZFk1SWFR?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-23T18:10:35+00:00"
+    },
+    {
+      "region": "美國",
+      "title": "Why SK hynix stock is trading up today - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQbVBXMXRHRmQ1Z3N3akpkVVBSZVhLcnVaTUNndXlydkhhUGhiOEFGci05R19MWS1MY1VoaUhIMU16cm15Vkgzc19NYk5zeWRWSmh3dVBVUTBUTHRRNGE4V0J5X0hqb0lFRmd2SS1iazlybjVIbi1rR2Jna01zc1Vpci03bVZIRE9Md0RJY2IyNFE3Nml3X0kyaEd3b0pyWU0?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-23T18:05:35+00:00"
     },
     {
       "region": "美國",
@@ -261,10 +282,38 @@
     },
     {
       "region": "美國",
+      "title": "AM Markets: Goldman eyes rebound, Ackman flags Fed risk, and more - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOU3BlWmY1VFYyVEdvWE1hcW4wSDhDTmZzVWRNbVhGclJmdTladjJSRHRPbUJHakdMRXhIcklHQXZqd0J6V01nUDhUZ19jbDBtaXJybFRSdkxMd3NGOFNJQ3p6NS1CaGlmdHhpNk5ONzFHdDNNTW1VM3lGVDlsTWlIRFJGbTg2ZlZJRW01d29mNzZZSDZ3TmRsNGxJZFFpOHV5cUluMl95cEJNN1FtdTh6QTNGeXVJNVFqTG9RdlYybnd5QQ?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-23T10:42:57+00:00"
+    },
+    {
+      "region": "美國",
+      "title": "Overbought conditions triggered a rebound! Pre-market U.S. tech stocks rallied across the board, with NVIDIA surging nearly 10% and Anthropic rising more than 5%; Nasdaq futures gained nearly 4%. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOR08yQTBsZDJUN0lOOWVIZi1rbzBBc2V2bFJWbjU0dlNmdExZWmk4ZHQyWmY1Sk9keFoxbVdFN2dKc0tOdWhGY3E4Rkg3ellqTkFFd3lkNERldjVETGlNRGNZVXlEbGtoRU1MZ0JBV3Q2OUJCSVNSaHFrYmFGS2RQUkMxXzdYNm9kaFZZN3VpaDc0UnVxN1NNQ2JWYWNROF9lM1kyakpqUzN2aEJ0Rzk0?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-23T09:49:05+00:00"
+    },
+    {
+      "region": "美國",
+      "title": "Gold Weekly Review: AI Stock Crash Combined with Rate Hike Expectations Sends Gold Prices Plunging Nearly 9% in a Week, Marking Largest Drop in Eight Months! Hits 14-Month Low - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNd3J6UEVtS040R0twSFU5WG1JVlFOOVVRM2JGdUhIMUlsd21JZE1JMklWTDhpUEUtNzZjbEhOQm5BU2ZZS09lOWs5eVNldTM3NkRmWThONjR3MXVzQWl1NnFCYXEzUndidWd4M05zWm9JM1ZiZ1A5eWcxOEtubGdLVmVwbDRkQ210WlJGNThrUGVwWnFKODdLQU9TcXRQZ3c1V0E?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-21T01:41:27+00:00"
+    },
+    {
+      "region": "美國",
       "title": "Nasdaq falls as Anthropic slides, dragging AI stocks into weekly selloff - TradingView",
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUUJtMEtQS0hxU0RSZFVjbG1aQVFvUUFaV1c3c1h3Zy1QU1hfMXN6cXN5c1VtTWFCWVAtVTVaaG1hT3NoeWZWOWRKTVA1VzN6ejZLOXBtMkhIdF95UlVZNGJQYmg0bXdKcU9pSTNTeHBvZHh0eWFjdFJGRDFMZzAwTlJoZTh4T0Z5YUVybFpZS3pjMTNVQTJlUEFiemdYb0ExLUl1eUMxSTBpMG5lMTBzY2lKZlRBQ3VDWUlqZjd5UXJGZmQ3U2c?oc=5",
       "source": "TradingView",
       "published_at": "2026-11-20T14:41:38+00:00"
+    },
+    {
+      "region": "美國",
+      "title": "Global Market Watch for Next Week: Can U.S. Stocks Stabilize? PCE Data and Black Friday Spending to Test Market Confidence - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxON2lidUc3bG0wVm5HWVJiWWhvQV9oRExzWXJmZ1dlekVDQ2pKaGRXS3UzYjNDZ1JUaUVvM2VQTk1sNFRocEdfOXJQY3dLLVE1cFR6QjVZVmMwQmVoWlloSGhfa05ueDlfc2Z3Rml6NS1DUGJQWk5aLW5Bc2c1QnN0anlxUHZubmNLSzNTSGhCZmMyNXdBeDFDc3FQbmZWbnZvYVE?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-20T10:10:00+00:00"
     },
     {
       "region": "美國",
