@@ -1,342 +1,414 @@
 {
   "date": "2026-11-24",
   "session": "opening",
-  "status": "demo",
-  "generated_at": null,
-  "note": "回溯試跑（非嚴格09:15快照）：沿用已確認的設計原型及原站11/23快照，含09:16附近報導，尚未重新核實。不是即時行情；收盤驗證須以獨立來源核實。",
+  "status": "ok",
+  "production": "chatgpt_scheduled_source_checked",
+  "generated_at": "2026-11-25T08:17:45.730Z",
+  "scheduled_at": "2026-11-24T09:15:00+08:00",
+  "note": "事後補發，僅重建09:00開盤事實及09:14前公開資訊，不是事前預測。原試跑完整保留於 original_demo。",
   "prices": {
     "taiex": {
       "name": "TAIEX",
       "value": 39148.91,
-      "change": 2337.02,
       "pct": 6.35,
+      "change": 2337.02,
       "date": "2026-11-24",
-      "asof": "09:04 開盤報導",
-      "source": "前次試跑・未重新核實"
+      "source": "鉅亨、TVBS",
+      "url": "https://tw.tradingview.com/news/cnyes%3A537a52185acdf%3A0/",
+      "asof": "09:00 開盤"
     },
-    "sp500": {
-      "name": "S&P 500",
-      "symbol": "^GSPC",
-      "value": 7237.1699,
-      "change": 326.7798,
-      "pct": 4.729,
-      "date": "2026-11-23",
-      "source": "Yahoo Finance（非官方、可能延遲） · 既有站快照",
-      "url": "https://finance.yahoo.com/quote/%5EGSPC"
-    },
-    "nasdaq": {
-      "name": "Nasdaq",
-      "symbol": "^IXIC",
-      "value": 24089.5586,
-      "change": 1471.8281,
-      "pct": 6.507,
-      "date": "2026-11-23",
-      "source": "Yahoo Finance（非官方、可能延遲） · 既有站快照",
-      "url": "https://finance.yahoo.com/quote/%5EIXIC"
-    },
-    "dow": {
-      "name": "Dow Jones",
-      "symbol": "^DJI",
-      "value": 49595.3086,
-      "change": 1447.9805,
-      "pct": 3.007,
-      "date": "2026-11-23",
-      "source": "Yahoo Finance（非官方、可能延遲） · 既有站快照",
-      "url": "https://finance.yahoo.com/quote/%5EDJI"
-    },
-    "russell": {
-      "name": "Russell 2000",
-      "symbol": "^RUT",
-      "value": 2669.655,
-      "change": 87.865,
-      "pct": 3.403,
-      "date": "2026-11-23",
-      "source": "Yahoo Finance（非官方、可能延遲） · 既有站快照",
-      "url": "https://finance.yahoo.com/quote/%5ERUT"
-    },
-    "sox": {
-      "name": "SOX 費城半導體",
-      "symbol": "^SOX",
-      "value": 9574.71,
-      "change": null,
-      "pct": 13.87,
-      "date": "2026-11-23",
-      "source": "前次試跑・未重新核實",
-      "url": "https://finance.yahoo.com/quote/%5ESOX"
-    },
-    "vix": {
-      "name": "VIX",
-      "symbol": "^VIX",
-      "value": 26.85,
-      "change": null,
-      "pct": -25.19,
-      "date": "2026-11-23",
-      "source": "前次試跑・未重新核實",
-      "url": "https://finance.yahoo.com/quote/%5EVIX"
-    },
-    "usd_twd": {
-      "name": "USD/TWD",
-      "symbol": "TWD=X",
-      "value": 32.871,
-      "change": null,
-      "pct": null,
-      "date": "2026-11-23",
-      "source": "前次試跑・未重新核實",
-      "url": "https://finance.yahoo.com/quote/TWD%3DX"
-    },
-    "us10y": {
-      "name": "美國10年債殖利率",
-      "symbol": "^TNX",
-      "value": 4.918,
-      "change": 0.006,
-      "pct": 0.122,
-      "date": "2026-11-23",
-      "source": "Yahoo Finance（非官方、可能延遲） · 既有站快照",
-      "url": "https://finance.yahoo.com/quote/%5ETNX"
-    },
-    "tsmc": {
-      "name": "台積電",
-      "value": 2230,
-      "date": "2026-11-24",
-      "asof": "早盤",
-      "source": "前次試跑・未重新核實"
-    }
+    "sp500": null,
+    "nasdaq": null,
+    "dow": null,
+    "sox": null,
+    "vix": null,
+    "us10y": null,
+    "usd_twd": null
   },
-  "watchlist": [
+  "watchlist": [],
+  "sectors": [],
+  "news": [
     {
-      "name": "台積電",
-      "symbol": "2330.TW",
-      "value": 2000,
-      "change": -100,
-      "pct": -4.762,
-      "date": "2026-11-20",
-      "source": "Yahoo Finance（非官方、可能延遲）",
-      "url": "https://finance.yahoo.com/quote/2330.TW"
-    },
-    {
-      "name": "聯發科",
-      "symbol": "2454.TW",
-      "value": 3350,
-      "change": -370,
-      "pct": -9.946,
-      "date": "2026-11-20",
-      "source": "Yahoo Finance（非官方、可能延遲）",
-      "url": "https://finance.yahoo.com/quote/2454.TW"
-    },
-    {
-      "name": "台達電",
-      "symbol": "2308.TW",
-      "value": 900,
-      "change": -100,
-      "pct": -10,
-      "date": "2026-11-20",
-      "source": "Yahoo Finance（非官方、可能延遲）",
-      "url": "https://finance.yahoo.com/quote/2308.TW"
-    },
-    {
-      "name": "鴻海",
-      "symbol": "2317.TW",
-      "value": 210,
-      "change": -10.5,
-      "pct": -4.762,
-      "date": "2026-11-20",
-      "source": "Yahoo Finance（非官方、可能延遲）",
-      "url": "https://finance.yahoo.com/quote/2317.TW"
-    },
-    {
-      "name": "Nvidia",
-      "symbol": "NVDA",
-      "value": 165.05,
-      "change": 39.52,
-      "pct": 31.483,
-      "date": "2026-11-23",
-      "source": "Yahoo Finance（非官方、可能延遲）",
-      "url": "https://finance.yahoo.com/quote/NVDA"
-    },
-    {
-      "name": "AMD",
-      "symbol": "AMD",
-      "value": 453.46,
-      "change": 29.07,
-      "pct": 6.85,
-      "date": "2026-11-23",
-      "source": "Yahoo Finance（非官方、可能延遲）",
-      "url": "https://finance.yahoo.com/quote/AMD"
-    },
-    {
-      "name": "Broadcom",
-      "symbol": "AVGO",
-      "value": 313.55,
-      "change": 9.14,
-      "pct": 3.003,
-      "date": "2026-11-23",
-      "source": "Yahoo Finance（非官方、可能延遲）",
-      "url": "https://finance.yahoo.com/quote/AVGO"
-    },
-    {
-      "name": "Micron",
-      "symbol": "MU",
-      "value": 707.7,
-      "change": 113.19,
-      "pct": 19.039,
-      "date": "2026-11-23",
-      "source": "Yahoo Finance（非官方、可能延遲）",
-      "url": "https://finance.yahoo.com/quote/MU"
-    },
-    {
-      "name": "Microsoft",
-      "symbol": "MSFT",
-      "value": 492.5,
-      "change": 7.98,
-      "pct": 1.647,
-      "date": "2026-11-23",
-      "source": "Yahoo Finance（非官方、可能延遲）",
-      "url": "https://finance.yahoo.com/quote/MSFT"
-    },
-    {
-      "name": "0050 元大台灣50",
-      "symbol": "0050.TW",
-      "value": 87,
-      "change": 2.55,
-      "pct": 3.02,
-      "date": "2026-11-23",
-      "source": "Yahoo Finance（非官方、可能延遲）",
-      "url": "https://finance.yahoo.com/quote/0050.TW"
-    },
-    {
-      "name": "0052 富邦科技",
-      "symbol": "0052.TW",
-      "value": 50.15,
-      "change": 1.75,
-      "pct": 3.616,
-      "date": "2026-11-23",
-      "source": "Yahoo Finance（非官方、可能延遲）",
-      "url": "https://finance.yahoo.com/quote/0052.TW"
-    },
-    {
-      "name": "00662 富邦NASDAQ",
-      "symbol": "00662.TW",
-      "value": 21.84,
-      "change": -0.31,
-      "pct": -1.4,
-      "date": "2026-11-23",
-      "source": "Yahoo Finance（非官方、可能延遲）",
-      "url": "https://finance.yahoo.com/quote/00662.TW"
-    },
-    {
-      "name": "00646 元大S&P500",
-      "symbol": "00646.TW",
-      "value": 73.45,
-      "change": -0.6,
-      "pct": -0.81,
-      "date": "2026-11-23",
-      "source": "Yahoo Finance（非官方、可能延遲）",
-      "url": "https://finance.yahoo.com/quote/00646.TW"
-    },
-    {
-      "name": "VOO Vanguard S&P500",
-      "symbol": "VOO",
-      "value": 663.91,
-      "change": 28.37,
-      "pct": 4.464,
-      "date": "2026-11-23",
-      "source": "Yahoo Finance（非官方、可能延遲）",
-      "url": "https://finance.yahoo.com/quote/VOO"
-    }
-  ],
-  "news": [],
-  "sectors": [
-    {
-      "name": "科技",
-      "pct": 8.97
-    },
-    {
-      "name": "非必需消費",
-      "pct": 3.97
-    },
-    {
-      "name": "工業",
-      "pct": 3.9
-    },
-    {
-      "name": "通訊服務",
-      "pct": 3.57
-    },
-    {
-      "name": "原物料",
-      "pct": 3.23
-    },
-    {
-      "name": "金融",
-      "pct": 1.98
-    },
-    {
-      "name": "公用事業",
-      "pct": 1.48
-    },
-    {
-      "name": "醫療保健",
-      "pct": 1.23
-    },
-    {
-      "name": "房地產",
-      "pct": 1.04
-    },
-    {
-      "name": "必需消費",
-      "pct": -0.09
-    },
-    {
-      "name": "能源",
-      "pct": -1.06
+      "title": "台股早盤急彈",
+      "source": "TVBS",
+      "url": "https://news.tvbs.com.tw/money/4055206"
     }
   ],
   "risk": {
-    "level": "中高風險",
-    "score": "4 / 5",
-    "description": "試跑定性評級，非回測模型",
+    "level": "高波動風險",
+    "score": "1項觸發／1項待核實",
+    "description": "開盤漲幅超過3%，VIX未核實；非事前評級。",
     "signals": [
-      "短線動能：強烈偏多",
-      "中期趨勢：尚待確認",
-      "流動性風險：偏高",
-      "恐慌情緒：明顯緩解"
+      "開盤上漲6.35%"
     ]
   },
-  "headline": "AI 信心修復，台美股出現報復性反彈（試跑主題）",
-  "summary": "前次試跑將科技股反彈列為主軸。早盤漲幅、個股與產業數據未重新核實；完整原型可另行瀏覽。",
-  "thesis": "市場正在修復信心，但尚不能確認空頭危機解除。",
+  "headline": "11/24早盤事後重建：跳空急彈",
+  "summary": "09:00加權39148.91點，上漲2337.02點。09:14公開報導指出多檔權值股漲停。",
+  "thesis": "開盤急彈顯示價格修復，但不能由此確認後續趨勢。",
   "factors": [
     {
-      "title": "人事消息",
-      "text": "前次試跑將輝達人事消息列為觀察重點，實際消息需核對原文。"
-    },
-    {
-      "title": "高利率估值壓力",
-      "text": "10年期美債殖利率試跑值4.918%；高利率可能限制估值擴張。"
-    },
-    {
-      "title": "跌深反彈",
-      "text": "觀察市場廣度、成交量及權值股強度。"
+      "title": "開盤事實",
+      "text": "跳空上漲，盤中成交及承接尚待觀察。"
     }
   ],
-  "scenarios": [
+  "scenarios": [],
+  "next_session_scenarios": [],
+  "validation": {
+    "scenario": null,
+    "text": "延遲補發，不計事前預測命中。"
+  },
+  "sources": [
     {
-      "id": "A",
-      "title": "強勢反彈延續",
-      "threshold": "40,000 點以上",
-      "text": "觀察權值股及AI供應鏈強度。"
+      "url": "https://tw.tradingview.com/news/cnyes%3A537a52185acdf%3A0/"
     },
     {
-      "id": "B",
-      "title": "高檔震盪",
-      "threshold": "39,000–39,999.99",
-      "text": "觀察獲利了結賣壓。"
-    },
-    {
-      "id": "C",
-      "title": "反彈失速",
-      "threshold": "39,000 點以下",
-      "text": "觀察解套賣壓。"
+      "url": "https://news.tvbs.com.tw/money/4055206"
     }
-  ]
+  ],
+  "warnings": [
+    "美股及其他早盤欄位未完整核實。",
+    "官方端點未取得。"
+  ],
+  "original_demo": {
+    "date": "2026-11-24",
+    "session": "opening",
+    "status": "demo",
+    "generated_at": null,
+    "note": "回溯試跑（非嚴格09:15快照）：沿用已確認的設計原型及原站11/23快照，含09:16附近報導，尚未重新核實。不是即時行情；收盤驗證須以獨立來源核實。",
+    "prices": {
+      "taiex": {
+        "name": "TAIEX",
+        "value": 39148.91,
+        "change": 2337.02,
+        "pct": 6.35,
+        "date": "2026-11-24",
+        "asof": "09:04 開盤報導",
+        "source": "前次試跑・未重新核實"
+      },
+      "sp500": {
+        "name": "S&P 500",
+        "symbol": "^GSPC",
+        "value": 7237.1699,
+        "change": 326.7798,
+        "pct": 4.729,
+        "date": "2026-11-23",
+        "source": "Yahoo Finance（非官方、可能延遲） · 既有站快照",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      "nasdaq": {
+        "name": "Nasdaq",
+        "symbol": "^IXIC",
+        "value": 24089.5586,
+        "change": 1471.8281,
+        "pct": 6.507,
+        "date": "2026-11-23",
+        "source": "Yahoo Finance（非官方、可能延遲） · 既有站快照",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      "dow": {
+        "name": "Dow Jones",
+        "symbol": "^DJI",
+        "value": 49595.3086,
+        "change": 1447.9805,
+        "pct": 3.007,
+        "date": "2026-11-23",
+        "source": "Yahoo Finance（非官方、可能延遲） · 既有站快照",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      },
+      "russell": {
+        "name": "Russell 2000",
+        "symbol": "^RUT",
+        "value": 2669.655,
+        "change": 87.865,
+        "pct": 3.403,
+        "date": "2026-11-23",
+        "source": "Yahoo Finance（非官方、可能延遲） · 既有站快照",
+        "url": "https://finance.yahoo.com/quote/%5ERUT"
+      },
+      "sox": {
+        "name": "SOX 費城半導體",
+        "symbol": "^SOX",
+        "value": 9574.71,
+        "change": null,
+        "pct": 13.87,
+        "date": "2026-11-23",
+        "source": "前次試跑・未重新核實",
+        "url": "https://finance.yahoo.com/quote/%5ESOX"
+      },
+      "vix": {
+        "name": "VIX",
+        "symbol": "^VIX",
+        "value": 26.85,
+        "change": null,
+        "pct": -25.19,
+        "date": "2026-11-23",
+        "source": "前次試跑・未重新核實",
+        "url": "https://finance.yahoo.com/quote/%5EVIX"
+      },
+      "usd_twd": {
+        "name": "USD/TWD",
+        "symbol": "TWD=X",
+        "value": 32.871,
+        "change": null,
+        "pct": null,
+        "date": "2026-11-23",
+        "source": "前次試跑・未重新核實",
+        "url": "https://finance.yahoo.com/quote/TWD%3DX"
+      },
+      "us10y": {
+        "name": "美國10年債殖利率",
+        "symbol": "^TNX",
+        "value": 4.918,
+        "change": 0.006,
+        "pct": 0.122,
+        "date": "2026-11-23",
+        "source": "Yahoo Finance（非官方、可能延遲） · 既有站快照",
+        "url": "https://finance.yahoo.com/quote/%5ETNX"
+      },
+      "tsmc": {
+        "name": "台積電",
+        "value": 2230,
+        "date": "2026-11-24",
+        "asof": "早盤",
+        "source": "前次試跑・未重新核實"
+      }
+    },
+    "watchlist": [
+      {
+        "name": "台積電",
+        "symbol": "2330.TW",
+        "value": 2000,
+        "change": -100,
+        "pct": -4.762,
+        "date": "2026-11-20",
+        "source": "Yahoo Finance（非官方、可能延遲）",
+        "url": "https://finance.yahoo.com/quote/2330.TW"
+      },
+      {
+        "name": "聯發科",
+        "symbol": "2454.TW",
+        "value": 3350,
+        "change": -370,
+        "pct": -9.946,
+        "date": "2026-11-20",
+        "source": "Yahoo Finance（非官方、可能延遲）",
+        "url": "https://finance.yahoo.com/quote/2454.TW"
+      },
+      {
+        "name": "台達電",
+        "symbol": "2308.TW",
+        "value": 900,
+        "change": -100,
+        "pct": -10,
+        "date": "2026-11-20",
+        "source": "Yahoo Finance（非官方、可能延遲）",
+        "url": "https://finance.yahoo.com/quote/2308.TW"
+      },
+      {
+        "name": "鴻海",
+        "symbol": "2317.TW",
+        "value": 210,
+        "change": -10.5,
+        "pct": -4.762,
+        "date": "2026-11-20",
+        "source": "Yahoo Finance（非官方、可能延遲）",
+        "url": "https://finance.yahoo.com/quote/2317.TW"
+      },
+      {
+        "name": "Nvidia",
+        "symbol": "NVDA",
+        "value": 165.05,
+        "change": 39.52,
+        "pct": 31.483,
+        "date": "2026-11-23",
+        "source": "Yahoo Finance（非官方、可能延遲）",
+        "url": "https://finance.yahoo.com/quote/NVDA"
+      },
+      {
+        "name": "AMD",
+        "symbol": "AMD",
+        "value": 453.46,
+        "change": 29.07,
+        "pct": 6.85,
+        "date": "2026-11-23",
+        "source": "Yahoo Finance（非官方、可能延遲）",
+        "url": "https://finance.yahoo.com/quote/AMD"
+      },
+      {
+        "name": "Broadcom",
+        "symbol": "AVGO",
+        "value": 313.55,
+        "change": 9.14,
+        "pct": 3.003,
+        "date": "2026-11-23",
+        "source": "Yahoo Finance（非官方、可能延遲）",
+        "url": "https://finance.yahoo.com/quote/AVGO"
+      },
+      {
+        "name": "Micron",
+        "symbol": "MU",
+        "value": 707.7,
+        "change": 113.19,
+        "pct": 19.039,
+        "date": "2026-11-23",
+        "source": "Yahoo Finance（非官方、可能延遲）",
+        "url": "https://finance.yahoo.com/quote/MU"
+      },
+      {
+        "name": "Microsoft",
+        "symbol": "MSFT",
+        "value": 492.5,
+        "change": 7.98,
+        "pct": 1.647,
+        "date": "2026-11-23",
+        "source": "Yahoo Finance（非官方、可能延遲）",
+        "url": "https://finance.yahoo.com/quote/MSFT"
+      },
+      {
+        "name": "0050 元大台灣50",
+        "symbol": "0050.TW",
+        "value": 87,
+        "change": 2.55,
+        "pct": 3.02,
+        "date": "2026-11-23",
+        "source": "Yahoo Finance（非官方、可能延遲）",
+        "url": "https://finance.yahoo.com/quote/0050.TW"
+      },
+      {
+        "name": "0052 富邦科技",
+        "symbol": "0052.TW",
+        "value": 50.15,
+        "change": 1.75,
+        "pct": 3.616,
+        "date": "2026-11-23",
+        "source": "Yahoo Finance（非官方、可能延遲）",
+        "url": "https://finance.yahoo.com/quote/0052.TW"
+      },
+      {
+        "name": "00662 富邦NASDAQ",
+        "symbol": "00662.TW",
+        "value": 21.84,
+        "change": -0.31,
+        "pct": -1.4,
+        "date": "2026-11-23",
+        "source": "Yahoo Finance（非官方、可能延遲）",
+        "url": "https://finance.yahoo.com/quote/00662.TW"
+      },
+      {
+        "name": "00646 元大S&P500",
+        "symbol": "00646.TW",
+        "value": 73.45,
+        "change": -0.6,
+        "pct": -0.81,
+        "date": "2026-11-23",
+        "source": "Yahoo Finance（非官方、可能延遲）",
+        "url": "https://finance.yahoo.com/quote/00646.TW"
+      },
+      {
+        "name": "VOO Vanguard S&P500",
+        "symbol": "VOO",
+        "value": 663.91,
+        "change": 28.37,
+        "pct": 4.464,
+        "date": "2026-11-23",
+        "source": "Yahoo Finance（非官方、可能延遲）",
+        "url": "https://finance.yahoo.com/quote/VOO"
+      }
+    ],
+    "news": [],
+    "sectors": [
+      {
+        "name": "科技",
+        "pct": 8.97
+      },
+      {
+        "name": "非必需消費",
+        "pct": 3.97
+      },
+      {
+        "name": "工業",
+        "pct": 3.9
+      },
+      {
+        "name": "通訊服務",
+        "pct": 3.57
+      },
+      {
+        "name": "原物料",
+        "pct": 3.23
+      },
+      {
+        "name": "金融",
+        "pct": 1.98
+      },
+      {
+        "name": "公用事業",
+        "pct": 1.48
+      },
+      {
+        "name": "醫療保健",
+        "pct": 1.23
+      },
+      {
+        "name": "房地產",
+        "pct": 1.04
+      },
+      {
+        "name": "必需消費",
+        "pct": -0.09
+      },
+      {
+        "name": "能源",
+        "pct": -1.06
+      }
+    ],
+    "risk": {
+      "level": "中高風險",
+      "score": "4 / 5",
+      "description": "試跑定性評級，非回測模型",
+      "signals": [
+        "短線動能：強烈偏多",
+        "中期趨勢：尚待確認",
+        "流動性風險：偏高",
+        "恐慌情緒：明顯緩解"
+      ]
+    },
+    "headline": "AI 信心修復，台美股出現報復性反彈（試跑主題）",
+    "summary": "前次試跑將科技股反彈列為主軸。早盤漲幅、個股與產業數據未重新核實；完整原型可另行瀏覽。",
+    "thesis": "市場正在修復信心，但尚不能確認空頭危機解除。",
+    "factors": [
+      {
+        "title": "人事消息",
+        "text": "前次試跑將輝達人事消息列為觀察重點，實際消息需核對原文。"
+      },
+      {
+        "title": "高利率估值壓力",
+        "text": "10年期美債殖利率試跑值4.918%；高利率可能限制估值擴張。"
+      },
+      {
+        "title": "跌深反彈",
+        "text": "觀察市場廣度、成交量及權值股強度。"
+      }
+    ],
+    "scenarios": [
+      {
+        "id": "A",
+        "title": "強勢反彈延續",
+        "threshold": "40,000 點以上",
+        "text": "觀察權值股及AI供應鏈強度。"
+      },
+      {
+        "id": "B",
+        "title": "高檔震盪",
+        "threshold": "39,000–39,999.99",
+        "text": "觀察獲利了結賣壓。"
+      },
+      {
+        "id": "C",
+        "title": "反彈失速",
+        "threshold": "39,000 點以下",
+        "text": "觀察解套賣壓。"
+      }
+    ]
+  }
 }
