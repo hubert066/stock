@@ -1,14 +1,14 @@
 {
   "status": "ok",
-  "generated_at": "2026-11-25T10:02:40.831607+00:00",
+  "generated_at": "2026-11-25T15:59:03.797305+00:00",
   "display_timezone": "Asia/Taipei",
   "coverage": {
     "taiex": "2026-11-25",
-    "sp500": "2026-11-24",
-    "sox": "2026-11-24",
+    "sp500": "2026-11-25",
+    "sox": "2026-11-25",
     "vix": "2026-11-25",
     "usd_twd": "2026-11-25",
-    "us10y": "2026-11-24"
+    "us10y": "2026-11-25"
   },
   "prices": {
     "taiex": {
@@ -24,59 +24,59 @@
     "sp500": {
       "name": "S&P 500",
       "symbol": "^GSPC",
-      "value": 7201.0898,
-      "change": -36.0801,
-      "pct": -0.499,
-      "date": "2026-11-24",
+      "value": 7011.6299,
+      "change": -189.46,
+      "pct": -2.631,
+      "date": "2026-11-25",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/%5EGSPC"
     },
     "nasdaq": {
       "name": "Nasdaq",
       "symbol": "^IXIC",
-      "value": 23733.5391,
-      "change": -356.0215,
-      "pct": -1.478,
-      "date": "2026-11-24",
+      "value": 22785.0605,
+      "change": -948.4785,
+      "pct": -3.996,
+      "date": "2026-11-25",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/%5EIXIC"
     },
     "dow": {
       "name": "Dow Jones",
       "symbol": "^DJI",
-      "value": 50018.6992,
-      "change": 423.3906,
-      "pct": 0.854,
-      "date": "2026-11-24",
+      "value": 49317.3906,
+      "change": -701.3086,
+      "pct": -1.402,
+      "date": "2026-11-25",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/%5EDJI"
     },
     "russell": {
       "name": "Russell 2000",
       "symbol": "^RUT",
-      "value": 2684.9399,
-      "change": 15.28,
-      "pct": 0.572,
-      "date": "2026-11-24",
+      "value": 2641.7551,
+      "change": -43.1848,
+      "pct": -1.608,
+      "date": "2026-11-25",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/%5ERUT"
     },
     "sox": {
       "name": "SOX 費城半導體",
       "symbol": "^SOX",
-      "value": 8832.5,
-      "change": -755.5498,
-      "pct": -7.88,
-      "date": "2026-11-24",
+      "value": 8225.8418,
+      "change": -606.6582,
+      "pct": -6.868,
+      "date": "2026-11-25",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/%5ESOX"
     },
     "vix": {
       "name": "VIX",
       "symbol": "^VIX",
-      "value": 29.66,
-      "change": 3.3,
-      "pct": 12.519,
+      "value": 33.56,
+      "change": 7.2,
+      "pct": 27.314,
       "date": "2026-11-25",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/%5EVIX"
@@ -84,9 +84,9 @@
     "usd_twd": {
       "name": "USD/TWD",
       "symbol": "TWD=X",
-      "value": 33.126,
-      "change": 0.2775,
-      "pct": 0.845,
+      "value": 33.276,
+      "change": 0.4275,
+      "pct": 1.301,
       "date": "2026-11-25",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/TWD%3DX"
@@ -94,10 +94,10 @@
     "us10y": {
       "name": "美國10年債殖利率",
       "symbol": "^TNX",
-      "value": 4.904,
-      "change": -0.014,
-      "pct": -0.285,
-      "date": "2026-11-24",
+      "value": 4.82,
+      "change": -0.084,
+      "pct": -1.713,
+      "date": "2026-11-25",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/%5ETNX"
     }
@@ -146,50 +146,50 @@
     {
       "name": "Nvidia",
       "symbol": "NVDA",
-      "value": 155.38,
-      "change": -9.67,
-      "pct": -5.859,
-      "date": "2026-11-24",
+      "value": 142.66,
+      "change": -12.72,
+      "pct": -8.186,
+      "date": "2026-11-25",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/NVDA"
     },
     {
       "name": "AMD",
       "symbol": "AMD",
-      "value": 413.27,
-      "change": -40.19,
-      "pct": -8.863,
-      "date": "2026-11-24",
+      "value": 377.055,
+      "change": -36.215,
+      "pct": -8.763,
+      "date": "2026-11-25",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/AMD"
     },
     {
       "name": "Broadcom",
       "symbol": "AVGO",
-      "value": 301.08,
-      "change": -12.47,
-      "pct": -3.977,
-      "date": "2026-11-24",
+      "value": 283.66,
+      "change": -17.42,
+      "pct": -5.786,
+      "date": "2026-11-25",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/AVGO"
     },
     {
       "name": "Micron",
       "symbol": "MU",
-      "value": 629.79,
-      "change": -77.91,
-      "pct": -11.009,
-      "date": "2026-11-24",
+      "value": 561.66,
+      "change": -68.13,
+      "pct": -10.818,
+      "date": "2026-11-25",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/MU"
     },
     {
       "name": "Microsoft",
       "symbol": "MSFT",
-      "value": 496.13,
-      "change": 3.63,
-      "pct": 0.737,
-      "date": "2026-11-24",
+      "value": 478.73,
+      "change": -17.4,
+      "pct": -3.507,
+      "date": "2026-11-25",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/MSFT"
     },
@@ -236,15 +236,22 @@
     {
       "name": "VOO Vanguard S&P500",
       "symbol": "VOO",
-      "value": 660.71,
-      "change": -3.2,
-      "pct": -0.482,
-      "date": "2026-11-24",
+      "value": 643.12,
+      "change": -17.59,
+      "pct": -2.662,
+      "date": "2026-11-25",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/VOO"
     }
   ],
   "news": [
+    {
+      "region": "美國",
+      "title": "Goldman Sachs: The market has already priced in four Federal Reserve rate hikes, but Warsh will continue to raise rates in December. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNS2ZNRlNIMVZyTlRvV0Q3VHl4SWpQYjNNY1pvWUplcnc4cXhpUkd2Mmx5OWhMeHNMRmlIV0hWWlBKLWFzY1BjcXlOemFJc3pTaTd5Sm1GeUJaZzlSSTYwSWVwWGsxXzZ4eF9mUF9RUEpBcXRUUzFRVmVnNDVyVGhSYWNWVXpJVkJKWHRaT0FYRDRPc010TlJIdl9vMDRLRC1MU2E4Mw?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-25T12:26:01+00:00"
+    },
     {
       "region": "美國",
       "title": "Nasdaq, Dow, S&P 500 Futures Gain As Jensen Huang’s Return To Nvidia Sparks $3T Market Rally: SOXS, IBRX, HPE, TSM In Focus - TradingView",
@@ -261,20 +268,6 @@
     },
     {
       "region": "美國",
-      "title": "Why is Micron stock rocketing higher today - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxONmxFYjNNZmpzMm9RZVZzTlM1UzdzUmlMU1p0bHFaSnl3R2Zxcm1sUzM2Y19hVTJNMWRwcmppT3Vyb2M5Q3lVVHpkNjQ4ZWNfS1ROZVNraWtvQ3J2MDBlWTZ6YUtvQnphcHQ5TmI2SUpnazVaSi0xY0JOdFNtdEt4TVlqbFd6U21aeW1HVmFmUVlYOFVOc2hJVERiV0NselA5X0tGb0N2QWN0XzhWbGJlVmJrUFQ0TTJWZFk1SWFR?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-23T18:10:35+00:00"
-    },
-    {
-      "region": "美國",
-      "title": "Why SK hynix stock is trading up today - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQbVBXMXRHRmQ1Z3N3akpkVVBSZVhLcnVaTUNndXlydkhhUGhiOEFGci05R19MWS1MY1VoaUhIMU16cm15Vkgzc19NYk5zeWRWSmh3dVBVUTBUTHRRNGE4V0J5X0hqb0lFRmd2SS1iazlybjVIbi1rR2Jna01zc1Vpci03bVZIRE9Md0RJY2IyNFE3Nml3X0kyaEd3b0pyWU0?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-23T18:05:35+00:00"
-    },
-    {
-      "region": "美國",
       "title": "US stock futures rebound as tech stocks recover from AI sell-off; Nasdaq 100 jumps 3.5%, S&P 500 climbs 2.8% - TradingView",
       "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNamJqdnhQelJOV1FkRGMzNDJsX3pjMFBsZXptN0sybHY2UTd2amIwV2I3TXMyWC03VV9Hd0NkVk5TVGtfcDh0MVRYUEpHXzc3TnYxTW92cGQ2NHZ5RExRTUREb1BpZnZRT2gtWjZMeHRuWkdZaWppUnRfWHM0NmpsdjVUOHhxaGZFQXVRQzFFZ1JVTHd1Q050XzNqUzBmWkhJMWpuTmVkNjd1WTFGQ1BEcHFQQXNlN2dLVnBLNmgzUjZ5VTNpaUV3NXBBM3hXZlFfc0hfMnhaN09tbjl0UUJZODNWTmVxVXk3WHlLM2pxYi03TkVseTBMVmlB?oc=5",
       "source": "TradingView",
@@ -282,38 +275,10 @@
     },
     {
       "region": "美國",
-      "title": "AM Markets: Goldman eyes rebound, Ackman flags Fed risk, and more - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOU3BlWmY1VFYyVEdvWE1hcW4wSDhDTmZzVWRNbVhGclJmdTladjJSRHRPbUJHakdMRXhIcklHQXZqd0J6V01nUDhUZ19jbDBtaXJybFRSdkxMd3NGOFNJQ3p6NS1CaGlmdHhpNk5ONzFHdDNNTW1VM3lGVDlsTWlIRFJGbTg2ZlZJRW01d29mNzZZSDZ3TmRsNGxJZFFpOHV5cUluMl95cEJNN1FtdTh6QTNGeXVJNVFqTG9RdlYybnd5QQ?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-23T10:42:57+00:00"
-    },
-    {
-      "region": "美國",
-      "title": "Overbought conditions triggered a rebound! Pre-market U.S. tech stocks rallied across the board, with NVIDIA surging nearly 10% and Anthropic rising more than 5%; Nasdaq futures gained nearly 4%. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOR08yQTBsZDJUN0lOOWVIZi1rbzBBc2V2bFJWbjU0dlNmdExZWmk4ZHQyWmY1Sk9keFoxbVdFN2dKc0tOdWhGY3E4Rkg3ellqTkFFd3lkNERldjVETGlNRGNZVXlEbGtoRU1MZ0JBV3Q2OUJCSVNSaHFrYmFGS2RQUkMxXzdYNm9kaFZZN3VpaDc0UnVxN1NNQ2JWYWNROF9lM1kyakpqUzN2aEJ0Rzk0?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-23T09:49:05+00:00"
-    },
-    {
-      "region": "美國",
-      "title": "Gold Weekly Review: AI Stock Crash Combined with Rate Hike Expectations Sends Gold Prices Plunging Nearly 9% in a Week, Marking Largest Drop in Eight Months! Hits 14-Month Low - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNd3J6UEVtS040R0twSFU5WG1JVlFOOVVRM2JGdUhIMUlsd21JZE1JMklWTDhpUEUtNzZjbEhOQm5BU2ZZS09lOWs5eVNldTM3NkRmWThONjR3MXVzQWl1NnFCYXEzUndidWd4M05zWm9JM1ZiZ1A5eWcxOEtubGdLVmVwbDRkQ210WlJGNThrUGVwWnFKODdLQU9TcXRQZ3c1V0E?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-21T01:41:27+00:00"
-    },
-    {
-      "region": "美國",
       "title": "Nasdaq falls as Anthropic slides, dragging AI stocks into weekly selloff - TradingView",
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUUJtMEtQS0hxU0RSZFVjbG1aQVFvUUFaV1c3c1h3Zy1QU1hfMXN6cXN5c1VtTWFCWVAtVTVaaG1hT3NoeWZWOWRKTVA1VzN6ejZLOXBtMkhIdF95UlVZNGJQYmg0bXdKcU9pSTNTeHBvZHh0eWFjdFJGRDFMZzAwTlJoZTh4T0Z5YUVybFpZS3pjMTNVQTJlUEFiemdYb0ExLUl1eUMxSTBpMG5lMTBzY2lKZlRBQ3VDWUlqZjd5UXJGZmQ3U2c?oc=5",
       "source": "TradingView",
       "published_at": "2026-11-20T14:41:38+00:00"
-    },
-    {
-      "region": "美國",
-      "title": "Global Market Watch for Next Week: Can U.S. Stocks Stabilize? PCE Data and Black Friday Spending to Test Market Confidence - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxON2lidUc3bG0wVm5HWVJiWWhvQV9oRExzWXJmZ1dlekVDQ2pKaGRXS3UzYjNDZ1JUaUVvM2VQTk1sNFRocEdfOXJQY3dLLVE1cFR6QjVZVmMwQmVoWlloSGhfa05ueDlfc2Z3Rml6NS1DUGJQWk5aLW5Bc2c1QnN0anlxUHZubmNLSzNTSGhCZmMyNXdBeDFDc3FQbmZWbnZvYVE?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-20T10:10:00+00:00"
     },
     {
       "region": "美國",
@@ -332,9 +297,9 @@
   ],
   "risk": {
     "level": "極高",
-    "score": 7,
+    "score": 8,
     "signals": [
-      "VIX ≥ 25",
+      "VIX ≥ 30",
       "台股單日跌幅 ≥ 4%",
       "SOX單日跌幅 ≥ 3%",
       "USD/TWD ≥ 33"
