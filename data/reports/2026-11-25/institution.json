@@ -1,0 +1,323 @@
+{
+  "date": "2026-11-25",
+  "status": "ok",
+  "production": "chatgpt_scheduled_source_checked",
+  "generated_at": "2026-11-25T08:17:45.730Z",
+  "note": "延遲補發；台股13:30收盤，美股11/24收盤；非事前預測。官方端點無法讀取，核心行情以獨立公開媒體交叉核實。",
+  "prices": {
+    "taiex": {
+      "name": "TAIEX 加權指數",
+      "value": 38195.43,
+      "pct": -4.8,
+      "change": -1926.92,
+      "date": "2026-11-25",
+      "source": "中央社、經濟日報",
+      "url": "https://www.cna.com.tw/news/afe/202611250141.aspx",
+      "asof": "13:30 收盤",
+      "symbol": "TAIEX",
+      "open": 39983.91,
+      "high": 39983.91,
+      "low": 36681.9,
+      "previous_close": 40122.35,
+      "turnover_billion_twd": 11881.99
+    },
+    "tsmc": {
+      "name": "台積電",
+      "value": 2150,
+      "pct": -3.58,
+      "change": -80,
+      "date": "2026-11-25",
+      "source": "經濟日報",
+      "url": "https://money.udn.com/money/story/12509/9901120",
+      "asof": "收盤",
+      "symbol": "2330.TW"
+    },
+    "sp500": {
+      "name": "S&P 500",
+      "value": 7201.09,
+      "pct": -0.5,
+      "change": -36.08,
+      "date": "2026-11-24",
+      "source": "FulyAI、Folio",
+      "url": "https://news.fuly.ai/market/report-2026-11-25",
+      "asof": "收盤"
+    },
+    "dow": {
+      "name": "道瓊",
+      "value": 50018.7,
+      "pct": 0.85,
+      "change": 423.39,
+      "date": "2026-11-24",
+      "source": "FulyAI、Folio",
+      "url": "https://news.fuly.ai/market/report-2026-11-25",
+      "asof": "收盤"
+    },
+    "nasdaq": {
+      "name": "NASDAQ",
+      "value": 23733.54,
+      "pct": -1.48,
+      "change": -356.03,
+      "date": "2026-11-24",
+      "source": "FulyAI、每日財經晨報",
+      "url": "https://news.fuly.ai/market/report-2026-11-25",
+      "asof": "收盤"
+    },
+    "sox": {
+      "name": "費半",
+      "value": 8832.5,
+      "pct": -7.88,
+      "change": -755.55,
+      "date": "2026-11-24",
+      "source": "FulyAI、每日財經晨報",
+      "url": "https://news.fuly.ai/market/report-2026-11-25",
+      "asof": "收盤"
+    },
+    "vix": {
+      "name": "VIX",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-24",
+      "source": "來源收盤值不一致",
+      "url": "https://www.spxset.com/folio/us-market-close-report-2026-11-24",
+      "asof": "收盤"
+    },
+    "us10y": {
+      "name": "美債10年",
+      "value": 4.9,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-24",
+      "source": "FulyAI、Folio（四捨五入）",
+      "url": "https://www.spxset.com/folio/us-market-close-report-2026-11-24",
+      "asof": "收盤"
+    },
+    "usd_twd": null,
+    "russell": null
+  },
+  "watchlist": [
+    {
+      "name": "台積電",
+      "value": 2150,
+      "pct": -3.58,
+      "change": -80,
+      "date": "2026-11-25",
+      "source": "經濟日報",
+      "url": "https://money.udn.com/money/story/12509/9901120",
+      "asof": "收盤",
+      "symbol": "2330.TW"
+    },
+    {
+      "name": "NVIDIA",
+      "value": 155.38,
+      "pct": -5.86,
+      "change": null,
+      "date": "2026-11-24",
+      "source": "FulyAI、經濟日報",
+      "url": "https://news.fuly.ai/market/report-2026-11-25",
+      "asof": "收盤",
+      "symbol": "NVDA"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "半導體",
+      "pct": -4.71,
+      "date": "2026-11-25",
+      "source": "經濟日報",
+      "url": "https://money.udn.com/money/story/12509/9901120"
+    },
+    {
+      "name": "金融",
+      "pct": -6.31,
+      "date": "2026-11-25",
+      "source": "中央社、經濟日報",
+      "url": "https://www.cna.com.tw/news/afe/202611250141.aspx"
+    }
+  ],
+  "news": [
+    {
+      "title": "台股收盤下跌4.80%",
+      "source": "中央社",
+      "url": "https://www.cna.com.tw/news/afe/202611250141.aspx"
+    },
+    {
+      "title": "美股科技股回落",
+      "source": "FulyAI、Folio",
+      "url": "https://news.fuly.ai/market/report-2026-11-25"
+    }
+  ],
+  "risk": {
+    "level": "高波動風險",
+    "score": "1項觸發／1項待核實",
+    "description": "台股絕對日漲跌幅≥3%觸發；VIX各來源數值不一致，暫不計分。非機率模型。",
+    "signals": [
+      "台股跌4.80%",
+      "費半跌7.88%",
+      "成交金額較前日顯著增加",
+      "外資賣超1236.54億元",
+      "期貨淨未平倉未核實"
+    ]
+  },
+  "headline": "外資大幅減碼，投信承接仍難抵賣壓",
+  "summary": "法人合計約賣超829.55億元，外資賣超1236.54億元、投信買超535.32億元、自營商賣超約128.33億元。價跌量增，法人淨賣與價格同向。",
+  "thesis": "外資淨賣與指數下跌同向，投信逆勢承接；不據此推定資金最終去向。",
+  "factors": [
+    {
+      "title": "量價結構",
+      "text": "價跌量增：同系列成交金額較前一交易日增加約183.3%，收盤從日低回升1513.53點，位於日內區間45.8%。前日漲停限制可能壓低比較基期；放量不等於確認底部。",
+      "url": "https://www.cna.com.tw/news/afe/202611250141.aspx"
+    },
+    {
+      "title": "科技股壓力",
+      "text": "費半與台灣半導體同步走弱，相關性不代表單一因果。",
+      "url": "https://news.fuly.ai/market/report-2026-11-25"
+    },
+    {
+      "title": "法人與價格同向",
+      "text": "法人淨賣額約為成交金額7.0%，僅為規模比較而非成交占比。",
+      "url": "https://news.cnyes.com/news/id/6671668"
+    }
+  ],
+  "scenarios": [],
+  "next_session_scenarios": [
+    {
+      "id": "A",
+      "title": "修復",
+      "threshold": "收盤高於39983.91",
+      "text": "觀察承接能否延續"
+    },
+    {
+      "id": "B",
+      "title": "區間",
+      "threshold": "36681.90至39983.91",
+      "text": "觀察換手與波動"
+    },
+    {
+      "id": "C",
+      "title": "再探低",
+      "threshold": "收盤低於36681.90",
+      "text": "留意流動性壓力"
+    }
+  ],
+  "validation": {
+    "scenario": null,
+    "text": "早盤報告延遲產製，未核實事前情境及截止時間，不計命中率。"
+  },
+  "sources": [
+    {
+      "id": "s0",
+      "url": "https://www.cna.com.tw/news/afe/202611250141.aspx"
+    },
+    {
+      "id": "s1",
+      "url": "https://money.udn.com/money/story/12509/9901120"
+    },
+    {
+      "id": "s2",
+      "url": "https://news.cnyes.com/news/id/6671668"
+    },
+    {
+      "id": "s3",
+      "url": "https://news.ebc.net.tw/news/business/582422"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.cna.com.tw/news/afe/202611240131.aspx"
+    },
+    {
+      "id": "s5",
+      "url": "https://news.fuly.ai/market/report-2026-11-25"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.spxset.com/folio/us-market-close-report-2026-11-24"
+    }
+  ],
+  "warnings": [
+    "TWSE官方端點無法直接讀取。",
+    "VIX、羅素2000來源不一致；當日匯率及20日均額未核實。",
+    "產業及ETF行情未完整核實；缺值不推估。",
+    "法人合計及自營商分項不同媒體有0.01億元差異；保留鉅亨合計及分項，未取得官方原始精度。",
+    "期貨未平倉、櫃買法人及個股排行未核實。"
+  ],
+  "price_volume": {
+    "turnover": {
+      "value": 11881.99,
+      "unit": "新台幣億元",
+      "date": "2026-11-25",
+      "source": "中央社",
+      "url": "https://www.cna.com.tw/news/afe/202611250141.aspx"
+    },
+    "previous_turnover": {
+      "value": 4194.05,
+      "unit": "新台幣億元",
+      "date": "2026-11-24",
+      "source": "中央社同系列收盤統計",
+      "url": "https://www.cna.com.tw/news/afe/202611240131.aspx"
+    },
+    "average_20_turnover": null,
+    "analysis": "價跌量增：同系列成交金額較前一交易日增加約183.3%，收盤從日低回升1513.53點，位於日內區間45.8%。前日漲停限制可能壓低比較基期；放量不等於確認底部。",
+    "watch_points": [
+      "觀察36681.90日低是否守住",
+      "觀察39983.91日高及成交金額變化",
+      "追蹤外資賣超是否收斂"
+    ]
+  },
+  "session": "institution",
+  "scheduled_at": "2026-11-25T15:30:00+08:00",
+  "institutional_data": {
+    "market": "上市",
+    "total": {
+      "value": -829.55,
+      "unit": "新台幣億元",
+      "date": "2026-11-25",
+      "source": "鉅亨網、東森財經",
+      "url": "https://news.cnyes.com/news/id/6671668",
+      "asof": "盤後公開報導"
+    },
+    "foreign": {
+      "value": -1236.54,
+      "unit": "新台幣億元",
+      "date": "2026-11-25",
+      "source": "鉅亨網、東森財經",
+      "url": "https://news.cnyes.com/news/id/6671668",
+      "asof": "盤後公開報導"
+    },
+    "trust": {
+      "value": 535.32,
+      "unit": "新台幣億元",
+      "date": "2026-11-25",
+      "source": "鉅亨網、東森財經",
+      "url": "https://news.cnyes.com/news/id/6671668",
+      "asof": "盤後公開報導"
+    },
+    "dealer": {
+      "value": -128.33,
+      "unit": "新台幣億元",
+      "date": "2026-11-25",
+      "source": "鉅亨網、東森財經",
+      "url": "https://news.cnyes.com/news/id/6671668",
+      "asof": "盤後公開報導"
+    },
+    "dealer_proprietary": {
+      "value": -73.62,
+      "unit": "新台幣億元",
+      "date": "2026-11-25",
+      "source": "東森財經",
+      "url": "https://news.ebc.net.tw/news/business/582422",
+      "asof": "盤後公開報導"
+    },
+    "dealer_hedge": {
+      "value": -54.7,
+      "unit": "新台幣億元",
+      "date": "2026-11-25",
+      "source": "東森財經",
+      "url": "https://news.ebc.net.tw/news/business/582422",
+      "asof": "盤後公開報導"
+    },
+    "foreign_tx_net_open_interest": null,
+    "foreign_tx_night_net_trades": null,
+    "tpex_total": null
+  }
+}
