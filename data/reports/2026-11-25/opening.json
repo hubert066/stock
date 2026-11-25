@@ -1,0 +1,426 @@
+{
+  "date": "2026-11-25",
+  "session": "opening",
+  "status": "ok",
+  "generated_at": "2026-11-25T03:09:49.814Z",
+  "scheduled_at": "2026-11-25T09:15:00+08:00",
+  "production": "manual_source_checked",
+  "note": "延遲早盤補發；台股截止10:19，非09:15事前快照，不計正式預測驗證。",
+  "prices": {
+    "taiex": {
+      "name": "TAIEX 加權指數",
+      "symbol": "TAIEX",
+      "value": 36766.76,
+      "pct": -8.36,
+      "change": -3355.59,
+      "date": "2026-11-25",
+      "asof": "10:19",
+      "source": "理財周刊",
+      "url": "https://www.moneyweekly.com.tw/Home/ChangePage/Article/264764/",
+      "open": 39983.91,
+      "previous_close": 40122.35
+    },
+    "sp500": {
+      "name": "S&P 500",
+      "symbol": "^GSPC",
+      "value": 7201.09,
+      "pct": -0.5,
+      "change": -36.08,
+      "date": "2026-11-24",
+      "asof": "美東收盤",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/wall-st-futures-dip-chip-stocks-cool-after-nvidia-fueled-rally-2026-11-24/"
+    },
+    "nasdaq": {
+      "name": "NASDAQ",
+      "symbol": "^IXIC",
+      "value": 23733.54,
+      "pct": -1.48,
+      "change": null,
+      "date": "2026-11-24",
+      "asof": "美東收盤",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/wall-st-futures-dip-chip-stocks-cool-after-nvidia-fueled-rally-2026-11-24/"
+    },
+    "dow": {
+      "name": "Dow Jones",
+      "symbol": "^DJI",
+      "value": 50018.7,
+      "pct": 0.85,
+      "change": 423.39,
+      "date": "2026-11-24",
+      "asof": "美東收盤",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/wall-st-futures-dip-chip-stocks-cool-after-nvidia-fueled-rally-2026-11-24/"
+    },
+    "russell": {
+      "name": "Russell 2000",
+      "symbol": "^RUT",
+      "value": 2684.94,
+      "pct": 0.57,
+      "change": 15.28,
+      "date": "2026-11-24",
+      "asof": "美東收盤",
+      "source": "AP／Portfolio Terminal",
+      "url": "https://apnews.com/article/6cc4e580290aadf304ee316d6d46dd81"
+    },
+    "sox": {
+      "name": "SOX 費城半導體",
+      "symbol": "^SOX",
+      "value": 8832.5,
+      "pct": -7.88,
+      "change": -755.55,
+      "date": "2026-11-24",
+      "asof": "美東收盤",
+      "source": "World Money Roadmap／Reuters",
+      "url": "https://worldmoneyroadmap.com/en/reports/2026-11-24-evening/"
+    },
+    "vix": {
+      "name": "VIX",
+      "symbol": "^VIX",
+      "value": 26.13,
+      "pct": -1.84,
+      "change": -0.49,
+      "date": "2026-11-24",
+      "asof": "美東收盤",
+      "source": "ByLiem",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-24"
+    },
+    "usd_twd": {
+      "name": "USD/TWD",
+      "symbol": "USD/TWD",
+      "value": 32.96,
+      "pct": 0.064,
+      "change": 0.021,
+      "date": "2026-11-25",
+      "asof": "開盤",
+      "source": "中央社",
+      "url": "https://www.cna.com.tw/news/afe/202611250023.aspx"
+    },
+    "us10y": {
+      "name": "美國10年期公債",
+      "symbol": "US10Y",
+      "value": 4.91,
+      "pct": null,
+      "change": -0.01,
+      "date": "2026-11-24",
+      "asof": "美東收盤",
+      "source": "World Money Roadmap",
+      "url": "https://worldmoneyroadmap.com/en/reports/2026-11-24-evening/"
+    },
+    "tsmc": {
+      "name": "台積電",
+      "symbol": "2330.TW",
+      "value": 2150,
+      "pct": -3.59,
+      "change": -80,
+      "date": "2026-11-25",
+      "asof": "開盤",
+      "source": "壹蘋新聞網",
+      "url": "https://news.nextapple.com/finance/20261125/AE715E6A1FABDD958F3341AC8EEC1EFA"
+    }
+  },
+  "watchlist": [
+    {
+      "name": "台積電",
+      "symbol": "2330.TW",
+      "value": 2150,
+      "pct": -3.59,
+      "change": -80,
+      "date": "2026-11-25",
+      "asof": "開盤",
+      "source": "壹蘋新聞網",
+      "url": "https://news.nextapple.com/finance/20261125/AE715E6A1FABDD958F3341AC8EEC1EFA"
+    },
+    {
+      "name": "鴻海",
+      "symbol": "2317.TW",
+      "value": 211,
+      "pct": null,
+      "change": -15.5,
+      "date": "2026-11-25",
+      "asof": "開盤",
+      "source": "壹蘋新聞網",
+      "url": "https://news.nextapple.com/finance/20261125/AE715E6A1FABDD958F3341AC8EEC1EFA"
+    },
+    {
+      "name": "聯發科",
+      "symbol": "2454.TW",
+      "value": 3855,
+      "pct": null,
+      "change": -195,
+      "date": "2026-11-25",
+      "asof": "開盤",
+      "source": "壹蘋新聞網",
+      "url": "https://news.nextapple.com/finance/20261125/AE715E6A1FABDD958F3341AC8EEC1EFA"
+    },
+    {
+      "name": "台達電",
+      "symbol": "2308.TW",
+      "value": 1095,
+      "pct": null,
+      "change": 10,
+      "date": "2026-11-25",
+      "asof": "開盤",
+      "source": "壹蘋新聞網",
+      "url": "https://news.nextapple.com/finance/20261125/AE715E6A1FABDD958F3341AC8EEC1EFA"
+    },
+    {
+      "name": "0050",
+      "symbol": "0050.TW",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-25",
+      "asof": null,
+      "source": "未核實",
+      "url": null
+    },
+    {
+      "name": "0052",
+      "symbol": "0052.TW",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-25",
+      "asof": null,
+      "source": "未核實",
+      "url": null
+    },
+    {
+      "name": "00662",
+      "symbol": "00662.TW",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-25",
+      "asof": null,
+      "source": "未核實",
+      "url": null
+    },
+    {
+      "name": "00646",
+      "symbol": "00646.TW",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-25",
+      "asof": null,
+      "source": "未核實",
+      "url": null
+    },
+    {
+      "name": "NVIDIA",
+      "symbol": "NVDA",
+      "value": 155.38,
+      "pct": -5.86,
+      "change": null,
+      "date": "2026-11-24",
+      "asof": "美東收盤",
+      "source": "壹蘋新聞網",
+      "url": "https://news.nextapple.com/finance/20261125/AE715E6A1FABDD958F3341AC8EEC1EFA"
+    },
+    {
+      "name": "台積電ADR",
+      "symbol": "TSM",
+      "value": 349.2,
+      "pct": -3.96,
+      "change": -14.4,
+      "date": "2026-11-24",
+      "asof": "美東收盤",
+      "source": "壹蘋新聞網",
+      "url": "https://news.nextapple.com/finance/20261125/AE715E6A1FABDD958F3341AC8EEC1EFA"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "醫療保健",
+      "symbol": "XLV",
+      "pct": 2.97,
+      "date": "2026-11-24",
+      "source": "ByLiem（前六項另與 World Money Roadmap 核對）",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-24"
+    },
+    {
+      "name": "必需消費",
+      "symbol": "XLP",
+      "pct": 1.66,
+      "date": "2026-11-24",
+      "source": "ByLiem（前六項另與 World Money Roadmap 核對）",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-24"
+    },
+    {
+      "name": "房地產",
+      "symbol": "XLRE",
+      "pct": 1.31,
+      "date": "2026-11-24",
+      "source": "ByLiem（前六項另與 World Money Roadmap 核對）",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-24"
+    },
+    {
+      "name": "能源",
+      "symbol": "XLE",
+      "pct": 0.94,
+      "date": "2026-11-24",
+      "source": "ByLiem（前六項另與 World Money Roadmap 核對）",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-24"
+    },
+    {
+      "name": "金融",
+      "symbol": "XLF",
+      "pct": 0.83,
+      "date": "2026-11-24",
+      "source": "ByLiem（前六項另與 World Money Roadmap 核對）",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-24"
+    },
+    {
+      "name": "通訊服務",
+      "symbol": "XLC",
+      "pct": 0.82,
+      "date": "2026-11-24",
+      "source": "ByLiem（前六項另與 World Money Roadmap 核對）",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-24"
+    },
+    {
+      "name": "非必需消費",
+      "symbol": "XLY",
+      "pct": 0.68,
+      "date": "2026-11-24",
+      "source": "ByLiem（前六項另與 World Money Roadmap 核對）",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-24"
+    },
+    {
+      "name": "原物料",
+      "symbol": "XLB",
+      "pct": 0.54,
+      "date": "2026-11-24",
+      "source": "ByLiem（前六項另與 World Money Roadmap 核對）",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-24"
+    },
+    {
+      "name": "公用事業",
+      "symbol": "XLU",
+      "pct": 0.18,
+      "date": "2026-11-24",
+      "source": "ByLiem（前六項另與 World Money Roadmap 核對）",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-24"
+    },
+    {
+      "name": "工業",
+      "symbol": "XLI",
+      "pct": -0.53,
+      "date": "2026-11-24",
+      "source": "ByLiem（前六項另與 World Money Roadmap 核對）",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-24"
+    },
+    {
+      "name": "科技",
+      "symbol": "XLK",
+      "pct": -3.26,
+      "date": "2026-11-24",
+      "source": "ByLiem（前六項另與 World Money Roadmap 核對）",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-24"
+    }
+  ],
+  "news": [
+    {
+      "title": "美股科技股回落，關稅疑慮升高",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/wall-st-futures-dip-chip-stocks-cool-after-nvidia-fueled-rally-2026-11-24/"
+    },
+    {
+      "title": "台股盤中回吐前日反彈",
+      "source": "理財周刊",
+      "url": "https://www.moneyweekly.com.tw/Home/ChangePage/Article/264764/"
+    }
+  ],
+  "risk": {
+    "level": "極高風險",
+    "score": "2 / 2 警示",
+    "description": "台股絕對漲跌幅≥3%、VIX≥25兩項門檻均觸發；非機率模型。",
+    "signals": [
+      "台股10:19下跌8.36%",
+      "VIX 26.13",
+      "費半下跌7.88%"
+    ]
+  },
+  "headline": "台股盤中急跌8.36%，昨日反彈全數回吐",
+  "summary": "台股10:19報36,766.76點。美股科技與半導體承壓，11大產業ETF中9漲2跌，醫療與必需消費相對強勢。",
+  "thesis": "科技股風險集中，台股價格支撐尚未確認。",
+  "factors": [
+    {
+      "title": "產業分化",
+      "text": "科技ETF跌3.26%，醫療ETF漲2.97%；相對表現支持防禦型輪動假設，但不直接證明資金流。",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-24"
+    },
+    {
+      "title": "匯率及利率",
+      "text": "美元兌台幣開盤32.96，美債10年期殖利率前日4.91%。",
+      "url": "https://www.cna.com.tw/news/afe/202611250023.aspx"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "A",
+      "title": "跌幅收斂",
+      "threshold": "≥38000",
+      "text": "觀察權值股承接"
+    },
+    {
+      "id": "B",
+      "title": "弱勢整理",
+      "threshold": "36500至未滿38000",
+      "text": "觀察賣壓能否緩和"
+    },
+    {
+      "id": "C",
+      "title": "賣壓加劇",
+      "threshold": "低於36500",
+      "text": "觀察風險擴散"
+    }
+  ],
+  "validation": {
+    "scenario": "不計正式命中",
+    "text": "延遲研究，使用10:19資訊，非09:15事前預測。"
+  },
+  "sources": [
+    {
+      "id": "source0",
+      "url": "https://www.twse.com.tw/en/exchangeReport/FMTQIK?date=&response=html"
+    },
+    {
+      "id": "source1",
+      "url": "https://www.reuters.com/business/wall-st-futures-dip-chip-stocks-cool-after-nvidia-fueled-rally-2026-11-24/"
+    },
+    {
+      "id": "source2",
+      "url": "https://news.nextapple.com/finance/20261125/AE715E6A1FABDD958F3341AC8EEC1EFA"
+    },
+    {
+      "id": "source3",
+      "url": "https://www.moneyweekly.com.tw/Home/ChangePage/Article/264764/"
+    },
+    {
+      "id": "source4",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-24"
+    },
+    {
+      "id": "source5",
+      "url": "https://worldmoneyroadmap.com/en/reports/2026-11-24-evening/"
+    },
+    {
+      "id": "source6",
+      "url": "https://www.cna.com.tw/news/afe/202611250023.aspx"
+    },
+    {
+      "id": "source7",
+      "url": "https://apnews.com/article/6cc4e580290aadf304ee316d6d46dd81"
+    }
+  ],
+  "warnings": [
+    "四檔台灣追蹤ETF當日盤中價未核實，留空。",
+    "產業ETF後五項僅取得單一彙整來源。",
+    "台積電及匯率為開盤價，不是10:19同期行情。",
+    "網站版本未獨立核實。"
+  ]
+}
