@@ -1,0 +1,806 @@
+{
+  "date": "2026-11-26",
+  "session": "institution",
+  "status": "ok",
+  "generated_at": "2026-11-26T10:20:21.797Z",
+  "scheduled_at": "2026-11-26T15:30:00+08:00",
+  "production": "chatgpt_scheduled_source_checked",
+  "note": "延遲補發；資料截止為實際產製時間 2026-11-26T10:20:21.797Z。台股13:30收盤，法人盤後統計；美股及其他背景沿用當日已發布收盤報告並重新搜尋缺值。官方直連未取得，中央社與鉅亨獨立報導及Win投資交叉核實。",
+  "prices": {
+    "taiex": {
+      "name": "TAIEX 加權指數",
+      "symbol": "TAIEX",
+      "value": 39151.81,
+      "pct": 2.5,
+      "change": 956.38,
+      "date": "2026-11-26",
+      "source": "中央社／經濟日報",
+      "url": "https://www.cna.com.tw/news/afe/202611260133.aspx",
+      "asof": "13:30 收盤",
+      "currency": null,
+      "open": 38435.99,
+      "high": 39459.95,
+      "low": 38435.99,
+      "previous_close": 38195.43,
+      "turnover_billion_twd": 8174.67,
+      "turnover_unit": "新台幣億元"
+    },
+    "sp500": {
+      "name": "S&P 500",
+      "symbol": "^GSPC",
+      "value": 7182.78,
+      "pct": -0.25,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "AP／ByLiem",
+      "url": "https://apnews.com/article/94fdb0ecb060ec65c0b02879ce0d2d09",
+      "asof": "美東 16:00 收盤",
+      "currency": "USD"
+    },
+    "nasdaq": {
+      "name": "NASDAQ",
+      "symbol": "^IXIC",
+      "value": 23585.8,
+      "pct": -0.62,
+      "change": -147.74,
+      "date": "2026-11-25",
+      "source": "AP／ByLiem",
+      "url": "https://apnews.com/article/94fdb0ecb060ec65c0b02879ce0d2d09",
+      "asof": "美東 16:00 收盤",
+      "currency": "USD"
+    },
+    "dow": {
+      "name": "Dow Jones",
+      "symbol": "^DJI",
+      "value": 50182.95,
+      "pct": 0.33,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "AP／ByLiem",
+      "url": "https://apnews.com/article/94fdb0ecb060ec65c0b02879ce0d2d09",
+      "asof": "美東 16:00 收盤",
+      "currency": "USD"
+    },
+    "russell": {
+      "name": "Russell 2000",
+      "symbol": "^RUT",
+      "value": 2704.06,
+      "pct": 0.71,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "ByLiem／World Money Roadmap",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-25",
+      "asof": "美東 16:00 收盤",
+      "currency": "USD"
+    },
+    "sox": {
+      "name": "費城半導體",
+      "symbol": "^SOX",
+      "value": 8774.86,
+      "pct": -0.65,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "YCharts／World Money Roadmap",
+      "url": "https://ycharts.com/indices/%5ESOX/level",
+      "asof": "美東 16:00 收盤",
+      "currency": "USD"
+    },
+    "vix": {
+      "name": "VIX",
+      "symbol": "^VIX",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "多來源收盤數字不一致（28.08、28.20、28.29），暫不選定",
+      "url": "https://ycharts.com/indices/%5EVIX/level",
+      "asof": null,
+      "currency": "USD"
+    },
+    "usd_twd": {
+      "name": "USD/TWD",
+      "symbol": "USD/TWD",
+      "value": 32.95,
+      "pct": -0.53,
+      "change": -0.176,
+      "date": "2026-11-26",
+      "source": "中央社（東森轉載）／其他午盤報導",
+      "url": "https://fnc.ebc.net.tw/fncnews/headline/223686",
+      "asof": "12:00 午盤暫收，非16:00收盤",
+      "currency": "TWD/USD"
+    },
+    "us10y": {
+      "name": "美國10年期公債",
+      "symbol": "US10Y",
+      "value": 4.85,
+      "pct": null,
+      "change": -0.06,
+      "date": "2026-11-25",
+      "source": "美國財政部／BondStats",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve",
+      "asof": "官方日度平價殖利率",
+      "currency": "%"
+    },
+    "tsmc": {
+      "name": "台積電",
+      "symbol": "2330.TW",
+      "value": 2145,
+      "pct": -0.23,
+      "change": -5,
+      "date": "2026-11-26",
+      "source": "聯合報／經濟日報",
+      "url": "https://udn.com/news/story/7251/9903574",
+      "asof": "13:30 收盤",
+      "currency": "TWD"
+    }
+  },
+  "watchlist": [
+    {
+      "name": "台積電",
+      "symbol": "2330.TW",
+      "value": 2145,
+      "pct": -0.23,
+      "change": -5,
+      "date": "2026-11-26",
+      "source": "聯合報／經濟日報",
+      "url": "https://udn.com/news/story/7251/9903574",
+      "asof": "13:30 收盤",
+      "currency": "TWD"
+    },
+    {
+      "name": "聯發科",
+      "symbol": "2454.TW",
+      "value": 3705,
+      "pct": 1.65,
+      "change": 60,
+      "date": "2026-11-26",
+      "source": "聯合報／經濟日報",
+      "url": "https://udn.com/news/story/7251/9903574",
+      "asof": "13:30 收盤",
+      "currency": "TWD"
+    },
+    {
+      "name": "鴻海",
+      "symbol": "2317.TW",
+      "value": 216.5,
+      "pct": 4.84,
+      "change": 10,
+      "date": "2026-11-26",
+      "source": "聯合報／經濟日報",
+      "url": "https://udn.com/news/story/7251/9903574",
+      "asof": "13:30 收盤",
+      "currency": "TWD"
+    },
+    {
+      "name": "台達電",
+      "symbol": "2308.TW",
+      "value": 1120,
+      "pct": 6.16,
+      "change": 65,
+      "date": "2026-11-26",
+      "source": "聯合報／經濟日報",
+      "url": "https://udn.com/news/story/7251/9903574",
+      "asof": "13:30 收盤",
+      "currency": "TWD"
+    },
+    {
+      "name": "廣達",
+      "symbol": "2382.TW",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-26",
+      "source": "未取得可核實收盤",
+      "url": null,
+      "asof": null,
+      "currency": "TWD"
+    },
+    {
+      "name": "元大台灣50",
+      "symbol": "0050.TW",
+      "value": 92.85,
+      "pct": 2.82,
+      "change": 2.55,
+      "date": "2026-11-26",
+      "source": "Yahoo股市標示13:30收盤／Investing日線相符；其他早盤快照不採",
+      "url": "https://tw.stock.yahoo.com/quote/0050.TW",
+      "asof": "13:30 收盤",
+      "currency": "TWD"
+    },
+    {
+      "name": "富邦科技",
+      "symbol": "0052.TW",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-26",
+      "source": "不同來源報價52.75、53.40、55.15不一致",
+      "url": "https://histock.tw/stock/tchart.aspx?m=b&no=0052",
+      "asof": null,
+      "currency": "TWD"
+    },
+    {
+      "name": "富邦NASDAQ",
+      "symbol": "00662.TW",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-26",
+      "source": "可靠歷史資料尚停留11/25",
+      "url": "https://hk.investing.com/etfs/fubon-nasdaq-100-historical-data",
+      "asof": null,
+      "currency": "TWD"
+    },
+    {
+      "name": "元大S&P500",
+      "symbol": "00646.TW",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-26",
+      "source": "75.15為12:39延遲值；另一來源75.20未確認收盤",
+      "url": "https://hk.investing.com/etfs/00646-historical-data",
+      "asof": null,
+      "currency": "TWD"
+    },
+    {
+      "name": "NVIDIA",
+      "symbol": "NVDA",
+      "value": 149.3,
+      "pct": -3.91,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "World Money Roadmap／Reuters（約跌3.9%）",
+      "url": "https://worldmoneyroadmap.com/en/reports/2026-11-25-evening/?sum=1",
+      "asof": "美東 16:00 收盤",
+      "currency": "USD"
+    },
+    {
+      "name": "Amazon",
+      "symbol": "AMZN",
+      "value": 244.43,
+      "pct": -3.12,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "World Money Roadmap／Reuters（約跌3.1%）",
+      "url": "https://worldmoneyroadmap.com/en/reports/2026-11-25-evening/?sum=1",
+      "asof": "美東 16:00 收盤",
+      "currency": "USD"
+    },
+    {
+      "name": "AMD",
+      "symbol": "AMD",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "本次未逐項雙來源核實精確收盤",
+      "url": null,
+      "asof": null,
+      "currency": "USD"
+    },
+    {
+      "name": "美光",
+      "symbol": "MU",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "本次未逐項雙來源核實精確收盤",
+      "url": null,
+      "asof": null,
+      "currency": "USD"
+    },
+    {
+      "name": "Broadcom",
+      "symbol": "AVGO",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "本次未逐項雙來源核實精確收盤",
+      "url": null,
+      "asof": null,
+      "currency": "USD"
+    },
+    {
+      "name": "Microsoft",
+      "symbol": "MSFT",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "本次未逐項雙來源核實精確收盤",
+      "url": null,
+      "asof": null,
+      "currency": "USD"
+    },
+    {
+      "name": "Apple",
+      "symbol": "AAPL",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "本次未逐項雙來源核實精確收盤",
+      "url": null,
+      "asof": null,
+      "currency": "USD"
+    },
+    {
+      "name": "台積電ADR",
+      "symbol": "TSM",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "本次未逐項雙來源核實精確收盤",
+      "url": null,
+      "asof": null,
+      "currency": "USD"
+    },
+    {
+      "name": "Vanguard S&P 500 ETF",
+      "symbol": "VOO",
+      "value": 658.87,
+      "pct": -0.28,
+      "change": -1.84,
+      "date": "2026-11-25",
+      "source": "Stock Analysis／Yahoo歷史收盤／Investing；FT較早快照不採",
+      "url": "https://stockanalysis.com/etf/voo/history/",
+      "asof": "美東 16:00 收盤",
+      "currency": "USD"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "原物料",
+      "symbol": "XLB",
+      "value": 51.2,
+      "pct": 2.05,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "ByLiem／World Money Roadmap，行情來源可能共用上游",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-25",
+      "asof": "美東 16:00 收盤",
+      "currency": "USD"
+    },
+    {
+      "name": "房地產",
+      "symbol": "XLRE",
+      "value": 43.86,
+      "pct": 0.92,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "ByLiem／World Money Roadmap，行情來源可能共用上游",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-25",
+      "asof": "美東 16:00 收盤",
+      "currency": "USD"
+    },
+    {
+      "name": "通訊服務",
+      "symbol": "XLC",
+      "value": 105.38,
+      "pct": 0.89,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "ByLiem／World Money Roadmap，行情來源可能共用上游",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-25",
+      "asof": "美東 16:00 收盤",
+      "currency": "USD"
+    },
+    {
+      "name": "工業",
+      "symbol": "XLI",
+      "value": 162.95,
+      "pct": 0.83,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "ByLiem／World Money Roadmap，行情來源可能共用上游",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-25",
+      "asof": "美東 16:00 收盤",
+      "currency": "USD"
+    },
+    {
+      "name": "能源",
+      "symbol": "XLE",
+      "value": 60.88,
+      "pct": 0.71,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "ByLiem／World Money Roadmap，行情來源可能共用上游",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-25",
+      "asof": "美東 16:00 收盤",
+      "currency": "USD"
+    },
+    {
+      "name": "金融",
+      "symbol": "XLF",
+      "value": 56.5,
+      "pct": 0.7,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "ByLiem／World Money Roadmap，行情來源可能共用上游",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-25",
+      "asof": "美東 16:00 收盤",
+      "currency": "USD"
+    },
+    {
+      "name": "公用事業",
+      "symbol": "XLU",
+      "value": 43.61,
+      "pct": 0.48,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "ByLiem／World Money Roadmap，行情來源可能共用上游",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-25",
+      "asof": "美東 16:00 收盤",
+      "currency": "USD"
+    },
+    {
+      "name": "必需消費",
+      "symbol": "XLP",
+      "value": 92.3,
+      "pct": 0.46,
+      "change": 0.42,
+      "date": "2026-11-25",
+      "source": "Investing歷史行情／ByLiem漲幅相符",
+      "url": "https://ph.investing.com/etfs/spdr---consumer-staples-historical-data",
+      "asof": "美東16:00收盤",
+      "currency": "USD"
+    },
+    {
+      "name": "非必需消費",
+      "symbol": "XLY",
+      "value": 117.49,
+      "pct": -0.2,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "ByLiem／World Money Roadmap，行情來源可能共用上游",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-25",
+      "asof": "美東 16:00 收盤",
+      "currency": "USD"
+    },
+    {
+      "name": "醫療保健",
+      "symbol": "XLV",
+      "value": 183.68,
+      "pct": -0.56,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "ByLiem／World Money Roadmap，行情來源可能共用上游",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-25",
+      "asof": "美東 16:00 收盤",
+      "currency": "USD"
+    },
+    {
+      "name": "科技",
+      "symbol": "XLK",
+      "value": 155.82,
+      "pct": -0.81,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "ByLiem／World Money Roadmap，行情來源可能共用上游",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-25",
+      "asof": "美東 16:00 收盤",
+      "currency": "USD"
+    }
+  ],
+  "news": [
+    {
+      "title": "美國提出對台301關稅方案",
+      "source": "USTR",
+      "url": "https://www.ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-makes-determinations-and-proposes-actions-14-section-301-investigations-relating-structural",
+      "published_at": null
+    },
+    {
+      "title": "台灣政府預期既有15%待遇維持",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/asia-pacific/taiwan-says-it-is-confident-keeping-previously-agreed-tariffs-with-us-2026-11-25/",
+      "published_at": null
+    },
+    {
+      "title": "美股科技與貿易政策風險",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-25/",
+      "published_at": null
+    },
+    {
+      "title": "美股指數分歧與通膨顧慮",
+      "source": "AP",
+      "url": "https://apnews.com/article/94fdb0ecb060ec65c0b02879ce0d2d09",
+      "published_at": null
+    },
+    {
+      "title": "台股收盤及類股行情",
+      "source": "中央社",
+      "url": "https://www.cna.com.tw/news/afe/202611260133.aspx",
+      "published_at": "2026-11-26T13:45:00+08:00"
+    },
+    {
+      "title": "台積電逆勢小跌，其他電子股反攻",
+      "source": "聯合報",
+      "url": "https://udn.com/news/story/7251/9903574",
+      "published_at": "2026-11-26T14:09:00+08:00"
+    },
+    {
+      "title": "新台幣午盤回升",
+      "source": "中央社／東森",
+      "url": "https://fnc.ebc.net.tw/fncnews/headline/223686",
+      "published_at": "2026-11-26T12:59:00+08:00"
+    }
+  ],
+  "risk": {
+    "level": "高波動風險",
+    "score": "定性評級",
+    "description": "價格反彈但成交額縮減、外資現貨淨賣及期貨淨空部位增加，尚無趨勢反轉證據。",
+    "signals": [
+      "加權 +2.50%，成交額 -31.20%",
+      "外資淨賣491.81億元",
+      "外資台指期淨空106275口"
+    ]
+  },
+  "headline": "反彈956點，外資續賣；內資承接但量縮",
+  "summary": "加權39151.81點，漲956.38點（2.50%）。三大法人淨賣132.65億元，外資淨賣491.81億元，投信與自營商合計淨買359.16億元。成交額較前日減31.20%。",
+  "thesis": "價格與法人合計淨額背離，內資承接與跌深修復可能並存；不能由淨額推定交易動機或趨勢反轉。",
+  "factors": [
+    {
+      "title": "事實｜法人分歧",
+      "text": "外資及陸資-491.81、投信+230.51、自營商+128.65億元，合計-132.65億元。",
+      "url": "https://money.udn.com/money/story/5607/9903780"
+    },
+    {
+      "title": "事實｜價漲量縮",
+      "text": "同系列收盤成交額8174.67億元，前日11881.99億元，減31.20%；收盤位於日內區間69.9%。法人淨賣規模約為成交額1.62%，非成交占比。",
+      "url": "https://www.cna.com.tw/news/afe/202611260133.aspx"
+    },
+    {
+      "title": "事實｜期貨",
+      "text": "外資大型台指期未平倉淨空106275口，較前日增加566口；未平倉非當日成交，可能含避險。",
+      "url": "https://ww2.money-link.com.tw/RealtimeNews/NewsContent.aspx?PU=0010&SN=2450285002"
+    },
+    {
+      "title": "推論｜反彈品質",
+      "text": "量縮可能反映賣壓緩和或追價不足，須觀察後續成交及外資賣壓；不可單獨視為看空訊號。"
+    }
+  ],
+  "scenarios": [],
+  "next_session_scenarios": [
+    {
+      "id": "A",
+      "title": "強勢修復",
+      "threshold": "≥39,459.95",
+      "text": "突破今日高點，觀察成交動能與台積電是否跟進。"
+    },
+    {
+      "id": "B",
+      "title": "區間整理",
+      "threshold": "38,435.99至未滿39,459.95",
+      "text": "觀察反彈區間與產業廣度能否維持。"
+    },
+    {
+      "id": "C",
+      "title": "反彈轉弱",
+      "threshold": "低於38,435.99",
+      "text": "跌破今日低點後觀察昨日收盤38,195.43附近支撐。"
+    }
+  ],
+  "validation": {
+    "scenario": "A（僅形式比對，不計正式命中）",
+    "text": "原始opening.json於10:00:23台北時間產製，標示非09:15事前快照、不列入事前預測驗證。收盤39,151.81符合A≥39,000；原紀錄不修改。"
+  },
+  "sources": [
+    {
+      "id": "s0",
+      "url": "https://www.cna.com.tw/news/afe/202611260133.aspx"
+    },
+    {
+      "id": "s1",
+      "url": "https://udn.com/news/story/7251/9903574"
+    },
+    {
+      "id": "s2",
+      "url": "https://money.udn.com/money/story/12509/9903549?form=udn_ch2_common3_cate"
+    },
+    {
+      "id": "s3",
+      "url": "https://apnews.com/article/94fdb0ecb060ec65c0b02879ce0d2d09"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-25/"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-makes-determinations-and-proposes-actions-14-section-301-investigations-relating-structural"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.reuters.com/world/asia-pacific/taiwan-says-it-is-confident-keeping-previously-agreed-tariffs-with-us-2026-11-25/"
+    },
+    {
+      "id": "s7",
+      "url": "https://fnc.ebc.net.tw/fncnews/headline/223686"
+    },
+    {
+      "id": "s8",
+      "url": "https://tw.news.yahoo.com/%E8%82%A1%E5%8C%AF%E8%81%AF%E8%A2%82%E5%8F%8D%E6%94%BB-%E6%96%B0%E5%8F%B0%E5%B9%A3%E6%94%B6%E5%BE%A933%E5%85%83%E9%98%B2%E7%B7%9A-%E5%8D%88%E7%9B%A4%E6%94%B632-95%E5%85%83-%E5%A4%A7%E5%8D%871-045016731.html"
+    },
+    {
+      "id": "s9",
+      "url": "https://worldmoneyroadmap.com/en/reports/2026-11-25-evening/?sum=1"
+    },
+    {
+      "id": "s10",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-25"
+    },
+    {
+      "id": "s11",
+      "url": "https://www.scannerxmi.com/sector/"
+    },
+    {
+      "id": "s12",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve"
+    },
+    {
+      "id": "s13",
+      "url": "https://ycharts.com/indices/%5ESOX/level"
+    },
+    {
+      "id": "s14",
+      "url": "https://ycharts.com/indices/%5EVIX/level"
+    },
+    {
+      "id": "s15",
+      "url": "https://markets.digantdc.com/macro/gauges/board/"
+    },
+    {
+      "id": "s16",
+      "url": "https://stockanalysis.com/etf/voo/history/"
+    },
+    {
+      "id": "s17",
+      "url": "https://hk.finance.yahoo.com/quote/VOO/history/"
+    },
+    {
+      "id": "s18",
+      "url": "https://tw.stock.yahoo.com/quote/0050.TW"
+    },
+    {
+      "id": "s19",
+      "url": "https://hk.investing.com/etfs/yuanta-p-shares-taiwan-top-50-historical-data"
+    },
+    {
+      "id": "s20",
+      "url": "https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date=20261126&type=ALLBUT0999&response=html"
+    },
+    {
+      "id": "s21",
+      "url": "https://www.cna.com.tw/news/afe/202611250103.aspx"
+    },
+    {
+      "id": "s22",
+      "url": "https://www.bondstats.org/daily/2026-11-25/"
+    },
+    {
+      "id": "institution0",
+      "url": "https://money.udn.com/money/story/5607/9903780"
+    },
+    {
+      "id": "institution1",
+      "url": "https://m.cnyes.com/news/id/6672850"
+    },
+    {
+      "id": "institution2",
+      "url": "https://winvest.tw/Home"
+    },
+    {
+      "id": "institution3",
+      "url": "https://ww2.money-link.com.tw/RealtimeNews/NewsContent.aspx?PU=0010&SN=2450285002"
+    },
+    {
+      "id": "institution4",
+      "url": "https://www.cna.com.tw/news/afe/202611250141.aspx"
+    },
+    {
+      "id": "institution5",
+      "url": "https://ww2.money-link.com.tw/RealtimeNews/NewsContent.aspx?sn=6372613001"
+    },
+    {
+      "id": "institution6",
+      "url": "https://tayloredfinancenews.com/sectors-daily"
+    },
+    {
+      "id": "xlp",
+      "url": "https://ph.investing.com/etfs/spdr---consumer-staples-historical-data"
+    }
+  ],
+  "warnings": [
+    "0052、00662、00646未核實當日收盤；VIX精確收盤不一致；廣達及部分美股價格留空。",
+    "11大ETF均已檢查；資料供應商可能共用上游，非交易所逐項驗證。",
+    "turnover_billion_twd沿用既有schema，實際單位新台幣億元。",
+    "不計早盤正式命中率。",
+    "成交額鉅亨報8174.68億元，與中央社及時報8174.67差0.01；採同系列收盤口徑，非含盤後全市場成交額。",
+    "20日均額、櫃買法人及自營商細項未核實。",
+    "產業ETF重新搜尋仍有精確報價差異；沿用已發布背景，未核實值保留null。"
+  ],
+  "institutional_data": {
+    "market": "上市",
+    "total": {
+      "value": -132.65,
+      "unit": "新台幣億元",
+      "date": "2026-11-26",
+      "source": "中央社／鉅亨網／Win投資",
+      "url": "https://money.udn.com/money/story/5607/9903780",
+      "asof": "盤後公開報導"
+    },
+    "foreign": {
+      "value": -491.81,
+      "unit": "新台幣億元",
+      "date": "2026-11-26",
+      "source": "中央社／鉅亨網／Win投資",
+      "url": "https://money.udn.com/money/story/5607/9903780",
+      "asof": "盤後公開報導"
+    },
+    "trust": {
+      "value": 230.51,
+      "unit": "新台幣億元",
+      "date": "2026-11-26",
+      "source": "中央社／鉅亨網／Win投資",
+      "url": "https://money.udn.com/money/story/5607/9903780",
+      "asof": "盤後公開報導"
+    },
+    "dealer": {
+      "value": 128.65,
+      "unit": "新台幣億元",
+      "date": "2026-11-26",
+      "source": "中央社／鉅亨網／Win投資",
+      "url": "https://money.udn.com/money/story/5607/9903780",
+      "asof": "盤後公開報導"
+    },
+    "dealer_proprietary": null,
+    "dealer_hedge": null,
+    "foreign_tx_net_open_interest": {
+      "value": -106275,
+      "unit": "口",
+      "date": "2026-11-26",
+      "source": "財訊新聞／Win投資",
+      "url": "https://ww2.money-link.com.tw/RealtimeNews/NewsContent.aspx?PU=0010&SN=2450285002",
+      "asof": "日盤盤後未平倉"
+    },
+    "foreign_tx_night_net_trades": null,
+    "tpex_total": null
+  },
+  "price_volume": {
+    "turnover": {
+      "value": 8174.67,
+      "unit": "新台幣億元",
+      "date": "2026-11-26",
+      "source": "中央社／時報新聞",
+      "url": "https://www.cna.com.tw/news/afe/202611260133.aspx",
+      "asof": "13:30收盤"
+    },
+    "previous_turnover": {
+      "value": 11881.99,
+      "unit": "新台幣億元",
+      "date": "2026-11-25",
+      "source": "中央社同系列",
+      "url": "https://www.cna.com.tw/news/afe/202611250141.aspx",
+      "asof": "13:30收盤"
+    },
+    "average_20_turnover": {
+      "value": null,
+      "unit": "新台幣億元",
+      "date": "2026-11-25",
+      "source": "未取得完整同口徑20交易日",
+      "url": null,
+      "asof": null
+    },
+    "analysis": "價漲量縮，成交額日減31.20%；收盤位於日內區間69.9%，法人淨賣與價格背離。20日均額未核實，不計倍數。",
+    "watch_points": [
+      "觀察39459.95日高及38435.99日低",
+      "觀察外資賣超與期貨淨空是否收斂",
+      "觀察成交額及台積電是否跟進"
+    ]
+  }
+}
