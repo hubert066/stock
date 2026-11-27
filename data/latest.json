@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "generated_at": "2026-11-27T09:39:00.527841+00:00",
+  "generated_at": "2026-11-27T09:52:25.316882+00:00",
   "display_timezone": "Asia/Taipei",
   "coverage": {
     "taiex": "2026-11-27",
@@ -74,9 +74,9 @@
     "vix": {
       "name": "VIX",
       "symbol": "^VIX",
-      "value": 24.59,
-      "change": -2.21,
-      "pct": -8.246,
+      "value": 24.66,
+      "change": -2.14,
+      "pct": -7.985,
       "date": "2026-11-27",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/%5EVIX"
@@ -84,9 +84,9 @@
     "usd_twd": {
       "name": "USD/TWD",
       "symbol": "TWD=X",
-      "value": 32.931,
-      "change": -0.258,
-      "pct": -0.777,
+      "value": 32.937,
+      "change": -0.252,
+      "pct": -0.759,
       "date": "2026-11-27",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/TWD%3DX"
@@ -246,25 +246,25 @@
   ],
   "news": [
     {
+      "region": "台灣",
+      "title": "台股多空激戰3萬9！聯發科、台達電翻黑 台積電能扛住？ - UDN",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBzSWJISkg1RVpCSHBOc2p5RzlacG5za01QUUtHQi13QWZBNW5TVVdKVVREczh6S1dvQUxHdldwTHM0dF84WUo0T3h0QThDMWwz0gFWQVVfeXFMUHFCTWF6QW1qQ0dGUmZadmVIYVpON2huRm55enN0UzdjbjQ3Q2VHbU5Fem9CUkZTZWlXX2lSLU9XVDBfYzVBUzRCUFFfX0QtZGgxNWlPNEE?oc=5",
+      "source": "UDN",
+      "published_at": "2026-11-27T01:18:11+00:00"
+    },
+    {
+      "region": "台灣",
+      "title": "台股開高強彈逾950點！聯發科扛多頭大旗、台積電卻陷震盪 - UDN",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9sdERhU1Jhd1lkZlBlbGpybW5pRXBFTk9WcVc4RTl1X0tuQWYzcDhNd1ZEVkRUR213cERyUXB5cFNmME0zeGpUa2s2MUJrLTVQ0gFWQVVfeXFMTkI4M0plX2M4UG1wVm9mbXlUaWFkdk5mYzJ4QVJvbWZudTFQZXZsYVV6X3p3UUVpR0tMbHFpUVVtX2dfNUp0MEk5Z21XVGU1aWJqUzdHX2c?oc=5",
+      "source": "UDN",
+      "published_at": "2026-11-26T01:19:54+00:00"
+    },
+    {
       "region": "美國",
       "title": "S&P 500, Nasdaq End Lower But Dow Rebounds As Traders Rotate Out Of AI — NVDA, SPCX, PANW In Focus - TradingView",
       "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOUm1aSlg2OEo5UVlWUUNOYVNhX0ZDMEdFWWNoX0tCM0tzOE0tdzR0OWY1QUhBZ2s4Q2liSnU2NnVPalRHYWZDSExHR044UHRJOFNZVHlhTzloMlRiSFNtYlAyN3JxOTE5UU5xRXdYanNMbGdadklBeGNJbG5wRS03Qm5fNVEybHZDWU8zUGZmSFpVY00teGt0WFpfVGpva3d1SndnQTB2aHJ5emxIcVdyMnp4MnJDb0V2QzF4anJXdUtPSExVM0w4NU5YUTBxMXNndjdwM2h3MURmOGV6cG1IS1JkbmliTXht?oc=5",
       "source": "TradingView",
       "published_at": "2026-11-26T00:09:50+00:00"
-    },
-    {
-      "region": "美國",
-      "title": "Wall Street rebounds from day’s lows as bargain hunters step in; Dow gains, Nasdaq falls - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQTGRfR1p2R2NCdzJMWGU4VXlRVmZiYVZuc1FldGRWSEUzQ19vbWItamJmM2t4czNwRlZCbjZtaHZ0aU1tOHAtV1BQWjhsZ3BpaHFTQXhhVGZOMFVhT1l6MHF1WXk1RUxLdWd2NXpROHFLNmJqcUZKLWpEOHRBeklqXzV0a0tnLUE5WjJwQThUX2JEMDZQQUFpeHBndXA2dE9BeEl5Q0Yyd2tmTVF3NG1fUWwxOWNoZ3ZPX2FybTFRWGhaRks4cUdKVkJrU05CYk54dHcyRWtKVFNidmRWaExsYUZNamdZX2xlVUxOZzloZkcyVWc?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-25T23:51:20+00:00"
-    },
-    {
-      "region": "美國",
-      "title": "Stock Indices Finish Off Their Lows as Dip Buyers Step In - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPTWlaMXRxM3p3SkxVOUJyVjBRSVFUZTlaRWo3dTdEeVA4VDk4Zng2bVIxMzQ3TXNsRlNqQVd0cVhuV2RYdTYyX3daTlk5SUxLbGtxY0J2bU11dEh2MDcyWHo0ZlFoVnlya3V4ZGJDbUlRMC10S3plSEhldTNKMHgxVlMzVzhLdm9EakNiWE53TVNxRVhXaERSNUZ2QmxaUEpqd19oQnhWN3M4RlpMREpTYS1SdTQtUQ?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-25T21:35:08+00:00"
     },
     {
       "region": "美國",
@@ -282,34 +282,6 @@
     },
     {
       "region": "美國",
-      "title": "TradingView上由CNBC TV18發佈的新聞，2026-11-25 — cnbctv:0df8688d0094b:0 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBWYjRpVlhRanZtYzFsX0tJQWEwWUVaRTNxZGhSQ3lXQmFaVVRTZTJxSHFUaF9MZnFEQUYwNElVQ1ZaRkVXbFdsYXgxNktEanhjalFtdXgxUmdBX2NwQ3lfSDJJdlFXQQ?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-25T12:36:22+00:00"
-    },
-    {
-      "region": "美國",
-      "title": "S&P 500 ‘Quite Cheap’ After Selloff: Tom Lee Counters Citadel’s 2018 Warning, Says AI ‘Supply Shock’ Could Ease - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNRmdvQUhLOWkyT0phV09KSnkwRjYzWVpyMHdMSTdKMGdBaFJNZkI1U1JkcnFvMnpTazBYSW8yY1NzRHNDMlIwNFp3LWRzNEdkNVg2bGRZMnQ2Tk1UR2VEVXVpQVpQbTVOSjFjblVjZnZjeWNnbm5vbGtHZHQ2UEJiQ3NMQlZHa3dSZlMxWUhkRUs0UHNlZnpOTFlYa0p4Y3N2WmxoSm80U0F1R1V4MkdoMWVjQkItMVhiTk8wb0NWQk01VDhEWXhZNW5sV0tQSUQ5VjVXYzBfVy1mSV9xZXl6Z2xTQldRaENFb29rZXo5NzZQcUpKSVE?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-25T12:00:19+00:00"
-    },
-    {
-      "region": "美國",
-      "title": "GE Vernova, nLIGHT, Arrow Electronics, Allient, and Kimball Solutions shares plummet, what you need to know - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOcUZnNkwwdjhJdjg3M2gwckZaSGZ4VWVHNVpZNGMyUFFlVHJtaEk2Mnp0am5qaFdSR0xwYWJQZXQwbm84a2plZWtHSWtqdUQwOElCa0dhYXdGcTNpeVRFbi1aSUpGR2ZISTVMQ0hVaWlQc0NRaTJfQng4TXpMUHdVZ3Bha1pVOWczbjZ3QUNRZlVobkVWUTljMDNzUENEaTk1V25ma29vQURNM2lubFJkZ2tEZllTWDNlN0hYeFJfTm5qRktRZU9LUmQtN3JhWlA4X3F2VjI2NFJzbHp6NGdhMVBEVG4yZHFaWEpKV2pPc1M3U3QwTTgzQVczZmM5VVV2VS0yXzhTRE1PLUZkWVE?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-24T20:25:41+00:00"
-    },
-    {
-      "region": "美國",
-      "title": "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Fall After Scott Bessent Unveils Fresh Iran Sanctions, Hormuz Warnings— HPE, SMTC, DELL in Focus (UPDATED) - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMiugJBVV95cUxPUk1OSnVna0drVUlkQ0dzdGQwMmlQQW15blhweWtMakdrcmRFU054anAzcWlKaW40ZWh1N3JTQkw3Q3BrRFk2dkR5TE1fM2dzM29PU0hnZC1FSk5qLWFuSnRtcGxtMWZmd3JEd2JkUGJ1QjloWEVNN3dGazdhOWlCWjhYd1d4QlhDQXFUb29PWFUtZElwZnJJOEVrRWU2c3FERW9iaVplQ3ViVnhfa2hvVVdFYlZSZHNkQjc2M2h1SkdmUnRCeG0xaVR1Z0N0d2RfSWtQYmVQcWZFc1phQWJEX3BhXzlzZ3hEOS1ibTN0WElQcWdYb090aFNfMGFlQXlFRVBQZW1aZlg5OThMakduSFVOcEJMVVlJWWwzeHNFeGVlM1FBQjV0OTU3MGQ1TjBZX2ZWTmlyVzhkQQ?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-24T13:22:12+00:00"
-    },
-    {
-      "region": "美國",
       "title": "Nasdaq, Dow, S&P 500 Futures Gain As Jensen Huang’s Return To Nvidia Sparks $3T Market Rally: SOXS, IBRX, HPE, TSM In Focus - TradingView",
       "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxOc01GelVNdkEzZFRUbTVFdFV1S0tWUDJwS2VzSGVIcXItWDZ5NzhXNUNleVNkYkdMV2FSaGhBRS1NYkpzY1AydkxybDk4WTlINGxrTTBVaks4RUV1ajFjNFhUbjJUX1l1S3JMNkRMak9fb2V6YXpIMURRWDUxMVZtYmhDVTZrb2RmaEE5bXlIdzN1dE03MHAwSHRNeV9vMV91VGhzRmdrMEZmNlFvbFF4MUNLT0VYUlRRcFNCUjh5bmZYRi12RHVLTmtFU3pNRG5FaDh1N1ZnVS1ULXVCQWMycnp6amRUazN4Z3dBRi1xTE1RUnhXMzhfT1hjV0JYb1BMR1VXd28zLV9QS1NCeUdadHFud1NmMEZ6c2VYVE1kRGI?oc=5",
       "source": "TradingView",
@@ -324,10 +296,10 @@
     },
     {
       "region": "美國",
-      "title": "Why is Micron stock rocketing higher today - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxONmxFYjNNZmpzMm9RZVZzTlM1UzdzUmlMU1p0bHFaSnl3R2Zxcm1sUzM2Y19hVTJNMWRwcmppT3Vyb2M5Q3lVVHpkNjQ4ZWNfS1ROZVNraWtvQ3J2MDBlWTZ6YUtvQnphcHQ5TmI2SUpnazVaSi0xY0JOdFNtdEt4TVlqbFd6U21aeW1HVmFmUVlYOFVOc2hJVERiV0NselA5X0tGb0N2QWN0XzhWbGJlVmJrUFQ0TTJWZFk1SWFR?oc=5",
+      "title": "US stock futures rebound as tech stocks recover from AI sell-off; Nasdaq 100 jumps 3.5%, S&P 500 climbs 2.8% - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNamJqdnhQelJOV1FkRGMzNDJsX3pjMFBsZXptN0sybHY2UTd2amIwV2I3TXMyWC03VV9Hd0NkVk5TVGtfcDh0MVRYUEpHXzc3TnYxTW92cGQ2NHZ5RExRTUREb1BpZnZRT2gtWjZMeHRuWkdZaWppUnRfWHM0NmpsdjVUOHhxaGZFQXVRQzFFZ1JVTHd1Q050XzNqUzBmWkhJMWpuTmVkNjd1WTFGQ1BEcHFQQXNlN2dLVnBLNmgzUjZ5VTNpaUV3NXBBM3hXZlFfc0hfMnhaN09tbjl0UUJZODNWTmVxVXk3WHlLM2pxYi03TkVseTBMVmlB?oc=5",
       "source": "TradingView",
-      "published_at": "2026-11-23T18:10:35+00:00"
+      "published_at": "2026-11-23T11:28:57+00:00"
     }
   ],
   "risk": {
