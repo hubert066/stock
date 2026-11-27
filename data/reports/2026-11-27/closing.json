@@ -1,0 +1,602 @@
+{
+  "date": "2026-11-27",
+  "session": "closing",
+  "status": "ok",
+  "generated_at": "2026-11-27T09:14:24.357Z",
+  "scheduled_at": "2026-11-27T14:00:00+08:00",
+  "production": "chatgpt_scheduled_source_checked",
+  "note": "延遲收盤補發，研究截止 2026-11-27T09:14:24.357Z；台股13:30收盤，美股11/26休市，沿用11/25已核實資料。中央社及時報獨立報導核實核心，TWSE端點未能讀取。",
+  "prices": {
+    "taiex": {
+      "name": "TAIEX 加權指數",
+      "value": 39308.08,
+      "pct": 0.4,
+      "change": 156.27,
+      "date": "2026-11-27",
+      "source": "中央社／時報",
+      "url": "https://www.cna.com.tw/news/afe/202611270102.aspx",
+      "asof": "13:30收盤",
+      "symbol": "TAIEX",
+      "open": 39168.57,
+      "previous_close": 39151.81,
+      "high": 39495.41,
+      "low": 38890.53,
+      "turnover_billion_twd": 6660.69,
+      "turnover_unit": "新台幣億元"
+    },
+    "sp500": {
+      "name": "S&P 500",
+      "value": 7182.78,
+      "pct": -0.25,
+      "change": -18.31,
+      "date": "2026-11-25",
+      "source": "Portfolio Terminal／ByLiem",
+      "url": "https://portfolio-terminal.com/markets/stock-market-close/november-25-2026",
+      "asof": "美東16:00收盤",
+      "symbol": "^GSPC"
+    },
+    "nasdaq": {
+      "name": "NASDAQ",
+      "value": 23585.8,
+      "pct": -0.62,
+      "change": -147.74,
+      "date": "2026-11-25",
+      "source": "Portfolio Terminal／ByLiem",
+      "url": "https://portfolio-terminal.com/markets/stock-market-close/november-25-2026",
+      "asof": "美東16:00收盤",
+      "symbol": "^IXIC"
+    },
+    "dow": {
+      "name": "Dow Jones",
+      "value": 50182.95,
+      "pct": 0.33,
+      "change": 164.25,
+      "date": "2026-11-25",
+      "source": "Portfolio Terminal／ByLiem",
+      "url": "https://portfolio-terminal.com/markets/stock-market-close/november-25-2026",
+      "asof": "美東16:00收盤",
+      "symbol": "^DJI"
+    },
+    "russell": {
+      "name": "Russell 2000",
+      "value": 2704.06,
+      "pct": 0.71,
+      "change": 19.12,
+      "date": "2026-11-25",
+      "source": "Portfolio Terminal／ByLiem",
+      "url": "https://portfolio-terminal.com/markets/stock-market-close/november-25-2026",
+      "asof": "美東16:00收盤",
+      "symbol": "^RUT"
+    },
+    "sox": {
+      "name": "費城半導體",
+      "value": 8774.86,
+      "pct": -0.65,
+      "change": -57.64,
+      "date": "2026-11-25",
+      "source": "Nasdaq官方／TECHi",
+      "url": "https://indexes.nasdaqomx.com/Index/Overview/SOX",
+      "asof": "美東收盤",
+      "symbol": "^SOX"
+    },
+    "vix": {
+      "name": "VIX",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "未核實",
+      "url": null,
+      "asof": null,
+      "symbol": "^VIX"
+    },
+    "usd_twd": {
+      "name": "USD/TWD",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-27",
+      "source": "未核實",
+      "url": null,
+      "asof": null,
+      "symbol": "USD/TWD"
+    },
+    "us10y": {
+      "name": "美國10年期公債",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "未核實",
+      "url": null,
+      "asof": null,
+      "symbol": "US10Y"
+    },
+    "tsmc": {
+      "name": "台積電",
+      "value": 2180,
+      "pct": 1.63,
+      "change": 35,
+      "date": "2026-11-27",
+      "source": "中央社／獨立記者余國棟",
+      "url": "https://money.udn.com/money/amp/story/5607/9905958",
+      "asof": "13:30收盤",
+      "symbol": "2330.TW"
+    }
+  },
+  "watchlist": [
+    {
+      "name": "台積電",
+      "value": 2180,
+      "pct": 1.63,
+      "change": 35,
+      "date": "2026-11-27",
+      "source": "中央社／獨立記者余國棟",
+      "url": "https://money.udn.com/money/amp/story/5607/9905958",
+      "asof": "13:30收盤",
+      "symbol": "2330.TW"
+    },
+    {
+      "name": "聯發科",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-27",
+      "source": "未核實",
+      "url": null,
+      "asof": null,
+      "symbol": "2454.TW"
+    },
+    {
+      "name": "鴻海",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-27",
+      "source": "未核實",
+      "url": null,
+      "asof": null,
+      "symbol": "2317.TW"
+    },
+    {
+      "name": "台達電",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-27",
+      "source": "未核實",
+      "url": null,
+      "asof": null,
+      "symbol": "2308.TW"
+    },
+    {
+      "name": "廣達",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-27",
+      "source": "未核實",
+      "url": null,
+      "asof": null,
+      "symbol": "2382.TW"
+    },
+    {
+      "name": "元大台灣50",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-27",
+      "source": "未核實",
+      "url": null,
+      "asof": null,
+      "symbol": "0050.TW"
+    },
+    {
+      "name": "富邦科技",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-27",
+      "source": "未核實",
+      "url": null,
+      "asof": null,
+      "symbol": "0052.TW"
+    },
+    {
+      "name": "富邦NASDAQ",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-27",
+      "source": "未核實",
+      "url": null,
+      "asof": null,
+      "symbol": "00662.TW"
+    },
+    {
+      "name": "元大S&P500",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-27",
+      "source": "未核實",
+      "url": null,
+      "asof": null,
+      "symbol": "00646.TW"
+    },
+    {
+      "name": "NVIDIA",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "未核實",
+      "url": null,
+      "asof": null,
+      "symbol": "NVDA"
+    },
+    {
+      "name": "Amazon",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "未核實",
+      "url": null,
+      "asof": null,
+      "symbol": "AMZN"
+    },
+    {
+      "name": "AMD",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "未核實",
+      "url": null,
+      "asof": null,
+      "symbol": "AMD"
+    },
+    {
+      "name": "美光",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "未核實",
+      "url": null,
+      "asof": null,
+      "symbol": "MU"
+    },
+    {
+      "name": "Broadcom",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "未核實",
+      "url": null,
+      "asof": null,
+      "symbol": "AVGO"
+    },
+    {
+      "name": "Microsoft",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "未核實",
+      "url": null,
+      "asof": null,
+      "symbol": "MSFT"
+    },
+    {
+      "name": "Apple",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "未核實",
+      "url": null,
+      "asof": null,
+      "symbol": "AAPL"
+    },
+    {
+      "name": "台積電ADR",
+      "value": null,
+      "pct": null,
+      "change": null,
+      "date": "2026-11-25",
+      "source": "未核實",
+      "url": null,
+      "asof": null,
+      "symbol": "TSM"
+    },
+    {
+      "name": "Vanguard S&P 500 ETF",
+      "value": 658.87,
+      "pct": -0.28,
+      "change": -1.84,
+      "date": "2026-11-25",
+      "source": "MoneyDJ／StockQuote",
+      "url": "https://www.moneydj.com/etf/x/basic/basic0003.xdjhtm?etfid=voo&topc=",
+      "asof": "美東16:00收盤",
+      "symbol": "VOO"
+    }
+  ],
+  "sectors": [
+    {
+      "name": "原物料",
+      "symbol": "XLB",
+      "pct": 2.05,
+      "date": "2026-11-25",
+      "source": "ByLiem／The Trade Signal 或 IndicatorStack",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-25",
+      "asof": "美東收盤",
+      "value": null
+    },
+    {
+      "name": "房地產",
+      "symbol": "XLRE",
+      "pct": 0.92,
+      "date": "2026-11-25",
+      "source": "ByLiem／The Trade Signal 或 IndicatorStack",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-25",
+      "asof": "美東收盤",
+      "value": null
+    },
+    {
+      "name": "通訊服務",
+      "symbol": "XLC",
+      "pct": 0.89,
+      "date": "2026-11-25",
+      "source": "ByLiem／The Trade Signal 或 IndicatorStack",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-25",
+      "asof": "美東收盤",
+      "value": null
+    },
+    {
+      "name": "工業",
+      "symbol": "XLI",
+      "pct": 0.83,
+      "date": "2026-11-25",
+      "source": "ByLiem／The Trade Signal 或 IndicatorStack",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-25",
+      "asof": "美東收盤",
+      "value": null
+    },
+    {
+      "name": "能源",
+      "symbol": "XLE",
+      "pct": null,
+      "date": "2026-11-25",
+      "source": "來源差異未核實",
+      "url": null,
+      "asof": "美東收盤",
+      "value": null
+    },
+    {
+      "name": "金融",
+      "symbol": "XLF",
+      "pct": null,
+      "date": "2026-11-25",
+      "source": "來源差異未核實",
+      "url": null,
+      "asof": "美東收盤",
+      "value": null
+    },
+    {
+      "name": "公用事業",
+      "symbol": "XLU",
+      "pct": 0.48,
+      "date": "2026-11-25",
+      "source": "ByLiem／The Trade Signal 或 IndicatorStack",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-25",
+      "asof": "美東收盤",
+      "value": null
+    },
+    {
+      "name": "必需消費",
+      "symbol": "XLP",
+      "pct": 0.46,
+      "date": "2026-11-25",
+      "source": "ByLiem／The Trade Signal 或 IndicatorStack",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-25",
+      "asof": "美東收盤",
+      "value": null
+    },
+    {
+      "name": "非必需消費",
+      "symbol": "XLY",
+      "pct": -0.2,
+      "date": "2026-11-25",
+      "source": "ByLiem／The Trade Signal 或 IndicatorStack",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-25",
+      "asof": "美東收盤",
+      "value": null
+    },
+    {
+      "name": "醫療保健",
+      "symbol": "XLV",
+      "pct": -0.56,
+      "date": "2026-11-25",
+      "source": "ByLiem／The Trade Signal 或 IndicatorStack",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-25",
+      "asof": "美東收盤",
+      "value": null
+    },
+    {
+      "name": "科技",
+      "symbol": "XLK",
+      "pct": -0.81,
+      "date": "2026-11-25",
+      "source": "ByLiem／The Trade Signal 或 IndicatorStack",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-25",
+      "asof": "美東收盤",
+      "value": null
+    }
+  ],
+  "news": [
+    {
+      "title": "台股收紅但市場廣度偏弱",
+      "source": "中央社",
+      "url": "https://www.cna.com.tw/news/afe/202611270102.aspx",
+      "published_at": "2026-11-27T13:47:00+08:00"
+    },
+    {
+      "title": "權值股與中小型股分化",
+      "source": "余國棟",
+      "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E6%94%B6%E7%9B%A4-%E5%8F%B0%E7%A9%8D%E9%9B%BB%E6%BC%B235%E5%85%83%E6%92%90%E7%9B%A4-%E5%8F%B0%E8%82%A1%E6%94%B6%E6%BC%B2156-27%E9%BB%9E-%E6%AB%83%E8%B2%B7%E8%B7%8C1-4-054800904.html",
+      "published_at": null
+    }
+  ],
+  "risk": {
+    "level": "高波動風險",
+    "score": "定性評級",
+    "description": "價漲量縮且市場廣度偏弱，近期波動未消失。",
+    "signals": [
+      "成交額日減18.52%",
+      "日內高低差604.88點",
+      "下跌561家多於上漲447家",
+      "美股假期流動性"
+    ]
+  },
+  "headline": "台股收漲156點，價漲量縮與市場廣度背離",
+  "summary": "加權指數39,308.08點，漲156.27點（0.40%），成交6,660.69億元，較前日減18.52%。台積電收2,180元，漲1.63%；櫃買跌1.40%。",
+  "thesis": "權值股支撐指數，但量縮及中小型股弱勢使反轉尚待確認。",
+  "factors": [
+    {
+      "title": "事實｜價量",
+      "text": "成交額由8,174.67降至6,660.69億元，減18.52%；日內高低差604.88點。",
+      "url": "https://www.cna.com.tw/news/afe/202611270102.aspx"
+    },
+    {
+      "title": "事實｜市場廣度",
+      "text": "上市上漲447家、下跌561家；櫃買跌1.40%，台積電漲1.63%。",
+      "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E6%94%B6%E7%9B%A4-%E5%8F%B0%E7%A9%8D%E9%9B%BB%E6%BC%B235%E5%85%83%E6%92%90%E7%9B%A4-%E5%8F%B0%E8%82%A1%E6%94%B6%E6%BC%B2156-27%E9%BB%9E-%E6%AB%83%E8%B2%B7%E8%B7%8C1-4-054800904.html"
+    },
+    {
+      "title": "推論｜反彈品質",
+      "text": "量縮可能反映觀望或賣壓減弱，不能單憑成交額判定資金回流。"
+    }
+  ],
+  "scenarios": [],
+  "validation": {
+    "scenario": "不計正式命中",
+    "text": "早盤為延遲補發且無事前情境，不回填預測。"
+  },
+  "sources": [
+    {
+      "id": "s0",
+      "url": "https://www.cna.com.tw/news/afe/202611270024.aspx"
+    },
+    {
+      "id": "s1",
+      "url": "https://www.ftnn.com.tw/news/600014"
+    },
+    {
+      "id": "s2",
+      "url": "https://portfolio-terminal.com/markets/stock-market-close/november-25-2026"
+    },
+    {
+      "id": "s3",
+      "url": "https://byliem.com/en/heatmap/us/2026-11-25"
+    },
+    {
+      "id": "s4",
+      "url": "https://indexes.nasdaqomx.com/Index/Overview/SOX"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.techi.com/chip-stocks-recover-early-slide-nasdaq-close-november-25/"
+    },
+    {
+      "id": "s6",
+      "url": "https://thetradesignal.com/brief/2026-11-25/close"
+    },
+    {
+      "id": "s7",
+      "url": "https://indicatorstack.com/reading/market-pulse-2026-11-25"
+    },
+    {
+      "id": "s8",
+      "url": "https://money.udn.com/money/story/5616/9905043"
+    },
+    {
+      "id": "s9",
+      "url": "https://applealmondrealty.com/posts/55640"
+    },
+    {
+      "id": "s10",
+      "url": "https://news.videoland.com.tw/article/292c46d5-fe3a-4ff3-9887-d50b877d6627.html"
+    },
+    {
+      "id": "s11",
+      "url": "https://www.twse.com.tw/exchangeReport/MI_INDEX?response=json&date=20261127&type=ALLBUT0999"
+    },
+    {
+      "id": "s12",
+      "url": "https://rate.bot.com.tw/xrt?Lang=en-US"
+    },
+    {
+      "id": "s13",
+      "url": "https://spxset.com/folio/us-market-close-report-2026-11-25"
+    },
+    {
+      "id": "close0",
+      "url": "https://www.cna.com.tw/news/afe/202611270102.aspx"
+    },
+    {
+      "id": "close1",
+      "url": "https://ww2.money-link.com.tw/RealtimeNews/NewsContent.aspx?SN=6373736001"
+    },
+    {
+      "id": "close2",
+      "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E6%94%B6%E7%9B%A4-%E5%8F%B0%E7%A9%8D%E9%9B%BB%E6%BC%B235%E5%85%83%E6%92%90%E7%9B%A4-%E5%8F%B0%E8%82%A1%E6%94%B6%E6%BC%B2156-27%E9%BB%9E-%E6%AB%83%E8%B2%B7%E8%B7%8C1-4-054800904.html"
+    },
+    {
+      "id": "close3",
+      "url": "https://money.udn.com/money/amp/story/5607/9905958"
+    },
+    {
+      "id": "close4",
+      "url": "https://www.cna.com.tw/news/afe/202611260133.aspx"
+    },
+    {
+      "id": "close5",
+      "url": "https://www.stockquote.io/stocks/VOO/history"
+    },
+    {
+      "id": "close6",
+      "url": "https://www.moneydj.com/etf/x/basic/basic0003.xdjhtm?etfid=voo&topc="
+    }
+  ],
+  "warnings": [
+    "TWSE端點未取得；開盤以中央社與FTNN交叉核實，09:15僅單一來源。",
+    "VIX來源不一致；美債、匯率、個別ETF及個股未完成獨立核實，留空。",
+    "產業ETF來源有細微差異，無法一致核實者留空；原物料與科技由IndicatorStack及ByLiem一致核實。",
+    "未取得可核實的期貨部位及20日均額。",
+    "本次重新搜尋ETF、匯率、美債與VIX，未取得其餘可一致核實數據，保留null；VOO已核實。",
+    "法人及期貨部位另見籌碼報告；成交額欄位沿用schema，單位億元。"
+  ],
+  "next_session_scenarios": [
+    {
+      "id": "A",
+      "title": "強勢修復",
+      "threshold": "≥39,495.41",
+      "text": "突破今日高點，觀察成交與市場廣度。"
+    },
+    {
+      "id": "B",
+      "title": "區間整理",
+      "threshold": "38,890.53至未滿39,495.41",
+      "text": "觀察權值與中小型股是否同步。"
+    },
+    {
+      "id": "C",
+      "title": "反彈轉弱",
+      "threshold": "低於38,890.53",
+      "text": "跌破今日低點，留意賣壓擴大。"
+    }
+  ]
+}
