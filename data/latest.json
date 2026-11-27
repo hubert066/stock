@@ -1,23 +1,23 @@
 {
   "status": "ok",
-  "generated_at": "2026-11-26T19:17:02.868734+00:00",
+  "generated_at": "2026-11-27T09:39:00.527841+00:00",
   "display_timezone": "Asia/Taipei",
   "coverage": {
-    "taiex": "2026-11-26",
+    "taiex": "2026-11-27",
     "sp500": "2026-11-25",
     "sox": "2026-11-25",
-    "vix": "2026-11-26",
-    "usd_twd": "2026-11-26",
+    "vix": "2026-11-27",
+    "usd_twd": "2026-11-27",
     "us10y": "2026-11-25"
   },
   "prices": {
     "taiex": {
       "name": "TAIEX 加權指數",
       "symbol": "TAIEX",
-      "value": 39151.81,
-      "change": 956.38,
-      "pct": 2.504,
-      "date": "2026-11-26",
+      "value": 39308.08,
+      "change": 156.27,
+      "pct": 0.399,
+      "date": "2026-11-27",
       "source": "臺灣證券交易所（官方）",
       "url": "https://www.twse.com.tw/zh/trading/historical/fmtqik.html"
     },
@@ -74,20 +74,20 @@
     "vix": {
       "name": "VIX",
       "symbol": "^VIX",
-      "value": 26.8,
-      "change": -1.49,
-      "pct": -5.267,
-      "date": "2026-11-26",
+      "value": 24.59,
+      "change": -2.21,
+      "pct": -8.246,
+      "date": "2026-11-27",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/%5EVIX"
     },
     "usd_twd": {
       "name": "USD/TWD",
       "symbol": "TWD=X",
-      "value": 32.941,
-      "change": 0.02,
-      "pct": 0.061,
-      "date": "2026-11-26",
+      "value": 32.931,
+      "change": -0.258,
+      "pct": -0.777,
+      "date": "2026-11-27",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/TWD%3DX"
     },
@@ -106,40 +106,40 @@
     {
       "name": "台積電",
       "symbol": "2330.TW",
-      "value": 2150.0,
-      "change": -80.0,
-      "pct": -3.587,
-      "date": "2026-11-25",
+      "value": 2180.0,
+      "change": 35.0,
+      "pct": 1.632,
+      "date": "2026-11-27",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/2330.TW"
     },
     {
       "name": "聯發科",
       "symbol": "2454.TW",
-      "value": 3645.0,
-      "change": -405.0,
-      "pct": -10.0,
-      "date": "2026-11-25",
+      "value": 3680.0,
+      "change": -25.0,
+      "pct": -0.675,
+      "date": "2026-11-27",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/2454.TW"
     },
     {
       "name": "台達電",
       "symbol": "2308.TW",
-      "value": 1055.0,
-      "change": -30.0,
-      "pct": -2.765,
-      "date": "2026-11-25",
+      "value": 1125.0,
+      "change": 5.0,
+      "pct": 0.446,
+      "date": "2026-11-27",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/2308.TW"
     },
     {
       "name": "鴻海",
       "symbol": "2317.TW",
-      "value": 206.5,
-      "change": -20.0,
-      "pct": -8.83,
-      "date": "2026-11-25",
+      "value": 219.0,
+      "change": 2.5,
+      "pct": 1.155,
+      "date": "2026-11-27",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/2317.TW"
     },
@@ -196,40 +196,40 @@
     {
       "name": "0050 元大台灣50",
       "symbol": "0050.TW",
-      "value": 90.3,
-      "change": -5.4,
-      "pct": -5.643,
-      "date": "2026-11-25",
+      "value": 92.4,
+      "change": -0.45,
+      "pct": -0.485,
+      "date": "2026-11-27",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/0050.TW"
     },
     {
       "name": "0052 富邦科技",
       "symbol": "0052.TW",
-      "value": 52.15,
-      "change": -3.0,
-      "pct": -5.44,
-      "date": "2026-11-25",
+      "value": 53.45,
+      "change": 0.0,
+      "pct": 0.0,
+      "date": "2026-11-27",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/0052.TW"
     },
     {
       "name": "00662 富邦NASDAQ",
       "symbol": "00662.TW",
-      "value": 21.86,
-      "change": -0.79,
-      "pct": -3.488,
-      "date": "2026-11-25",
+      "value": 22.64,
+      "change": 0.37,
+      "pct": 1.661,
+      "date": "2026-11-27",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/00662.TW"
     },
     {
       "name": "00646 元大S&P500",
       "symbol": "00646.TW",
-      "value": 74.25,
-      "change": -1.15,
-      "pct": -1.525,
-      "date": "2026-11-25",
+      "value": 75.9,
+      "change": 0.75,
+      "pct": 0.998,
+      "date": "2026-11-27",
       "source": "Yahoo Finance（非官方、可能延遲）",
       "url": "https://finance.yahoo.com/quote/00646.TW"
     },
@@ -246,25 +246,25 @@
   ],
   "news": [
     {
-      "region": "台灣",
-      "title": "加權指數重挫 1,926 點，創歷史第 6 大紀錄！股災 3 大潛在原因、重災區與避風港一次看｜股市話題 - 永豐金證券",
-      "url": "https://news.google.com/rss/articles/CBMitwRBVV95cUxQVERtdnRSd0NLY0RscnhJcnZCcFhNeVVoRW1TOTZKLWRDWVRZbFdMV2lxWmJfMGJzZnNoNHlJQ3ZXR1VqY2RodG5BQ2dZNDktc0ZoRXFlT2Z3ZU82TmFpOEZnNVVLTGN2X05xZjYtWTY3MW9CMzJjX2o0VEpwZE04WUlBdW5qUkFTQnhCNnd0SVY0WTdIU00xcmp4MUwzb21ITnN4OVNUbDBlTlNQSEVCUlV2T0htcmNHbGxkd2FuQjVaOGFBMFppUTl1YTk4bm5aNUszQnlwT0dIQnlOcy04NmZMbnVMSVhmZWRBWEZIaERxVGxPcGMzcXZtMDdDVUdsLTZ5MnBqODcySmZkcXBmSDhrQi1kUDlaVzRMMHlaOVIteWdwUVZId191dFhBYXZGbHIwejR6V1dJbmJFQnF1elJwNngxd1Q2MGV4WkpsYzFvVjc3b2xXaGVFOE1BQ2tacFNQRmVfY0tQRUVxTEhJZjQ5ZGZ3LVJBXzBWckZTT0syS2hDLUFNMHIwWWNsd3VWQXh1bi1qQ216MEJiaWtfZkE5bXRDMEU0NGEzWXA4X0VCNFNZZVlBMDhQLTZMNEd3WUs1dEJLRWdoRzdSZjZESE9yVnAwS0V1cFZsQnQ3YzZHLXVVb213cTFtdks4SGl4dHNZRmdaeDdVOTlVVnBaVzRyZlliX1pyM1VzTUNaajNnYTlFZEtpTFpOaHo1TkF4RV9RRmVvZzk1NGdmc2VGOEZrYl9BVDg?oc=5",
-      "source": "永豐金證券",
-      "published_at": "2026-11-26T04:38:32+00:00"
-    },
-    {
-      "region": "台灣",
-      "title": "台股開高強彈逾950點！聯發科扛多頭大旗、台積電卻陷震盪 - UDN",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9sdERhU1Jhd1lkZlBlbGpybW5pRXBFTk9WcVc4RTl1X0tuQWYzcDhNd1ZEVkRUR213cERyUXB5cFNmME0zeGpUa2s2MUJrLTVQ0gFWQVVfeXFMTkI4M0plX2M4UG1wVm9mbXlUaWFkdk5mYzJ4QVJvbWZudTFQZXZsYVV6X3p3UUVpR0tMbHFpUVVtX2dfNUp0MEk5Z21XVGU1aWJqUzdHX2c?oc=5",
-      "source": "UDN",
-      "published_at": "2026-11-26T01:19:54+00:00"
-    },
-    {
       "region": "美國",
       "title": "S&P 500, Nasdaq End Lower But Dow Rebounds As Traders Rotate Out Of AI — NVDA, SPCX, PANW In Focus - TradingView",
       "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOUm1aSlg2OEo5UVlWUUNOYVNhX0ZDMEdFWWNoX0tCM0tzOE0tdzR0OWY1QUhBZ2s4Q2liSnU2NnVPalRHYWZDSExHR044UHRJOFNZVHlhTzloMlRiSFNtYlAyN3JxOTE5UU5xRXdYanNMbGdadklBeGNJbG5wRS03Qm5fNVEybHZDWU8zUGZmSFpVY00teGt0WFpfVGpva3d1SndnQTB2aHJ5emxIcVdyMnp4MnJDb0V2QzF4anJXdUtPSExVM0w4NU5YUTBxMXNndjdwM2h3MURmOGV6cG1IS1JkbmliTXht?oc=5",
       "source": "TradingView",
       "published_at": "2026-11-26T00:09:50+00:00"
+    },
+    {
+      "region": "美國",
+      "title": "Wall Street rebounds from day’s lows as bargain hunters step in; Dow gains, Nasdaq falls - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQTGRfR1p2R2NCdzJMWGU4VXlRVmZiYVZuc1FldGRWSEUzQ19vbWItamJmM2t4czNwRlZCbjZtaHZ0aU1tOHAtV1BQWjhsZ3BpaHFTQXhhVGZOMFVhT1l6MHF1WXk1RUxLdWd2NXpROHFLNmJqcUZKLWpEOHRBeklqXzV0a0tnLUE5WjJwQThUX2JEMDZQQUFpeHBndXA2dE9BeEl5Q0Yyd2tmTVF3NG1fUWwxOWNoZ3ZPX2FybTFRWGhaRks4cUdKVkJrU05CYk54dHcyRWtKVFNidmRWaExsYUZNamdZX2xlVUxOZzloZkcyVWc?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-25T23:51:20+00:00"
+    },
+    {
+      "region": "美國",
+      "title": "Stock Indices Finish Off Their Lows as Dip Buyers Step In - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPTWlaMXRxM3p3SkxVOUJyVjBRSVFUZTlaRWo3dTdEeVA4VDk4Zng2bVIxMzQ3TXNsRlNqQVd0cVhuV2RYdTYyX3daTlk5SUxLbGtxY0J2bU11dEh2MDcyWHo0ZlFoVnlya3V4ZGJDbUlRMC10S3plSEhldTNKMHgxVlMzVzhLdm9EakNiWE53TVNxRVhXaERSNUZ2QmxaUEpqd19oQnhWN3M4RlpMREpTYS1SdTQtUQ?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-25T21:35:08+00:00"
     },
     {
       "region": "美國",
@@ -282,24 +282,24 @@
     },
     {
       "region": "美國",
-      "title": "Goldman Sachs: The market has already priced in four Federal Reserve rate hikes, but Warsh will continue to raise rates in December. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNS2ZNRlNIMVZyTlRvV0Q3VHl4SWpQYjNNY1pvWUplcnc4cXhpUkd2Mmx5OWhMeHNMRmlIV0hWWlBKLWFzY1BjcXlOemFJc3pTaTd5Sm1GeUJaZzlSSTYwSWVwWGsxXzZ4eF9mUF9RUEpBcXRUUzFRVmVnNDVyVGhSYWNWVXpJVkJKWHRaT0FYRDRPc010TlJIdl9vMDRLRC1MU2E4Mw?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-25T12:26:01+00:00"
+      "title": "TradingView上由CNBC TV18發佈的新聞，2026-11-25 — cnbctv:0df8688d0094b:0 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBWYjRpVlhRanZtYzFsX0tJQWEwWUVaRTNxZGhSQ3lXQmFaVVRTZTJxSHFUaF9MZnFEQUYwNElVQ1ZaRkVXbFdsYXgxNktEanhjalFtdXgxUmdBX2NwQ3lfSDJJdlFXQQ?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-25T12:36:22+00:00"
     },
     {
-      "region": "台灣",
-      "title": "杜金龍昨賣漲停台積電！曝老婆「解定存買聯發科」還獲利 - ETtoday財經雲",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBPbWxhaUtxTEYtTXJKMTV5RE5pRGZPTFAwQy1sc3B1Nk1HYXVNVjBoaXdjQWgzV1RIMlp2NlRWd3U4em9zbXZNem4xVWhVc1VvLVHSAVBBVV95cUxQM29PUl9iWF9GYXY0Nnd6YnZxVnpYa0kxZFdzamJPVm80azBodm5FbXM5aWhIanlDSmJid21XS0h2MFNLdC0tUldPZkJXSVdRUg?oc=5",
-      "source": "ETtoday財經雲",
-      "published_at": "2026-11-25T06:06:00+00:00"
+      "region": "美國",
+      "title": "S&P 500 ‘Quite Cheap’ After Selloff: Tom Lee Counters Citadel’s 2018 Warning, Says AI ‘Supply Shock’ Could Ease - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNRmdvQUhLOWkyT0phV09KSnkwRjYzWVpyMHdMSTdKMGdBaFJNZkI1U1JkcnFvMnpTazBYSW8yY1NzRHNDMlIwNFp3LWRzNEdkNVg2bGRZMnQ2Tk1UR2VEVXVpQVpQbTVOSjFjblVjZnZjeWNnbm5vbGtHZHQ2UEJiQ3NMQlZHa3dSZlMxWUhkRUs0UHNlZnpOTFlYa0p4Y3N2WmxoSm80U0F1R1V4MkdoMWVjQkItMVhiTk8wb0NWQk01VDhEWXhZNW5sV0tQSUQ5VjVXYzBfVy1mSV9xZXl6Z2xTQldRaENFb29rZXo5NzZQcUpKSVE?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-25T12:00:19+00:00"
     },
     {
-      "region": "台灣",
-      "title": "外資大砍1236億！台積電跌80元、聯發科跌停 台股收跌1926點再破年線 - 知新聞",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE55d0prY0ZiQzVSakxhYml6c1dKMFJ6Q0I3Z1lfckZyUDR6OHhIOVExZENJaXUta1ZJaUxrYU5aTEkzeE1mbDZhUFowb1Y1X2RLT0RLM1laakhNbVBjanl6QVIzWDBiZjNfcXBRbk5MUQ?oc=5",
-      "source": "知新聞",
-      "published_at": "2026-11-25T01:07:00+00:00"
+      "region": "美國",
+      "title": "GE Vernova, nLIGHT, Arrow Electronics, Allient, and Kimball Solutions shares plummet, what you need to know - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOcUZnNkwwdjhJdjg3M2gwckZaSGZ4VWVHNVpZNGMyUFFlVHJtaEk2Mnp0am5qaFdSR0xwYWJQZXQwbm84a2plZWtHSWtqdUQwOElCa0dhYXdGcTNpeVRFbi1aSUpGR2ZISTVMQ0hVaWlQc0NRaTJfQng4TXpMUHdVZ3Bha1pVOWczbjZ3QUNRZlVobkVWUTljMDNzUENEaTk1V25ma29vQURNM2lubFJkZ2tEZllTWDNlN0hYeFJfTm5qRktRZU9LUmQtN3JhWlA4X3F2VjI2NFJzbHp6NGdhMVBEVG4yZHFaWEpKV2pPc1M3U3QwTTgzQVczZmM5VVV2VS0yXzhTRE1PLUZkWVE?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-24T20:25:41+00:00"
     },
     {
       "region": "美國",
@@ -324,17 +324,17 @@
     },
     {
       "region": "美國",
-      "title": "US stock futures rebound as tech stocks recover from AI sell-off; Nasdaq 100 jumps 3.5%, S&P 500 climbs 2.8% - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNamJqdnhQelJOV1FkRGMzNDJsX3pjMFBsZXptN0sybHY2UTd2amIwV2I3TXMyWC03VV9Hd0NkVk5TVGtfcDh0MVRYUEpHXzc3TnYxTW92cGQ2NHZ5RExRTUREb1BpZnZRT2gtWjZMeHRuWkdZaWppUnRfWHM0NmpsdjVUOHhxaGZFQXVRQzFFZ1JVTHd1Q050XzNqUzBmWkhJMWpuTmVkNjd1WTFGQ1BEcHFQQXNlN2dLVnBLNmgzUjZ5VTNpaUV3NXBBM3hXZlFfc0hfMnhaN09tbjl0UUJZODNWTmVxVXk3WHlLM2pxYi03TkVseTBMVmlB?oc=5",
+      "title": "Why is Micron stock rocketing higher today - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxONmxFYjNNZmpzMm9RZVZzTlM1UzdzUmlMU1p0bHFaSnl3R2Zxcm1sUzM2Y19hVTJNMWRwcmppT3Vyb2M5Q3lVVHpkNjQ4ZWNfS1ROZVNraWtvQ3J2MDBlWTZ6YUtvQnphcHQ5TmI2SUpnazVaSi0xY0JOdFNtdEt4TVlqbFd6U21aeW1HVmFmUVlYOFVOc2hJVERiV0NselA5X0tGb0N2QWN0XzhWbGJlVmJrUFQ0TTJWZFk1SWFR?oc=5",
       "source": "TradingView",
-      "published_at": "2026-11-23T11:28:57+00:00"
+      "published_at": "2026-11-23T18:10:35+00:00"
     }
   ],
   "risk": {
-    "level": "偏高",
-    "score": 2,
+    "level": "一般",
+    "score": 1,
     "signals": [
-      "VIX ≥ 25"
+      "VIX ≥ 20"
     ],
     "description": "固定觀察規則，非AI預測、非回測模型或投資建議。"
   },

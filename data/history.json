@@ -671,5 +671,116 @@
       ],
       "description": "固定觀察規則，非AI預測、非回測模型或投資建議。"
     }
+  },
+  {
+    "generated_at": "2026-11-27T09:39:00.527841+00:00",
+    "coverage": {
+      "taiex": "2026-11-27",
+      "sp500": "2026-11-25",
+      "sox": "2026-11-25",
+      "vix": "2026-11-27",
+      "usd_twd": "2026-11-27",
+      "us10y": "2026-11-25"
+    },
+    "prices": {
+      "taiex": {
+        "name": "TAIEX 加權指數",
+        "symbol": "TAIEX",
+        "value": 39308.08,
+        "change": 156.27,
+        "pct": 0.399,
+        "date": "2026-11-27",
+        "source": "臺灣證券交易所（官方）",
+        "url": "https://www.twse.com.tw/zh/trading/historical/fmtqik.html"
+      },
+      "sp500": {
+        "name": "S&P 500",
+        "symbol": "^GSPC",
+        "value": 7182.7798,
+        "change": -18.3101,
+        "pct": -0.254,
+        "date": "2026-11-25",
+        "source": "Yahoo Finance（非官方、可能延遲）",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC"
+      },
+      "nasdaq": {
+        "name": "Nasdaq",
+        "symbol": "^IXIC",
+        "value": 23585.8008,
+        "change": -147.7383,
+        "pct": -0.622,
+        "date": "2026-11-25",
+        "source": "Yahoo Finance（非官方、可能延遲）",
+        "url": "https://finance.yahoo.com/quote/%5EIXIC"
+      },
+      "dow": {
+        "name": "Dow Jones",
+        "symbol": "^DJI",
+        "value": 50182.9492,
+        "change": 164.25,
+        "pct": 0.328,
+        "date": "2026-11-25",
+        "source": "Yahoo Finance（非官方、可能延遲）",
+        "url": "https://finance.yahoo.com/quote/%5EDJI"
+      },
+      "russell": {
+        "name": "Russell 2000",
+        "symbol": "^RUT",
+        "value": 2704.0601,
+        "change": 19.1201,
+        "pct": 0.712,
+        "date": "2026-11-25",
+        "source": "Yahoo Finance（非官方、可能延遲）",
+        "url": "https://finance.yahoo.com/quote/%5ERUT"
+      },
+      "sox": {
+        "name": "SOX 費城半導體",
+        "symbol": "^SOX",
+        "value": 8774.8604,
+        "change": -57.6396,
+        "pct": -0.653,
+        "date": "2026-11-25",
+        "source": "Yahoo Finance（非官方、可能延遲）",
+        "url": "https://finance.yahoo.com/quote/%5ESOX"
+      },
+      "vix": {
+        "name": "VIX",
+        "symbol": "^VIX",
+        "value": 24.59,
+        "change": -2.21,
+        "pct": -8.246,
+        "date": "2026-11-27",
+        "source": "Yahoo Finance（非官方、可能延遲）",
+        "url": "https://finance.yahoo.com/quote/%5EVIX"
+      },
+      "usd_twd": {
+        "name": "USD/TWD",
+        "symbol": "TWD=X",
+        "value": 32.931,
+        "change": -0.258,
+        "pct": -0.777,
+        "date": "2026-11-27",
+        "source": "Yahoo Finance（非官方、可能延遲）",
+        "url": "https://finance.yahoo.com/quote/TWD%3DX"
+      },
+      "us10y": {
+        "name": "美國10年債殖利率",
+        "symbol": "^TNX",
+        "value": 4.848,
+        "change": -0.056,
+        "pct": -1.142,
+        "date": "2026-11-25",
+        "source": "Yahoo Finance（非官方、可能延遲）",
+        "url": "https://finance.yahoo.com/quote/%5ETNX"
+      }
+    },
+    "risk": {
+      "level": "一般",
+      "score": 1,
+      "signals": [
+        "VIX ≥ 20"
+      ],
+      "description": "固定觀察規則，非AI預測、非回測模型或投資建議。"
+    }
   }
 ]
